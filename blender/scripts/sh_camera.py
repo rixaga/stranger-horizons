@@ -23,14 +23,15 @@ def _add(a, b):
 
 
 def compute_keyframes(move: str, target=(0.0, 0.0, 0.0), fps: int = 30, frame_start: int = 1,
-                      duration_s: float | None = None, moves: dict | None = None) -> list[dict]:
+                      duration_s: float | None = None, moves: dict | None = None,
+                      lens_mm: float | None = None) -> list[dict]:
     """Return [{frame, location, lens}] for a named move. The final framing is held for hold_s."""
     spec = (moves or load_moves())[move]
     duration = float(duration_s if duration_s is not None else spec["duration_s"])
     hold = min(float(spec.get("hold_s", 0.0)), duration * 0.5)
     move_frames = round((duration - hold) * fps)
     end_frame = frame_start + round(duration * fps)
-    lens = spec.get("lens_mm", 35)
+    lens = lens_mm or spec.get("lens_mm", 35)
     keys: list[dict] = []
     if "orbit" in spec:
         o = spec["orbit"]
@@ -67,12 +68,13 @@ def _fcurves(action):
 
 
 def build_camera_move(scene, move: str, target=(0.0, 0.0, 0.0), frame_start: int | None = None,
-                      duration_s: float | None = None, name: str = "SH_Camera", make_active: bool = True):
+                      duration_s: float | None = None, name: str = "SH_Camera", make_active: bool = True,
+                      lens_mm: float | None = None):
     import bpy
     moves = load_moves()
     spec = moves[move]
     frame_start = scene.frame_start if frame_start is None else frame_start
-    keys = compute_keyframes(move, target, scene.render.fps, frame_start, duration_s, moves)
+    keys = compute_keyframes(move, target, scene.render.fps, frame_start, duration_s, moves, lens_mm)
 
     cam = bpy.data.objects.get(name)
     if cam is None:

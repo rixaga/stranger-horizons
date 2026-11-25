@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Episode",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "episode_id",
+    "slug",
+    "title",
+    "pillar",
+    "status",
+    "approvals"
+  ],
+  "properties": {
+    "episode_id": {
+      "type": "string",
+      "pattern": "^EP[0-9]{3,}$"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pillar": {
+      "enum": [
+        "Hidden Earth",
+        "Deep Unknown",
+        "Strange Signals",
+        "Forbidden Theories",
+        "Prototype"
+      ]
+    },
+    "status": {
+      "enum": [
+        "research",
+        "script",
+        "storyboard",
+        "production",
+        "post",
+        "qc",
+        "published",
+        "prototype"
+      ]
+    },
+    "approvals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "research",
+        "script",
+        "storyboard",
+        "prototype",
+        "final_cut"
+      ],
+      "properties": {
+        "research": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "approved_by",
+                "date"
+              ],
+              "properties": {
+                "approved_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "script": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "approved_by",
+                "date"
+              ],
+              "properties": {
+                "approved_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "storyboard": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "approved_by",
+                "date"
+              ],
+              "properties": {
+                "approved_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "prototype": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "approved_by",
+                "date"
+              ],
+              "properties": {
+                "approved_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "final_cut": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "approved_by",
+                "date"
+              ],
+              "properties": {
+                "approved_by": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

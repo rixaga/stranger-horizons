@@ -11,6 +11,7 @@ import pytest
 REPO = Path(__file__).resolve().parents[1]
 PIPELINE = REPO / "pipeline"
 sys.path.insert(0, str(PIPELINE))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(REPO / "blender" / "scripts"))
 
 needs_ffmpeg = pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="FFmpeg not installed")

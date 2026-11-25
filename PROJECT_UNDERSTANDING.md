@@ -291,3 +291,7 @@ Measured on the owner's Mac by running `blender/scripts/sh_run_checks.py` inside
 | jsonschema | Not in Blender's Python; not checked for the system Python |
 
 Implications for Stage 5: EEVEE preview at 1280×720 is the right default. Cycles with volumes runs on Metal but will be slow and warm on a fanless machine, so keep it for final shots with modest samples. FFmpeg must be installed before any video can be encoded.
+
+## Status update — Stage 4 (2026-11-26)
+
+Stage 4 plan and Phase A foundations are implemented on branch `claude/stage4-architecture`. See `docs/PRODUCTION_IMPLEMENTATION_PLAN.md` §7 for validation results and `docs/SYSTEM_ARCHITECTURE.md` for module layout. Stage 5 (EP001 prototype) has not started.

@@ -1,0 +1,14 @@
+{
+  "episode_id": "EPXXX",
+  "slug": "working_slug",
+  "title": "<working title>",
+  "pillar": "Deep Unknown",
+  "status": "research",
+  "approvals": {
+    "research": null,
+    "script": null,
+    "storyboard": null,
+    "prototype": null,
+    "final_cut": null
+  }
+}

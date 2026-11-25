@@ -1,0 +1,37 @@
+{
+  "episode_id": "EP900",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "text": "Fact one",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "C02",
+      "text": "Report two",
+      "evidence_label": "unverified_report",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "C03",
+      "text": "A guess",
+      "evidence_label": "speculation",
+      "source_ids": [],
+      "status": "verified"
+    },
+    {
+      "claim_id": "C04",
+      "text": "Unsourced",
+      "evidence_label": "strong_evidence",
+      "source_ids": [],
+      "status": "draft"
+    }
+  ]
+}

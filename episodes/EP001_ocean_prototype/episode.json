@@ -1,0 +1,15 @@
+{
+  "episode_id": "EP001",
+  "slug": "ocean_prototype",
+  "title": "Ocean Prototype (10-second visual proof of concept)",
+  "pillar": "Prototype",
+  "status": "prototype",
+  "approvals": {
+    "research": null,
+    "script": null,
+    "storyboard": null,
+    "prototype": null,
+    "final_cut": null
+  },
+  "notes": "Not a published episode. Validates the visual direction and Blender workflow."
+}

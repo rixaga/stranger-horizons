@@ -17,11 +17,17 @@
 │   ├── CHANNEL_BIBLE.md, PRODUCTION_PIPELINE.md, RESEARCH_STANDARDS.md
 │   ├── VISUAL_STYLE_GUIDE.md        Umbrella visual system
 │   ├── CINEMATOGRAPHY_GUIDE.md, LIGHTING_GUIDE.md, ENVIRONMENT_GUIDE.md, AUDIO_STYLE_GUIDE.md
+│   ├── PRODUCTION_IMPLEMENTATION_PLAN.md, SYSTEM_ARCHITECTURE.md  Stage 4 plan and architecture
+│   ├── ASSET_MANAGEMENT_GUIDE.md, TECHNICAL_REQUIREMENTS.md       Assets, setup, commands
 │   └── images/                      Look-dev references
-├── schemas/                         JSON Schemas: storyboard, source dossier, claim ledger,
+├── schemas/                         JSON Schemas: episode, storyboard, source dossier, claim ledger,
 │                                    asset register, environment preset
 ├── templates/                       Example files and script template for new episodes
 ├── pipeline/                        System-Python tools
+│   ├── sh.py                        ONE CLI: episode-new, approve, research, script, storyboard,
+│   │                                assets, srt, clip, concat, mux, qc
+│   ├── shpipe/                      Library behind sh.py: config, paths, log, errors, ffmpeg,
+│   │                                research, script, storyboard, assets, edit, qc
 │   ├── check_environment.py         Tools, Blender, disk check before rendering
 │   ├── validate_episode.py          Folder + schema + source-ID checks (--profile prototype|episode)
 │   ├── assemble_video.py            Image sequence (+audio) → H.264 MP4, BT.709, atomic write
@@ -37,8 +43,10 @@
 ├── assets/
 │   ├── asset_register.json          Licence record for every asset (schema: asset_register)
 │   └── audio/ environments/ materials/ models/   (contents git-ignored)
-├── episodes/EP001_ocean_prototype/  blender/ scripts/ renders/ (renders git-ignored)
-├── tests/                           pytest suite; test_blender_integration.py needs bpy
+├── episodes/<EPxxx_slug>/           episode.json research/ script/ storyboard/ blender/shots/ renders/
+│                                    audio/ edit/ final/ qc/ logs/   (layout: shpipe.paths.LAYOUT)
+├── episodes/EP001_ocean_prototype/  The 10-second visual prototype (status: prototype)
+├── tests/                           pytest suite + fixtures/EP900_fixture; Blender tests need bpy
 └── requirements.txt
 ```
 
@@ -49,6 +57,7 @@ pip install -r requirements.txt
 python3 -m pytest                                  # pipeline + preset + camera tests
 python3 pipeline/check_environment.py              # before rendering
 python3 pipeline/validate_episode.py episodes/EP001_ocean_prototype --profile prototype
+python3 pipeline/sh.py --help                      # production CLI; see docs/TECHNICAL_REQUIREMENTS.md
 ```
 
 Large render caches and licensed third-party assets stay out of git (see `.gitignore`); record them in `assets/asset_register.json`.

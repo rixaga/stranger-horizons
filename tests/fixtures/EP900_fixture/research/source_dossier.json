@@ -1,0 +1,39 @@
+{
+  "episode_id": "EP900",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "Primary dataset",
+      "author_or_org": "Org A",
+      "accessed": "2026-11-20",
+      "url_or_reference": "https://example.org/a",
+      "source_type": "primary",
+      "claims_supported": [
+        "C01"
+      ],
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-002",
+      "title": "Forum post",
+      "author_or_org": "anon",
+      "accessed": "2026-11-20",
+      "url_or_reference": "https://example.org/b",
+      "source_type": "social_or_forum",
+      "claims_supported": [
+        "C02"
+      ],
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-003",
+      "title": "Unused paper",
+      "author_or_org": "Org C",
+      "accessed": "2026-11-20",
+      "url_or_reference": "https://example.org/c",
+      "source_type": "peer_reviewed",
+      "claims_supported": [],
+      "reliability": "high"
+    }
+  ]
+}

@@ -127,6 +127,26 @@
               "type": "string"
             },
             "description": "IDs from assets/asset_register.json."
+          },
+          "blender": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Optional Blender build hints for blender/scripts/sh_build_shot.py",
+            "properties": {
+              "target_m": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "Camera aim point in metres"
+              },
+              "template": {
+                "type": "string",
+                "description": "Repo-relative .blend with the hero set, e.g. blender/templates/seabed_ridge.blend"
+              }
+            }
           }
         },
         "additionalProperties": false
