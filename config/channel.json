@@ -1,0 +1,20 @@
+{
+  "channel_name": "Stranger Horizons",
+  "tagline": "Explore Beyond What We Know.",
+  "language": "en",
+  "format": "faceless_cinematic_mystery_documentary",
+  "audience": "international_general_teen_and_adult",
+  "content_pillars": [
+    {"name": "Hidden Earth", "target_share": 0.30},
+    {"name": "Deep Unknown", "target_share": 0.30},
+    {"name": "Strange Signals", "target_share": 0.25},
+    {"name": "Forbidden Theories", "target_share": 0.15}
+  ],
+  "long_form_target_minutes": {"min": 12, "max": 16},
+  "editorial_rules": {
+    "evidence_labels_required": true,
+    "cgi_reconstructions_must_not_be_presented_as_authentic_footage": true,
+    "speculation_must_be_labeled": true,
+    "counter_explanations_required": true
+  }
+}
