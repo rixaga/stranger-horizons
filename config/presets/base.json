@@ -1,0 +1,61 @@
+{
+  "name": "base",
+  "label": "Stranger Horizons base look",
+  "description": "Shared identity applied under every topic preset: AgX, restrained exposure, one accent per frame, slow motivated camera.",
+  "accent": "none",
+  "palette": {
+    "abyss_navy": "#0B1622",
+    "charcoal": "#15181C",
+    "slate": "#2B3540",
+    "mist": "#8C9AA6",
+    "bone": "#E8E4DC",
+    "signal_cyan": "#4FD1D9",
+    "ember_amber": "#E0A04A"
+  },
+  "editorial_rules": [
+    "CGI is illustration, never evidence: set reconstruction_status and on_screen_label in the storyboard.",
+    "One accent colour per frame; base remains neutral/cool.",
+    "Subject must read on a phone screen: keep the focal subject above deep shadow."
+  ],
+  "world": {
+    "color": [
+      0.004,
+      0.006,
+      0.01
+    ],
+    "strength": 1.0
+  },
+  "volume": {
+    "kind": "none"
+  },
+  "lights": [],
+  "particles": {
+    "kind": "none"
+  },
+  "color_management": {
+    "view_transform": "AgX",
+    "look": "Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "camera": {
+    "lens_mm": 35,
+    "sensor_mm": 36,
+    "dof": false,
+    "fstop": 4.0,
+    "clip_start_m": 0.05,
+    "clip_end_m": 1000,
+    "motion_blur_shutter": 0.5
+  },
+  "eevee": {
+    "volumetric_tile_size": "4",
+    "volumetric_samples": 64,
+    "volumetric_end_m": 150,
+    "volumetric_shadows": true
+  },
+  "cycles": {
+    "volume_bounces": 1,
+    "max_bounces": 6,
+    "volume_step_rate": 1.0
+  }
+}

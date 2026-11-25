@@ -1,0 +1,437 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Environment Preset",
+  "description": "Topic presets override config/presets/base.json. Applied by blender/scripts/sh_presets.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "label",
+    "description"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z_]+$"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "extends": {
+      "type": "string"
+    },
+    "editorial_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "accent": {
+      "enum": [
+        "signal_cyan",
+        "ember_amber",
+        "none"
+      ]
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0
+        },
+        "horizon_color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        },
+        "zenith_color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        }
+      }
+    },
+    "volume": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "none",
+            "fog",
+            "water",
+            "dust",
+            "haze"
+          ]
+        },
+        "bounds_m": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "center_m": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "scatter_color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        },
+        "density": {
+          "type": "number",
+          "minimum": 0
+        },
+        "anisotropy": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "absorption_color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        },
+        "absorption_density": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height_falloff": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "z_full": {
+              "type": "number"
+            },
+            "z_zero": {
+              "type": "number"
+            }
+          }
+        },
+        "noise_scale": {
+          "type": "number",
+          "minimum": 0
+        },
+        "noise_amount": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "lights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "type",
+          "color",
+          "energy"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "SUN",
+              "SPOT",
+              "AREA",
+              "POINT"
+            ]
+          },
+          "role": {
+            "enum": [
+              "key",
+              "fill",
+              "rim",
+              "practical",
+              "motivated_source",
+              "accent"
+            ]
+          },
+          "color": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0
+            },
+            "minItems": 3,
+            "maxItems": 3,
+            "description": "Linear RGB"
+          },
+          "energy": {
+            "type": "number",
+            "minimum": 0
+          },
+          "location": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rotation_deg": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "angle_deg": {
+            "type": "number",
+            "minimum": 0
+          },
+          "spot_size_deg": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 180
+          },
+          "spot_blend": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "size_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "volume_factor": {
+            "type": "number",
+            "minimum": 0
+          },
+          "parent_to_camera": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "particles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "none",
+            "marine_snow",
+            "snow",
+            "dust",
+            "embers"
+          ]
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 200000
+        },
+        "size_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "size_random": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "bounds_m": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "center_m": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "drift_m_s": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "brownian": {
+          "type": "number",
+          "minimum": 0
+        },
+        "color": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Linear RGB"
+        },
+        "emission": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "color_management": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "view_transform": {
+          "const": "AgX"
+        },
+        "look": {
+          "type": "string"
+        },
+        "exposure": {
+          "type": "number",
+          "minimum": -3,
+          "maximum": 3
+        },
+        "gamma": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 1.5
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lens_mm": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 300
+        },
+        "sensor_mm": {
+          "type": "number"
+        },
+        "dof": {
+          "type": "boolean"
+        },
+        "fstop": {
+          "type": "number",
+          "minimum": 0.7
+        },
+        "clip_start_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "clip_end_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "motion_blur_shutter": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "eevee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "volumetric_tile_size": {
+          "enum": [
+            "2",
+            "4",
+            "8",
+            "16"
+          ]
+        },
+        "volumetric_samples": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "volumetric_end_m": {
+          "type": "number"
+        },
+        "volumetric_shadows": {
+          "type": "boolean"
+        }
+      }
+    },
+    "cycles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "volume_bounces": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_bounces": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "volume_step_rate": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  }
+}

@@ -262,3 +262,14 @@ Follows START_HERE_CLAUDE_CODE.md without skipping gates. Small fixes are slotte
 3. Which machine will render, and its Blender version.
 4. Whether the pipeline fixes (B1–B7) should wait for Stage 4 as planned, or be done earlier as a small separate task.
 5. How changes should reach the repository (this session currently has read-only access).
+
+---
+
+## Status update — 2026-11-26
+
+What changed since this report (all on branch `claude/foundation-stages-1-3`):
+
+- **Stage 1 gaps fixed (B1–B7)**, each with a test that failed first. `assemble_video.py` (help crash, BT.709 tags, missing-frame error, atomic write), `validate_episode.py` (prototype profile, schema validation, source-ID cross-check), and `render_config.json` (logical engine names). **B7 confirmed:** Blender 5.3 offers `BLENDER_EEVEE`, not `BLENDER_EEVEE_NEXT`.
+- **Added:** `.gitignore`, `requirements.txt`, `templates/`, source dossier, claim ledger and asset register schemas, `check_environment.py`, `measure_loudness.py`, Blender scripts under `blender/scripts/`, and tests (`python3 -m pytest`).
+- **Testing:** Blender 5.3.0 was installed in the cloud workspace as a Python module (`bpy`, CPU only), and the Blender integration tests and look-dev renders ran there. The owner's Mac still needs `pipeline/check_environment.py` and `sh_env_check.py` before Stage 5.
+- **Stage 2 completed** (frame-sampled; audio not accessible). **Stage 3 proposed:** see `docs/VISUAL_STYLE_GUIDE.md` and the four companion guides.

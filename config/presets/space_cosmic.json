@@ -1,0 +1,53 @@
+{
+  "name": "space_cosmic",
+  "extends": "base",
+  "label": "Space & Cosmic",
+  "accent": "signal_cyan",
+  "description": "Vacuum: no atmosphere, hard single-source light, true black, scale cues from known bodies. Restrained scientific graphics.",
+  "editorial_rules": [
+    "No volumetric fog or light shafts in vacuum; glow only from emitting or reflecting matter.",
+    "Sizes, distances and colours follow cited data; any compressed scale is stated on screen ('not to scale').",
+    "Use mission imagery only with verified licence/credit."
+  ],
+  "world": {
+    "color": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "strength": 0.0
+  },
+  "volume": {
+    "kind": "none"
+  },
+  "lights": [
+    {
+      "name": "SH_Star",
+      "type": "SUN",
+      "role": "key",
+      "color": [
+        1.0,
+        0.97,
+        0.92
+      ],
+      "energy": 6.0,
+      "rotation_deg": [
+        60,
+        0,
+        -60
+      ],
+      "angle_deg": 0.53
+    }
+  ],
+  "particles": {
+    "kind": "none"
+  },
+  "color_management": {
+    "exposure": 0.0
+  },
+  "camera": {
+    "lens_mm": 50,
+    "dof": false,
+    "clip_end_m": 10000000.0
+  }
+}

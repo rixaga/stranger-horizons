@@ -1,15 +1,118 @@
 {
   "style_name": "Stranger Horizons Cinematic Documentary",
-  "status": "initial_working_direction_reference_analysis_pending",
-  "look": ["cinematic", "realistic", "atmospheric", "documentary"],
-  "palette_guidance": {
-    "base": ["deep_navy", "charcoal", "natural_environment_colors"],
-    "accent": ["restrained_cyan", "restrained_amber"]
+  "version": "1.0",
+  "status": "proposed_stage3_awaiting_owner_approval",
+  "look": [
+    "cinematic",
+    "realistic",
+    "atmospheric",
+    "documentary"
+  ],
+  "identity_rules": [
+    "motivated_light",
+    "one_accent_per_frame",
+    "readable_on_phone",
+    "slow_eased_camera",
+    "label_reconstructions"
+  ],
+  "palette": {
+    "abyss_navy": "#0B1622",
+    "charcoal": "#15181C",
+    "slate": "#2B3540",
+    "mist": "#8C9AA6",
+    "bone": "#E8E4DC",
+    "signal_cyan": "#4FD1D9",
+    "ember_amber": "#E0A04A"
+  },
+  "accents": {
+    "signal_cyan": "technology, signals, water, data, bioluminescence",
+    "ember_amber": "human presence, lamps, fire, history"
+  },
+  "evidence_label_chips": {
+    "established_fact": "bone_fill",
+    "strong_evidence": "signal_cyan_outline",
+    "hypothesis": "ember_amber_outline",
+    "disputed": "split_cyan_amber_outline",
+    "unverified_report": "mist_dashed_outline",
+    "speculation": "ember_amber_dashed_italic"
+  },
+  "grading": {
+    "view_transform": "AgX",
+    "look": "Medium High Contrast",
+    "exposure_range_ev": [
+      -1,
+      1
+    ],
+    "shadow_tint": "abyss_navy",
+    "delivery": "rec709_bt709_tagged"
+  },
+  "typography": {
+    "titles": "Barlow Condensed SemiBold, uppercase, +8-12% tracking",
+    "body": "Inter Regular/Medium",
+    "data": "IBM Plex Mono",
+    "license": "SIL OFL 1.1 (verify at download, record in assets/asset_register.json)",
+    "min_px_at_1080p": {
+      "chapter_title_cap_height": 72,
+      "lower_third": 40,
+      "citation_chip": 28,
+      "burnt_in_subtitle": 48
+    }
+  },
+  "on_screen_labels": [
+    "ILLUSTRATIVE RECONSTRUCTION",
+    "ARTIST'S IMPRESSION",
+    "DATA VISUALIZATION",
+    "NOT TO SCALE"
+  ],
+  "transitions": {
+    "default": "cut",
+    "dissolve_frames": [
+      12,
+      24
+    ],
+    "chapter": "dip_to_charcoal_0.5s_each_way",
+    "forbidden": [
+      "glitch_wipe",
+      "flash",
+      "whip_pan",
+      "spin_3d",
+      "jump_scare_cut"
+    ]
   },
   "camera": {
     "movement": "slow_deliberate_motivated",
-    "preferred": ["push_in", "tracking", "controlled_orbit", "aerial_reveal", "descent"]
+    "presets_file": "config/camera_presets.json",
+    "max_drift_cm": 2,
+    "min_final_hold_s": 1.5
   },
-  "lighting": ["physically_plausible", "motivated_sources", "controlled_volumetrics"],
-  "avoid": ["cartoon_style", "generic_horror_tropes", "unmotivated_camera_shake", "unsupported_visual_claims"]
+  "lighting": [
+    "physically_plausible",
+    "motivated_sources",
+    "key_fill_ratio_min_2_stops",
+    "no_volumetrics_in_vacuum"
+  ],
+  "environment_presets": [
+    "deep_ocean",
+    "antarctica",
+    "underground",
+    "ancient_civilizations",
+    "uap_visualization",
+    "space_cosmic"
+  ],
+  "avoid": [
+    "cartoon_style",
+    "generic_horror_tropes",
+    "unmotivated_camera_shake",
+    "unsupported_visual_claims",
+    "horror_stingers",
+    "crushed_blacks",
+    "full_frame_teal_orange"
+  ],
+  "guides": [
+    "docs/VISUAL_STYLE_GUIDE.md",
+    "docs/CINEMATOGRAPHY_GUIDE.md",
+    "docs/LIGHTING_GUIDE.md",
+    "docs/ENVIRONMENT_GUIDE.md",
+    "docs/AUDIO_STYLE_GUIDE.md"
+  ]
 }
