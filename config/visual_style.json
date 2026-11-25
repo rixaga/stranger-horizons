@@ -1,0 +1,15 @@
+{
+  "style_name": "Stranger Horizons Cinematic Documentary",
+  "status": "initial_working_direction_reference_analysis_pending",
+  "look": ["cinematic", "realistic", "atmospheric", "documentary"],
+  "palette_guidance": {
+    "base": ["deep_navy", "charcoal", "natural_environment_colors"],
+    "accent": ["restrained_cyan", "restrained_amber"]
+  },
+  "camera": {
+    "movement": "slow_deliberate_motivated",
+    "preferred": ["push_in", "tracking", "controlled_orbit", "aerial_reveal", "descent"]
+  },
+  "lighting": ["physically_plausible", "motivated_sources", "controlled_volumetrics"],
+  "avoid": ["cartoon_style", "generic_horror_tropes", "unmotivated_camera_shake", "unsupported_visual_claims"]
+}
