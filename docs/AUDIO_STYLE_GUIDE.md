@@ -1,6 +1,6 @@
 # Audio Style Guide — Stranger Horizons
 
-**Status:** v1.0 proposed (Stage 3). Loudness targets are data in `config/render_config.json` (`audio`) and are checked by `pipeline/measure_loudness.py`.
+**Status:** v1.0 approved by owner 2026-11-26 (Stage 3). Loudness targets are data in `config/render_config.json` (`audio`) and are checked by `pipeline/measure_loudness.py`.
 
 **Principle:** the viewer should **trust their ears the way they trust the facts**. Narration is the spine; music and effects support it and never manufacture fear.
 

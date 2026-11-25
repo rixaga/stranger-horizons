@@ -1,6 +1,6 @@
 # Cinematography Guide — Stranger Horizons
 
-**Status:** v1.0 proposed (Stage 3). Camera moves are data in `config/camera_presets.json` and are built in Blender by `blender/scripts/sh_camera.py`.
+**Status:** v1.0 approved by owner 2026-11-26 (Stage 3). Camera moves are data in `config/camera_presets.json` and are built in Blender by `blender/scripts/sh_camera.py`.
 
 The camera behaves like a **patient observer on an expedition**: it arrives, looks, and waits. It never performs.
 

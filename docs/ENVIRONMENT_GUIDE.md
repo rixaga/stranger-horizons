@@ -1,6 +1,6 @@
 # Environment Guide — Stranger Horizons
 
-**Status:** v1.0 proposed (Stage 3).
+**Status:** v1.0 approved by owner 2026-11-26 (Stage 3).
 **Presets:** `config/presets/` (schema `schemas/environment_preset.schema.json`). Each topic preset `extends` `base.json`, inheriting the shared identity: AgX, palette, editorial rules, camera and render defaults.
 
 ---

@@ -1,6 +1,6 @@
 # Lighting Guide — Stranger Horizons
 
-**Status:** v1.0 proposed (Stage 3). Light rigs are data in `config/presets/<topic>.json` (`lights` array) and are built by `blender/scripts/sh_presets.py`. Values were checked in a Cycles look-dev render (`docs/images/lookdev_presets_v1.jpg`).
+**Status:** v1.0 approved by owner 2026-11-26 (Stage 3). Light rigs are data in `config/presets/<topic>.json` (`lights` array) and are built by `blender/scripts/sh_presets.py`. Values were checked in a Cycles look-dev render (`docs/images/lookdev_presets_v1.jpg`).
 
 **Principle:** light tells the viewer **where they are and what is real**. Every light must have a source the viewer could name.
 

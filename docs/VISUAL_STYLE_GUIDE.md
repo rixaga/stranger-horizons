@@ -1,6 +1,6 @@
 # Visual Style Guide — Stranger Horizons
 
-**Status:** v1.0 proposed (Stage 3). Awaiting owner approval. Replaces the initial working direction.
+**Status:** v1.0 approved by owner 2026-11-26 (Stage 3). Replaces the initial working direction.
 **Inputs:** `docs/CHANNEL_BIBLE.md`, `REFERENCE_VIDEO_ANALYSIS.md`, `BLENDER_TECHNIQUE_NOTES.md`.
 **Companion guides:** `CINEMATOGRAPHY_GUIDE.md` · `LIGHTING_GUIDE.md` · `ENVIRONMENT_GUIDE.md` · `AUDIO_STYLE_GUIDE.md`
 **Machine-readable source of truth:** `config/visual_style.json`, `config/presets/*.json`, `config/camera_presets.json`, `config/render_config.json`. If a number in this document disagrees with a config file, the config file wins and this document gets fixed.
