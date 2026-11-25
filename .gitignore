@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Blender
+*.blend1
+*.blend2
+*.blend@
+/blender/cache/
+
+# Renders and encodes: masters are large; keep them out of git (back up separately)
+episodes/*/renders/**
+!episodes/*/renders/.gitkeep
+episodes/*/final/**
+!episodes/*/final/.gitkeep
+*.partial.mp4
+
+# Downloaded third-party assets (record them in assets/asset_register.json instead)
+assets/models/**
+assets/materials/**
+assets/environments/**
+assets/audio/**
+!assets/**/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

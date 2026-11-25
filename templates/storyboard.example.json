@@ -1,0 +1,32 @@
+{
+  "episode_id": "EPXXX",
+  "title": "<working title>",
+  "fps": 30,
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "duration_seconds": 8,
+      "narration": "<narration line>",
+      "visual_intent": "<what the viewer should understand>",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "source_ids": [],
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal",
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high",
+        "movement": "descent",
+        "lens_mm": 35
+      },
+      "environment": "<location>",
+      "assets": [],
+      "lighting": "<motivated source>",
+      "effects": [
+        "particulate"
+      ],
+      "transition": "cut",
+      "sound_notes": "<ambience / music cue>"
+    }
+  ]
+}

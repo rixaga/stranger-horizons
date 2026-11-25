@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Asset Register",
+  "type": "object",
+  "required": [
+    "assets"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "kind",
+          "source",
+          "license",
+          "acquired"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^AST-[0-9]{3,}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "model",
+              "texture",
+              "hdri",
+              "material",
+              "footage",
+              "image",
+              "music",
+              "sfx",
+              "voice",
+              "font",
+              "other"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "description": "Site or creator"
+          },
+          "url": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string",
+            "description": "e.g. CC0, CC-BY-4.0, royalty-free subscription, original"
+          },
+          "attribution_required": {
+            "type": "boolean"
+          },
+          "attribution_text": {
+            "type": "string"
+          },
+          "ai_generated": {
+            "type": "boolean",
+            "description": "True if made with a generative AI tool; drives disclosure"
+          },
+          "acquired": {
+            "type": "string",
+            "format": "date"
+          },
+          "local_path": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,43 +2,136 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Stranger Horizons Storyboard",
   "type": "object",
-  "required": ["episode_id", "title", "fps", "scenes"],
+  "required": [
+    "episode_id",
+    "title",
+    "fps",
+    "scenes"
+  ],
   "properties": {
-    "episode_id": {"type": "string"},
-    "title": {"type": "string"},
-    "fps": {"type": "integer", "minimum": 1},
+    "episode_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 1
+    },
     "scenes": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["scene_id", "duration_seconds", "visual_intent", "reconstruction_status", "camera"],
+        "required": [
+          "scene_id",
+          "duration_seconds",
+          "visual_intent",
+          "reconstruction_status",
+          "camera"
+        ],
         "properties": {
-          "scene_id": {"type": "string"},
-          "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
-          "narration": {"type": "string"},
-          "visual_intent": {"type": "string"},
+          "scene_id": {
+            "type": "string"
+          },
+          "duration_seconds": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "narration": {
+            "type": "string"
+          },
+          "visual_intent": {
+            "type": "string"
+          },
           "reconstruction_status": {
             "type": "string",
-            "enum": ["documentary_footage", "illustrative_reconstruction", "data_visualization", "abstract_visual"]
+            "enum": [
+              "documentary_footage",
+              "licensed_archival_footage",
+              "original_footage",
+              "illustrative_reconstruction",
+              "data_visualization",
+              "abstract_visual"
+            ],
+            "description": "documentary_footage is kept for compatibility; prefer licensed_archival_footage or original_footage so provenance and licensing are auditable."
           },
-          "source_ids": {"type": "array", "items": {"type": "string"}},
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "camera": {
             "type": "object",
             "properties": {
-              "shot_size": {"type": "string"},
-              "angle": {"type": "string"},
-              "movement": {"type": "string"},
-              "focal_length_mm": {"type": "number"}
+              "shot_size": {
+                "type": "string"
+              },
+              "angle": {
+                "type": "string"
+              },
+              "movement": {
+                "type": "string"
+              },
+              "lens_mm": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "focal_length_mm": {
+                "type": "number",
+                "description": "Deprecated alias of lens_mm"
+              }
+            },
+            "additionalProperties": false
+          },
+          "environment": {
+            "type": "string"
+          },
+          "assets": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
-          "environment": {"type": "string"},
-          "assets": {"type": "array", "items": {"type": "string"}},
-          "lighting": {"type": "string"},
-          "effects": {"type": "array", "items": {"type": "string"}},
-          "transition": {"type": "string"},
-          "sound_notes": {"type": "string"}
-        }
-      }
+          "lighting": {
+            "type": "string"
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "transition": {
+            "type": "string"
+          },
+          "sound_notes": {
+            "type": "string"
+          },
+          "on_screen_label": {
+            "type": "string",
+            "description": "Disclosure text shown on screen, e.g. 'Illustrative reconstruction'. Required by AUDIO/VISUAL style guides for reconstructions of real events."
+          },
+          "environment_preset": {
+            "type": "string",
+            "description": "Name of a preset in config/presets/ (e.g. deep_ocean)."
+          },
+          "camera_preset": {
+            "type": "string",
+            "description": "Name of a camera move in config/camera_presets.json."
+          },
+          "asset_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "IDs from assets/asset_register.json."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
     }
   }
 }
