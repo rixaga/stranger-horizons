@@ -1,0 +1,197 @@
+{
+  "description": "Reusable camera moves. Offsets are metres relative to the subject target; the camera always aims at the target via a Track To constraint. Durations are defaults; storyboard duration_seconds overrides them.",
+  "rules": [
+    "Ease in and out on every move (Bezier); never linear starts or stops.",
+    "No handheld shake. Optional drift amplitude stays below 2 cm.",
+    "Hold at least 1.5 s on the final framing so the viewer can read it."
+  ],
+  "moves": {
+    "static_hold": {
+      "label": "Static hold",
+      "duration_s": 6,
+      "lens_mm": 35,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0,
+            -12,
+            2
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -12,
+            2
+          ]
+        }
+      ],
+      "drift_cm": 1.0
+    },
+    "slow_push_in": {
+      "label": "Slow push-in",
+      "duration_s": 8,
+      "lens_mm": 35,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0,
+            -14,
+            2.5
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -10,
+            2.0
+          ]
+        }
+      ],
+      "hold_s": 1.5
+    },
+    "descent_reveal": {
+      "label": "Descent reveal",
+      "duration_s": 10,
+      "lens_mm": 24,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0,
+            -6,
+            18
+          ]
+        },
+        {
+          "t": 0.6,
+          "offset": [
+            0,
+            -9,
+            7
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -12,
+            3
+          ]
+        }
+      ],
+      "hold_s": 2.0
+    },
+    "aerial_reveal": {
+      "label": "Aerial reveal",
+      "duration_s": 10,
+      "lens_mm": 35,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            -30,
+            -60,
+            25
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -45,
+            18
+          ]
+        }
+      ],
+      "hold_s": 2.0
+    },
+    "rise_reveal": {
+      "label": "Rise reveal",
+      "duration_s": 8,
+      "lens_mm": 28,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0,
+            -8,
+            0.6
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -10,
+            6
+          ]
+        }
+      ],
+      "hold_s": 1.5
+    },
+    "lateral_track": {
+      "label": "Lateral track",
+      "duration_s": 8,
+      "lens_mm": 50,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            -6,
+            -14,
+            2
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            6,
+            -14,
+            2
+          ]
+        }
+      ]
+    },
+    "controlled_orbit": {
+      "label": "Controlled orbit",
+      "duration_s": 12,
+      "lens_mm": 50,
+      "orbit": {
+        "radius_m": 15,
+        "height_m": 4,
+        "start_deg": -110,
+        "end_deg": -70
+      }
+    },
+    "over_shoulder_reveal": {
+      "label": "Over-the-shoulder reveal",
+      "duration_s": 6,
+      "lens_mm": 40,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0.8,
+            -16,
+            1.7
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0.7,
+            -14.5,
+            1.7
+          ]
+        }
+      ],
+      "hold_s": 1.5,
+      "notes": "Requires a foreground observer object between camera and target; deep focus (dof off or f/8+)."
+    }
+  }
+}

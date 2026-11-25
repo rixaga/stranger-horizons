@@ -1,0 +1,16 @@
+{
+  "assets": [
+    {
+      "id": "AST-001",
+      "name": "<asset name>",
+      "kind": "model",
+      "source": "Poly Haven",
+      "url": "<asset page URL>",
+      "license": "CC0",
+      "attribution_required": false,
+      "ai_generated": false,
+      "acquired": "2026-01-01",
+      "local_path": "assets/models/<file>"
+    }
+  ]
+}

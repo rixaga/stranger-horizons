@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Claim Ledger",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "claims"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "type": "string"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "text",
+          "evidence_label",
+          "source_ids"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^C[0-9]{2,}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_label": {
+            "enum": [
+              "established_fact",
+              "strong_evidence",
+              "hypothesis",
+              "disputed",
+              "unverified_report",
+              "speculation"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "counter_evidence": {
+            "type": "string"
+          },
+          "alternative_explanations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "script_wording": {
+            "type": "string",
+            "description": "Exact narration wording approved for this claim"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "verified",
+              "qualified",
+              "removed"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "name": "deep_ocean",
+  "extends": "base",
+  "label": "Deep Ocean",
+  "accent": "signal_cyan",
+  "description": "Mid-to-deep water: rapid attenuation of red, near-black beyond ~30 m, motivated submersible lamps, slow marine snow.",
+  "editorial_rules": [
+    "Organisms must be generic and plausible for the stated depth, or match a cited species.",
+    "No undocumented creatures implied in silhouettes; scale cues come from terrain, equipment or documented fauna.",
+    "Light at depth is artificial or bioluminescent; sunlight shafts only for scenes shallower than ~200 m."
+  ],
+  "world": {
+    "color": [
+      0.0008,
+      0.003,
+      0.005
+    ],
+    "strength": 1.0
+  },
+  "volume": {
+    "kind": "water",
+    "bounds_m": [
+      80,
+      80,
+      40
+    ],
+    "center_m": [
+      0,
+      0,
+      10
+    ],
+    "scatter_color": [
+      0.1,
+      0.42,
+      0.48
+    ],
+    "density": 0.035,
+    "anisotropy": 0.75,
+    "absorption_color": [
+      0.12,
+      0.55,
+      0.62
+    ],
+    "absorption_density": 0.06,
+    "noise_scale": 0.15,
+    "noise_amount": 0.25,
+    "height_falloff": {
+      "enabled": false
+    }
+  },
+  "lights": [
+    {
+      "name": "SH_SubLamp_L",
+      "type": "SPOT",
+      "role": "motivated_source",
+      "color": [
+        0.92,
+        0.96,
+        1.0
+      ],
+      "energy": 2500,
+      "location": [
+        -0.6,
+        -0.2,
+        0.1
+      ],
+      "rotation_deg": [
+        0,
+        -6,
+        0
+      ],
+      "spot_size_deg": 40,
+      "spot_blend": 0.6,
+      "size_m": 0.15,
+      "volume_factor": 1.0,
+      "parent_to_camera": true
+    },
+    {
+      "name": "SH_SubLamp_R",
+      "type": "SPOT",
+      "role": "motivated_source",
+      "color": [
+        0.92,
+        0.96,
+        1.0
+      ],
+      "energy": 2500,
+      "location": [
+        0.6,
+        -0.2,
+        0.1
+      ],
+      "rotation_deg": [
+        0,
+        6,
+        0
+      ],
+      "spot_size_deg": 40,
+      "spot_blend": 0.6,
+      "size_m": 0.15,
+      "volume_factor": 1.0,
+      "parent_to_camera": true
+    },
+    {
+      "name": "SH_Downwelling",
+      "type": "AREA",
+      "role": "fill",
+      "color": [
+        0.25,
+        0.6,
+        0.75
+      ],
+      "energy": 300,
+      "location": [
+        0,
+        0,
+        28
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "size_m": 60,
+      "volume_factor": 0.6
+    }
+  ],
+  "particles": {
+    "kind": "marine_snow",
+    "count": 12000,
+    "size_m": 0.006,
+    "size_random": 0.7,
+    "bounds_m": [
+      30,
+      30,
+      14
+    ],
+    "center_m": [
+      0,
+      0,
+      4
+    ],
+    "drift_m_s": [
+      0.0,
+      0.0,
+      -0.02
+    ],
+    "brownian": 0.02,
+    "color": [
+      0.75,
+      0.82,
+      0.85
+    ],
+    "emission": 0.0
+  },
+  "color_management": {
+    "exposure": 0.3
+  },
+  "camera": {
+    "lens_mm": 24,
+    "dof": false,
+    "clip_end_m": 200
+  }
+}

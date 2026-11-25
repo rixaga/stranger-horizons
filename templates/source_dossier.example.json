@@ -1,0 +1,20 @@
+{
+  "episode_id": "EPXXX",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "<exact title of the document or dataset>",
+      "author_or_org": "<author or organisation>",
+      "published": "unknown",
+      "accessed": "2026-01-01",
+      "url_or_reference": "<URL, DOI or archive reference>",
+      "source_type": "primary",
+      "passage": "<page / section / timestamp>",
+      "claims_supported": [
+        "C01"
+      ],
+      "limitations": "<what this source cannot show>",
+      "reliability": "high"
+    }
+  ]
+}

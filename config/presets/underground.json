@@ -1,0 +1,131 @@
+{
+  "name": "underground",
+  "extends": "base",
+  "label": "Underground",
+  "accent": "ember_amber",
+  "description": "Caves, tunnels and bunkers: darkness by default, every light physically present (head-torch, work lamp, shaft from an opening), suspended dust.",
+  "editorial_rules": [
+    "Every visible light needs a source in frame or a clearly implied one.",
+    "Do not invent chambers or artefacts for real sites; use generic geology labelled as illustrative."
+  ],
+  "world": {
+    "color": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "strength": 0.0
+  },
+  "volume": {
+    "kind": "dust",
+    "bounds_m": [
+      40,
+      40,
+      12
+    ],
+    "center_m": [
+      0,
+      0,
+      4
+    ],
+    "scatter_color": [
+      0.75,
+      0.7,
+      0.62
+    ],
+    "density": 0.008,
+    "anisotropy": 0.55,
+    "noise_scale": 0.3,
+    "noise_amount": 0.4,
+    "height_falloff": {
+      "enabled": false
+    }
+  },
+  "lights": [
+    {
+      "name": "SH_WorkLamp",
+      "type": "SPOT",
+      "role": "motivated_source",
+      "color": [
+        1.0,
+        0.72,
+        0.42
+      ],
+      "energy": 2500,
+      "location": [
+        2,
+        -3,
+        2.2
+      ],
+      "rotation_deg": [
+        86,
+        0,
+        13
+      ],
+      "spot_size_deg": 60,
+      "spot_blend": 0.5,
+      "size_m": 0.2,
+      "volume_factor": 1.0
+    },
+    {
+      "name": "SH_BounceFill",
+      "type": "AREA",
+      "role": "fill",
+      "color": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "energy": 60,
+      "location": [
+        -3,
+        2,
+        3
+      ],
+      "rotation_deg": [
+        60,
+        0,
+        -140
+      ],
+      "size_m": 4,
+      "volume_factor": 0.2
+    }
+  ],
+  "particles": {
+    "kind": "dust",
+    "count": 2500,
+    "size_m": 0.0015,
+    "size_random": 0.8,
+    "bounds_m": [
+      12,
+      12,
+      5
+    ],
+    "center_m": [
+      0,
+      0,
+      2
+    ],
+    "drift_m_s": [
+      0.02,
+      0.0,
+      -0.005
+    ],
+    "brownian": 0.05,
+    "color": [
+      0.9,
+      0.85,
+      0.78
+    ],
+    "emission": 0.0
+  },
+  "color_management": {
+    "exposure": 0.4
+  },
+  "camera": {
+    "lens_mm": 28,
+    "dof": true,
+    "fstop": 2.8,
+    "clip_end_m": 200
+  }
+}

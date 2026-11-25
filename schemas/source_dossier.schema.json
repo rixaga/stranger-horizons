@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Source Dossier",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "author_or_org",
+          "url_or_reference",
+          "source_type",
+          "accessed",
+          "claims_supported",
+          "reliability"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^SRC-[0-9]{3,}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "author_or_org": {
+            "type": "string",
+            "minLength": 1
+          },
+          "published": {
+            "type": "string",
+            "description": "ISO date or year; 'unknown' if not stated"
+          },
+          "accessed": {
+            "type": "string",
+            "format": "date"
+          },
+          "url_or_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_type": {
+            "enum": [
+              "primary",
+              "peer_reviewed",
+              "institutional",
+              "specialist_press",
+              "news",
+              "secondary_summary",
+              "social_or_forum"
+            ]
+          },
+          "passage": {
+            "type": "string",
+            "description": "Page, section, quote location or timestamp"
+          },
+          "claims_supported": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "string"
+          },
+          "reliability": {
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "lead_only"
+            ]
+          },
+          "license_notes": {
+            "type": "string",
+            "description": "Usage rights if any media from this source appears on screen"
+          }
+        }
+      }
+    }
+  }
+}

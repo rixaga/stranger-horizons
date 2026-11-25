@@ -1,0 +1,76 @@
+{
+  "name": "uap_visualization",
+  "extends": "base",
+  "label": "UFO / UAP Visualization",
+  "accent": "signal_cyan",
+  "description": "Evidence-first visualisation of reported observations: plausible night or daylight sky, the reported object shown as an abstract, labelled marker unless the source describes it in detail. Night scenes use a documentary day-for-night exposure so the sky, horizon and object position stay readable.",
+  "editorial_rules": [
+    "Default reconstruction_status is data_visualization; use illustrative_reconstruction only for witness-described shapes and label 'Artist's impression of the reported object'.",
+    "Never render a detailed craft that no source describes.",
+    "Show source data (sensor overlays, timestamps, flight paths) separated from illustration.",
+    "Ordinary explanations (aircraft, balloons, Starlink, Venus, sensor artefacts) get equal visual treatment."
+  ],
+  "world": {
+    "color": [
+      0.012,
+      0.018,
+      0.04
+    ],
+    "strength": 1.0
+  },
+  "volume": {
+    "kind": "haze",
+    "bounds_m": [
+      2000,
+      2000,
+      300
+    ],
+    "center_m": [
+      0,
+      0,
+      150
+    ],
+    "scatter_color": [
+      0.6,
+      0.7,
+      0.85
+    ],
+    "density": 0.0004,
+    "anisotropy": 0.2,
+    "height_falloff": {
+      "enabled": true,
+      "z_full": 0.0,
+      "z_zero": 300.0
+    }
+  },
+  "lights": [
+    {
+      "name": "SH_Moon",
+      "type": "SUN",
+      "role": "key",
+      "color": [
+        0.7,
+        0.78,
+        0.95
+      ],
+      "energy": 0.6,
+      "rotation_deg": [
+        55,
+        0,
+        140
+      ],
+      "angle_deg": 0.52
+    }
+  ],
+  "particles": {
+    "kind": "none"
+  },
+  "color_management": {
+    "exposure": 1.0
+  },
+  "camera": {
+    "lens_mm": 85,
+    "dof": false,
+    "clip_end_m": 20000
+  }
+}

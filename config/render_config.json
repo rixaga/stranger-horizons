@@ -4,22 +4,63 @@
     "resolution_x": 1280,
     "resolution_y": 720,
     "resolution_percentage": 100,
-    "engine": "BLENDER_EEVEE_NEXT",
+    "engine": "EEVEE",
     "samples": 16,
-    "file_format": "PNG"
+    "file_format": "PNG",
+    "color_depth": "8",
+    "color_management": "AgX"
   },
   "delivery": {
     "resolution_x": 1920,
     "resolution_y": 1080,
     "resolution_percentage": 100,
-    "preferred_engine": "BLENDER_CYCLES",
+    "engine": "CYCLES",
+    "samples": 256,
+    "denoise": true,
+    "device": "GPU",
     "file_format": "PNG",
+    "color_depth": "16",
     "color_management": "AgX"
   },
-  "master": {"resolution_x": 3840, "resolution_y": 2160, "fps": 30},
+  "master": {
+    "resolution_x": 3840,
+    "resolution_y": 2160,
+    "resolution_percentage": 100,
+    "engine": "CYCLES",
+    "samples": 256,
+    "denoise": true,
+    "device": "GPU",
+    "file_format": "PNG",
+    "color_depth": "16",
+    "color_management": "AgX"
+  },
+  "shorts": {
+    "resolution_x": 1080,
+    "resolution_y": 1920,
+    "resolution_percentage": 100,
+    "engine": "EEVEE",
+    "samples": 64,
+    "file_format": "PNG",
+    "color_depth": "16",
+    "color_management": "AgX"
+  },
+  "encode": {
+    "codec": "libx264",
+    "pix_fmt": "yuv420p",
+    "crf_delivery": 18,
+    "crf_preview": 23,
+    "color_tags": "bt709"
+  },
+  "audio": {
+    "sample_rate_hz": 48000,
+    "integrated_lufs_target": -14.0,
+    "integrated_lufs_tolerance": 1.0,
+    "true_peak_max_dbtp": -1.0
+  },
   "notes": [
-    "Confirm installed Blender version and render devices before selecting engine settings.",
-    "Use image sequences as render masters and encode MP4 separately.",
-    "Engine identifiers and settings may vary by Blender version."
+    "Engine names are logical (EEVEE, CYCLES); blender/scripts/sh_render.py resolves them to the identifier the installed Blender offers.",
+    "Sample counts are starting points; tune per shot and record the final value in render_log.json.",
+    "Use image sequences as render masters and encode MP4 separately with pipeline/assemble_video.py.",
+    "Run pipeline/check_environment.py and blender/scripts/sh_env_check.py before rendering."
   ]
 }

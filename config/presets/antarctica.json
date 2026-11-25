@@ -1,0 +1,101 @@
+{
+  "name": "antarctica",
+  "extends": "base",
+  "label": "Antarctica",
+  "accent": "ember_amber",
+  "description": "Vast ice and snow under a low polar sun, long shadows, wind-driven snow near the ground, cold neutral-blue palette.",
+  "editorial_rules": [
+    "Station, vehicle and expedition details must match cited records; generic otherwise and labelled.",
+    "No invented structures under the ice presented as discoveries."
+  ],
+  "world": {
+    "color": [
+      0.35,
+      0.45,
+      0.62
+    ],
+    "strength": 1.0
+  },
+  "volume": {
+    "kind": "haze",
+    "bounds_m": [
+      600,
+      600,
+      60
+    ],
+    "center_m": [
+      0,
+      0,
+      30
+    ],
+    "scatter_color": [
+      0.85,
+      0.9,
+      1.0
+    ],
+    "density": 0.0025,
+    "anisotropy": 0.3,
+    "height_falloff": {
+      "enabled": true,
+      "z_full": 0.0,
+      "z_zero": 25.0
+    },
+    "noise_scale": 0.05,
+    "noise_amount": 0.35
+  },
+  "lights": [
+    {
+      "name": "SH_PolarSun",
+      "type": "SUN",
+      "role": "key",
+      "color": [
+        1.0,
+        0.9,
+        0.78
+      ],
+      "energy": 4.0,
+      "rotation_deg": [
+        82,
+        0,
+        35
+      ],
+      "angle_deg": 0.55
+    }
+  ],
+  "particles": {
+    "kind": "snow",
+    "count": 12000,
+    "size_m": 0.008,
+    "size_random": 0.6,
+    "bounds_m": [
+      40,
+      40,
+      10
+    ],
+    "center_m": [
+      0,
+      0,
+      4
+    ],
+    "drift_m_s": [
+      6.0,
+      1.0,
+      -0.4
+    ],
+    "brownian": 0.3,
+    "color": [
+      0.95,
+      0.97,
+      1.0
+    ],
+    "emission": 0.0
+  },
+  "color_management": {
+    "exposure": -0.4
+  },
+  "camera": {
+    "lens_mm": 50,
+    "dof": false,
+    "clip_end_m": 5000
+  }
+}

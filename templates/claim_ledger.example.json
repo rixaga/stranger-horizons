@@ -1,0 +1,19 @@
+{
+  "episode_id": "EPXXX",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "text": "<one factual statement, as narrow as possible>",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "counter_evidence": "<contradicting evidence, or 'none found' with search notes>",
+      "alternative_explanations": [
+        "<ordinary explanation>"
+      ],
+      "script_wording": "<approved narration wording>",
+      "status": "draft"
+    }
+  ]
+}
