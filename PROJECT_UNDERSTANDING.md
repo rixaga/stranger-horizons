@@ -273,3 +273,21 @@ What changed since this report (all on branch `claude/foundation-stages-1-3`):
 - **Added:** `.gitignore`, `requirements.txt`, `templates/`, source dossier, claim ledger and asset register schemas, `check_environment.py`, `measure_loudness.py`, Blender scripts under `blender/scripts/`, and tests (`python3 -m pytest`).
 - **Testing:** Blender 5.3.0 was installed in the cloud workspace as a Python module (`bpy`, CPU only), and the Blender integration tests and look-dev renders ran there. The owner's Mac still needs `pipeline/check_environment.py` and `sh_env_check.py` before Stage 5.
 - **Stage 2 completed** (frame-sampled; audio not accessible). **Stage 3 approved by the owner on 2026-11-26** (as a working baseline, open to revision): see `docs/VISUAL_STYLE_GUIDE.md` and the four companion guides.
+
+## Render machine — measured 2026-11-26
+
+Measured on the owner's Mac by running `blender/scripts/sh_run_checks.py` inside Blender's Python console. Raw reports are in `reports/environment/`, which is git-ignored.
+
+| Item | Result |
+|---|---|
+| Machine | Mac16,12, Apple M4, 10 CPU cores, 16 GB RAM |
+| OS | macOS 27.2.1 |
+| Blender | **5.3.0** (`/Applications/Blender.app`), bundled Python 3.13.13 |
+| Render engines | `BLENDER_EEVEE`, `CYCLES` |
+| Cycles GPU | **Metal: Apple M4 GPU, 10 cores** |
+| Free disk | 254.9 GB |
+| Xcode command-line tools | Installed; `/usr/bin/python3` available |
+| **FFmpeg** | **Not found** (not on PATH, `/opt/homebrew/bin` or `/usr/local/bin`). Needed by `assemble_video.py` and `measure_loudness.py` |
+| jsonschema | Not in Blender's Python; not checked for the system Python |
+
+Implications for Stage 5: EEVEE preview at 1280×720 is the right default. Cycles with volumes runs on Metal but will be slow and warm on a fanless machine, so keep it for final shots with modest samples. FFmpeg must be installed before any video can be encoded.
