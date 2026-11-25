@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stranger Horizons Storyboard",
+  "type": "object",
+  "required": ["episode_id", "title", "fps", "scenes"],
+  "properties": {
+    "episode_id": {"type": "string"},
+    "title": {"type": "string"},
+    "fps": {"type": "integer", "minimum": 1},
+    "scenes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["scene_id", "duration_seconds", "visual_intent", "reconstruction_status", "camera"],
+        "properties": {
+          "scene_id": {"type": "string"},
+          "duration_seconds": {"type": "number", "exclusiveMinimum": 0},
+          "narration": {"type": "string"},
+          "visual_intent": {"type": "string"},
+          "reconstruction_status": {
+            "type": "string",
+            "enum": ["documentary_footage", "illustrative_reconstruction", "data_visualization", "abstract_visual"]
+          },
+          "source_ids": {"type": "array", "items": {"type": "string"}},
+          "camera": {
+            "type": "object",
+            "properties": {
+              "shot_size": {"type": "string"},
+              "angle": {"type": "string"},
+              "movement": {"type": "string"},
+              "focal_length_mm": {"type": "number"}
+            }
+          },
+          "environment": {"type": "string"},
+          "assets": {"type": "array", "items": {"type": "string"}},
+          "lighting": {"type": "string"},
+          "effects": {"type": "array", "items": {"type": "string"}},
+          "transition": {"type": "string"},
+          "sound_notes": {"type": "string"}
+        }
+      }
+    }
+  }
+}
