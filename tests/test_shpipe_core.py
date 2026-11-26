@@ -82,3 +82,23 @@ def test_missing_ffmpeg_raises_clear_error(monkeypatch):
     monkeypatch.setattr(ffmpeg, "EXTRA_DIRS", ())
     with pytest.raises(ToolMissing, match="brew install ffmpeg"):
         ffmpeg.find("ffmpeg")
+
+
+def test_dossier_prefers_sources_json_when_present(ep: Path):
+    from shpipe.paths import Episode
+    e = Episode(ep)
+    assert e.dossier.name == "source_dossier.json"            # legacy name still works
+    (ep / "research" / "sources.json").write_text((ep / "research" / "source_dossier.json").read_text())
+    assert e.dossier.name == "sources.json"
+
+
+def test_claim_ledger_markdown_lists_every_claim_with_sources(ep: Path):
+    from shpipe import research
+    from shpipe.paths import Episode
+    md = research.ledger_markdown(Episode(ep))
+    ledger = json.loads((ep / "research" / "claim_ledger.json").read_text())
+    for c in ledger["claims"]:
+        assert c["claim_id"] in md
+        for sid in c["source_ids"]:
+            assert sid in md
+    assert md.startswith("# Claim Ledger")

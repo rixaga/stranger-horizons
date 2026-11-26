@@ -23,7 +23,12 @@ class Episode:
 
     # files
     episode_json = property(lambda self: self.root / "episode.json")
-    dossier = property(lambda self: self.root / "research" / "source_dossier.json")
+    @property
+    def dossier(self) -> Path:
+        """research/sources.json if present (Stage 7 name), else the original source_dossier.json."""
+        preferred = self.root / "research" / "sources.json"
+        return preferred if preferred.is_file() else self.root / "research" / "source_dossier.json"
+
     ledger = property(lambda self: self.root / "research" / "claim_ledger.json")
     script = property(lambda self: self.root / "script" / "script.md")
     storyboard = property(lambda self: self.root / "storyboard" / "storyboard.json")

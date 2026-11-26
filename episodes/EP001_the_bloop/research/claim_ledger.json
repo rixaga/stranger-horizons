@@ -1,0 +1,508 @@
+{
+  "episode_id": "EP001",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "text": "In 1997 NOAA hydrophones in the Pacific recorded an unusual underwater sound that became known as the 'Bloop'.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002",
+        "SRC-004"
+      ],
+      "script_wording": "In 1997, underwater microphones operated by the U.S. National Oceanic and Atmospheric Administration recorded a sound that would become known as the Bloop.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C02",
+      "text": "The recording was made by an autonomous hydrophone array that NOAA had kept in the eastern equatorial Pacific since May 1996 to monitor seafloor earthquakes and volcanic activity.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-005",
+        "SRC-004"
+      ],
+      "script_wording": "The microphones were not listening for monsters. They were there to hear earthquakes and eruptions on the seafloor.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C03",
+      "text": "The array was designed by NOAA's Pacific Marine Environmental Laboratory (PMEL) to record low-frequency sound in the SOFAR channel, producing results comparable to the U.S. Navy's SOSUS network, which NOAA scientists had also used for research.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-005",
+        "SRC-001"
+      ],
+      "counter_evidence": "Popular accounts often say the Bloop was heard by Cold War submarine-hunting SOSUS hydrophones. NOAA's own page and Fox et al. (2001) identify the Equatorial Pacific autonomous array, a separate civilian system modelled on SOSUS results.",
+      "script_wording": "NOAA's moored hydrophones hung in the deep sound channel, the layer the U.S. Navy had once used to track submarines.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C04",
+      "text": "NOAA says the Bloop was recorded repeatedly during the summer of 1997, not once.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001",
+        "SRC-004"
+      ],
+      "counter_evidence": "'Summer' on a U.S. agency page means the northern summer, which is winter in Antarctica.",
+      "script_wording": "And it wasn't a single event. NOAA recorded it repeatedly through the summer of 1997.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C05",
+      "text": "The Bloop rose rapidly in frequency over about one minute.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "script_wording": "Its pitch climbed steeply, over about a minute.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C06",
+      "text": "The famous audio clip of the Bloop is the original recording sped up 16 times.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "script_wording": "What you just heard is not what the hydrophones heard. It has been sped up sixteen times.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C07",
+      "text": "The Bloop was loud enough to be heard on multiple sensors at a range of over 5,000 km.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "script_wording": "It was heard on several hydrophones more than five thousand kilometres away.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C08",
+      "text": "NOAA's early description gave a general location near 50°S, 100°W, far off the west coast of southern South America.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "counter_evidence": "This was a 'general location' from an early analysis; NOAA's later page (C09) gives a different, wider region.",
+      "script_wording": "NOAA's first estimate placed it in one of the emptiest stretches of ocean on Earth, roughly 50 degrees south and 100 degrees west.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C09",
+      "text": "NOAA later wrote that, based on the arrival azimuth, the Bloop's source was most likely between the Bransfield Strait and the Ross Sea, or possibly at Cape Adare, all on the Antarctic margin.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "counter_evidence": "An azimuth gives a direction, not a fixed point; the possible region spans thousands of kilometres of coastline (our calculation: Bransfield Strait is ~2,830 km and Cape Adare ~4,830 km from 50°S 100°W).",
+      "script_wording": "Later, NOAA traced the direction the sound had arrived from. The line pointed past that empty ocean, to the edge of Antarctica.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C10",
+      "text": "NOAA lists theories that circulated about the Bloop: secret military exercises, ship engines, fishing-boat winches, giant squid, whales and an unknown sea creature.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "script_wording": "The guesses ranged from secret military tests and ship engines to giant squid, whales, and something no one had ever seen.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C11",
+      "text": "NOAA states that about 95 percent of the ocean is unexplored.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "counter_evidence": "The figure depends on how 'explored' is defined (e.g., mapped at high resolution vs. directly observed); attribute it to NOAA rather than state it as a measurement.",
+      "script_wording": "By NOAA's own estimate, around ninety-five percent of the ocean remains unexplored.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C12",
+      "text": "Low-frequency sound can travel thousands of kilometres in the ocean's SOFAR (deep sound) channel, which is why hydrophones placed near its axis can hear distant events.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-016",
+        "SRC-017",
+        "SRC-005"
+      ],
+      "script_wording": "Deep in the ocean there is a layer where sound slows down and gets trapped. Inside it, a low rumble can cross an ocean basin.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C13",
+      "text": "As early as 2001, NOAA oceanographer Christopher Fox said publicly that the team suspected ice off the coast of Antarctica.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-008"
+      ],
+      "counter_evidence": "Known only via Popular Science's quotation of a 2001 CNN interview; the CNN original could not be opened in this session.",
+      "script_wording": "Even in 2001, the scientist leading the work said his team suspected Antarctic ice.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C14",
+      "text": "In August 2001 Fox named the Bloop as an example of a sound whose origin had still not been determined.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "counter_evidence": "In the same release Fox says the sound had been reported for decades by Navy sonar operators; no other source supports that, so it is not used.",
+      "script_wording": "But suspicion is not proof. Officially, its origin was still unknown.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C15",
+      "text": "In 2002, New Scientist reported Fox's 'hunch' that the Bloop was the most likely of the unidentified sounds to be biological, because its rapid frequency variation resembled known animal calls.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-007"
+      ],
+      "counter_evidence": "Fox's views were reported differently in 2001 (ice) and 2002 (animal-like); the article read here is an unofficial reproduction.",
+      "alternative_explanations": [
+        "Fox was describing the signal's shape, not claiming a creature existed"
+      ],
+      "script_wording": "In 2002 he admitted something else: of all the unexplained sounds, this was the one that most resembled an animal.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C16",
+      "text": "PMEL later deployed hydrophones near Antarctica: autonomous hydrophones in the Bransfield Strait from December 2005, and arrays in the Bransfield Strait and Scotia Sea until 2009.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-012",
+        "SRC-011",
+        "SRC-004"
+      ],
+      "script_wording": "So NOAA took its microphones south. In December 2005, hydrophones went into the water off the Antarctic Peninsula.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C17",
+      "text": "NOAA PMEL concluded that the broad-spectrum sounds recorded in summer 1997 are consistent with icequakes generated by large icebergs as they crack and fracture.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-002",
+        "SRC-003"
+      ],
+      "script_wording": "NOAA's conclusion: the sound is consistent with icequakes, large icebergs cracking and fracturing.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C18",
+      "text": "NOAA hydrophones in the Scotia Sea recorded numerous icequakes with spectrograms very similar to the Bloop, and used them to track iceberg A53a (about 60 km long) as it disintegrated near South Georgia in early 2008.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-002",
+        "SRC-010"
+      ],
+      "script_wording": "In 2008 the hydrophones followed an iceberg called A53a, about sixty kilometres long, as it broke apart near South Georgia. Its cracks sounded like the Bloop.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C19",
+      "text": "Icequakes can have sufficient amplitude to be detected on multiple sensors more than 5,000 km away.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-002",
+        "SRC-003"
+      ],
+      "script_wording": "And icequakes can be heard more than five thousand kilometres away.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C20",
+      "text": "The most likely cause of the Bloop is an icequake from a large Antarctic iceberg.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-002",
+        "SRC-009",
+        "SRC-004"
+      ],
+      "counter_evidence": "The conclusion rests on (1) spectral similarity to later icequake recordings and (2) the arrival direction. No one observed the 1997 event, the specific iceberg was never identified, and we found no peer-reviewed paper analysing the 1997 signal itself. Icequake activity near the Antarctic Peninsula peaks in austral summer (SRC-011), while the Bloop was recorded in the northern summer (austral winter); this does not rule ice out, but it is worth stating honestly.",
+      "alternative_explanations": [
+        "Another cryogenic process, such as an iceberg grounding or rubbing (NOAA attributes 'Slow Down' and 'Julia' to groundings)",
+        "An unknown biological source (no supporting evidence; see C42)"
+      ],
+      "script_wording": "That makes an Antarctic icequake the best-supported explanation. Not proven by a witness, but matched by the physics, the direction and the sound itself.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C21",
+      "text": "In 2012 NOAA seismologist Robert Dziak said the Bloop's frequency and duration characteristics are consistent, and essentially identical, to icequake signals recorded off Antarctica.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-009"
+      ],
+      "counter_evidence": "Quoted via reproductions of the WIRED UK article; check against the original before on-screen use.",
+      "script_wording": "In 2012, NOAA's Robert Dziak put it plainly: the Bloop matched the icequakes his team had recorded off Antarctica.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C22",
+      "text": "Dziak said that each year there are tens of thousands of icequakes from cracking and melting sea ice and from ice calving off glaciers.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-009"
+      ],
+      "script_wording": "Every year, he said, there are tens of thousands of them.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C23",
+      "text": "The year the Bloop was 'solved' is given differently: NOAA's National Ocean Service says 2005; PMEL's evidence page describes icequakes tracked in early 2008; the explanation became widely public in 2012.",
+      "evidence_label": "disputed",
+      "source_ids": [
+        "SRC-004",
+        "SRC-002",
+        "SRC-009",
+        "SRC-026"
+      ],
+      "counter_evidence": "No dated NOAA publication on the 1997 signal was found, so the date cannot be fixed precisely.",
+      "script_wording": "When was it solved? Even NOAA's own pages disagree: 2005, 2008, or 2012, depending on where you look.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C24",
+      "text": "NOAA's public fact page describes the Bloop as an iceberg 'breaking away from an Antarctic glacier' (calving), while PMEL's technical page describes large icebergs cracking and fracturing, without specifying calving.",
+      "evidence_label": "disputed",
+      "source_ids": [
+        "SRC-004",
+        "SRC-002"
+      ],
+      "script_wording": "Avoid claiming calving specifically; say 'ice cracking and breaking apart'.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C25",
+      "text": "The hydrophones that detected the Bloop were thousands of kilometres apart: NOAA's fact page says more than 3,219 km (2,000 miles); New Scientist reported sensors up to 4,800 km apart.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-004",
+        "SRC-007",
+        "SRC-028"
+      ],
+      "counter_evidence": "Figures differ because they measure different things (sensor spacing vs. detection range). Use 'thousands of kilometres apart'.",
+      "script_wording": "Hydrophones thousands of kilometres apart all picked it up.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C26",
+      "text": "The Bloop was 'several times louder than the loudest recorded animal, the blue whale'.",
+      "evidence_label": "unverified_report",
+      "source_ids": [
+        "SRC-031",
+        "SRC-007",
+        "SRC-015"
+      ],
+      "counter_evidence": "The wording is quoted by 2012 articles from an older NOAA page that we could not find; current NOAA pages do not say it. We found no published source level for the Bloop. The comparison is an inference from detection range. For reference, blue whale calls measure about 189 dB re 1 µPa at 1 m (SRC-015).",
+      "script_wording": "It was often said to be louder than any animal. That came from how far it travelled, not from a measurement of the sound itself.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C27",
+      "text": "In 2002 news outlets presented the Bloop as possibly a giant sea creature, such as a giant squid.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-008",
+        "SRC-028"
+      ],
+      "script_wording": "By 2002, headlines were asking whether a giant creature was hiding in the deep.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C28",
+      "text": "While oceanographers said only that the source was unknown, much of the press presented the Bloop as a possible sea monster.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-025",
+        "SRC-008"
+      ],
+      "script_wording": "The scientists said 'unknown'. The internet heard 'monster'.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C29",
+      "text": "Many people linked the Bloop to Cthulhu from H.P. Lovecraft's fiction, and cryptozoologist Loren Coleman wrote in 2003 that it most likely came from a marine beast.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-026",
+        "SRC-008"
+      ],
+      "script_wording": "Some connected it to Cthulhu, the sleeping god of H.P. Lovecraft's fiction.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C30",
+      "text": "In 2010 NASA's Astronomy Picture of the Day said no further Bloops had been heard since 1997; in 2012 Dziak said Bloop-like icequake signals are common.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-032",
+        "SRC-009"
+      ],
+      "counter_evidence": "Both can be true: the specific 1997 event was not repeated as a recognised 'Bloop', while signals of the same type are frequent.",
+      "script_wording": "For years people said it was never heard again. In a sense that's true. But sounds just like it are heard every year.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C31",
+      "text": "Popular retellings often say the Bloop was recorded only once, lasted about fifteen seconds, or was heard by every sensor; NOAA's description says it was recorded repeatedly, rose over about one minute, and was heard on multiple sensors.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001",
+        "SRC-004",
+        "SRC-027",
+        "SRC-029"
+      ],
+      "script_wording": "Online, the story grew: heard only once, lasting fifteen seconds, picked up by every microphone. None of that matches NOAA's record.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C32",
+      "text": "Other mystery sounds from the same era were later attributed by NOAA to icebergs running aground near Antarctica: 'Slow Down' (19 May 1997) and 'Julia' (1 March 1999).",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-018",
+        "SRC-019",
+        "SRC-003"
+      ],
+      "counter_evidence": "NOAA's earlier Ocean Explorer page located 'Slow Down' near 15°S 115°W and called its origin unknown; the later PMEL page places it near 62°S 60°W.",
+      "script_wording": "The Bloop had company. Sounds nicknamed Slow Down and Julia were also traced to icebergs scraping the seafloor.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C33",
+      "text": "Icequakes from fracturing icebergs are a prominent part of the ocean soundscape near the Antarctic Peninsula, with activity peaking in the austral summer.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-011",
+        "SRC-030"
+      ],
+      "script_wording": "Around Antarctica, cracking ice is one of the loudest natural sounds in the sea.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C34",
+      "text": "Sounds from large icebergs have been detected independently at very long ranges, e.g. Ross Sea icebergs heard by seismic stations in French Polynesia (2000) and icebergs B15a and C19a heard about 10,000 km away (2008-2009).",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-013",
+        "SRC-014",
+        "SRC-010"
+      ],
+      "script_wording": "Other scientists, on other instruments, have heard Antarctic icebergs from as far as French Polynesia, and even across the equator.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C35",
+      "text": "Dziak's team went to the Antarctic Peninsula to study underwater volcanoes and earthquakes, and had recorded 5,000 to 6,000 icequakes by 2013.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-030",
+        "SRC-011"
+      ],
+      "script_wording": "Once again they had come to listen for volcanoes, and heard ice, thousands of times.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C36",
+      "text": "At distant hydrophones, sounds from disintegrating icebergs can dominate frequencies below 100 Hz, the range used by baleen whales.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-014"
+      ],
+      "script_wording": "At times, breaking ice drowns out the low frequencies that great whales use to call to each other.",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C37",
+      "text": "Retellings disagree on how long the mystery lasted; even a 2017 Motherboard headline appears as both 'nearly 10 years' and 'nearly 20 years'.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-026",
+        "SRC-004"
+      ],
+      "script_wording": "(Background only; not needed in narration.)",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C38",
+      "text": "In H.P. Lovecraft's 'The Call of Cthulhu', first published in Weird Tales in February 1928, the sunken city of R'lyeh is placed at 47°9′S, 126°43′W.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-034",
+        "SRC-020"
+      ],
+      "counter_evidence": "The story also gives 49°51'S 128°34'W as where the ships Emma and Alert met; encyclopedias attribute those numbers to August Derleth's later placement of R'lyeh. Use only 47°9'S 126°43'W for R'lyeh.",
+      "script_wording": "In a horror story published in 1928, Lovecraft placed his sunken city at forty-seven degrees south, one hundred twenty-six degrees west.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C39",
+      "text": "The Bloop's early 'general location' (50°S 100°W) is about 1,980 km from Lovecraft's R'lyeh coordinates, while R'lyeh is about 313 km from Point Nemo, the oceanic pole of inaccessibility.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-001",
+        "SRC-034",
+        "SRC-020",
+        "SRC-021"
+      ],
+      "counter_evidence": "Distances are our own great-circle calculations (research.json → computed_distances) from the published coordinates. The later NOAA location (C09) is even farther from R'lyeh.",
+      "script_wording": "The Bloop's first estimated position was nearly two thousand kilometres from Lovecraft's fictional coordinates. Close on a world map. Not close in the ocean.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C40",
+      "text": "Animal Planet's 'Mermaids: The Body Found' (aired 27 May 2012) was fiction presented as documentary, and its publicity named NOAA's 1997 Bloop as one of the real events it used as a springboard.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-023",
+        "SRC-024"
+      ],
+      "script_wording": "In 2012 a television film presented as a documentary used the Bloop as 'evidence' for mermaids. It was fiction.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C41",
+      "text": "After that broadcast, NOAA publicly stated that no evidence of aquatic humanoids has ever been found.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-022"
+      ],
+      "script_wording": "NOAA had to issue a statement: no evidence of aquatic humanoids has ever been found.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C42",
+      "text": "The Bloop was made by an unknown giant animal.",
+      "evidence_label": "speculation",
+      "source_ids": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "counter_evidence": "No known animal is large or loud enough; no supporting observation exists; the signal matches recorded icequakes (C17-C21).",
+      "alternative_explanations": [
+        "Antarctic icequake (C20)"
+      ],
+      "script_wording": "There is no evidence for a giant creature. The idea survives because the sped-up recording sounds alive.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C43",
+      "text": "The Bloop was a secret military or submarine sound.",
+      "evidence_label": "speculation",
+      "source_ids": [
+        "SRC-004",
+        "SRC-007"
+      ],
+      "counter_evidence": "Fox told New Scientist he did not believe it was man-made; no evidence supports a military source.",
+      "script_wording": "There is no evidence it was military.",
+      "status": "verified"
+    }
+  ]
+}
