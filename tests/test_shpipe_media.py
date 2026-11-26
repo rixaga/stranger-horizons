@@ -15,7 +15,7 @@ def _frames(d: Path, n: int, color: str):
 
 
 def _probe(p: Path) -> dict:
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,color_space",
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,color_space,color_primaries,color_transfer",
                           "-of", "json", str(p)], capture_output=True, text=True, check=True)
     return json.loads(out.stdout)
 
@@ -32,7 +32,8 @@ def test_clips_concat_and_mux(ep):
     joined = edit.concat(clips, e.root / "edit" / "joined.mp4")
     info = _probe(joined)
     assert abs(float(info["format"]["duration"]) - 6.0) < 0.1
-    assert info["streams"][0]["color_space"] == "bt709"
+    v = info["streams"][0]
+    assert (v.get("color_space"), v.get("color_primaries"), v.get("color_transfer")) == ("bt709",) * 3
     wav = e.root / "audio" / "mix.wav"
     subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "lavfi", "-i", "sine=frequency=220:duration=6", str(wav)], check=True)
     final = edit.mux(joined, wav, e.root / "final" / "EP900.mp4")
