@@ -1,5 +1,5 @@
 {
-  "episode_id": "EP001",
+  "episode_id": "EP000",
   "title": "Ocean Prototype",
   "fps": 30,
   "scenes": [
@@ -32,7 +32,7 @@
       "asset_ids": [],
       "sound_notes": "Low water rumble, distant creaks, no music (prototype is visual only)",
       "blender": {
-        "template": "episodes/EP001_ocean_prototype/blender/EP001_set.blend",
+        "template": "episodes/EP000_ocean_prototype/blender/EP001_set.blend",
         "target_m": [
           4,
           0,

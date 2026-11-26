@@ -1,7 +1,7 @@
 """Build one shot .blend from one storyboard scene. Safe to rerun.
 
     blender --background --factory-startup --python blender/scripts/sh_build_shot.py -- \
-        --episode episodes/EP001_ocean_prototype --scene S01 --mode preview
+        --episode episodes/EP000_ocean_prototype --scene S01 --mode preview
 
 Sets frame range and fps from the storyboard, applies the render profile, the
 environment preset and the camera move, records metadata on the scene, sets the

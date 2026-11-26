@@ -2,7 +2,7 @@
 
 The GUI stays responsive; progress goes to logs/run_ep001.log and renders/preview/progress.json.
 
-    import runpy; runpy.run_path('<repo>/episodes/EP001_ocean_prototype/scripts/launch_ep001.py')
+    import runpy; runpy.run_path('<repo>/episodes/EP000_ocean_prototype/scripts/launch_ep001.py')
 
 Extra arguments for run_ep001.py can be put in scripts/launch_args.json as a list, e.g.
 ["--resolution", "720"]. Without that file the full pipeline runs with --resolution auto.

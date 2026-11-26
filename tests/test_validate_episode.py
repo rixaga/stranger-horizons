@@ -69,5 +69,5 @@ def test_storyboard_source_ids_must_exist_in_dossier(tmp_path: Path):
 
 
 def test_ep001_prototype_folder_passes():
-    result = run(SCRIPT, str(REPO / "episodes" / "EP001_ocean_prototype"), "--profile", "prototype")
+    result = run(SCRIPT, str(REPO / "episodes" / "EP000_ocean_prototype"), "--profile", "prototype")
     assert result.returncode == 0, result.stdout

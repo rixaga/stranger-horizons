@@ -2,7 +2,7 @@
 
 Runs inside Blender in background mode. Rerunnable; each run overwrites its outputs.
 
-    blender --background --factory-startup --python episodes/EP001_ocean_prototype/scripts/run_ep001.py -- [options]
+    blender --background --factory-startup --python episodes/EP000_ocean_prototype/scripts/run_ep001.py -- [options]
 
 Options:
     --stages        comma list of: build,test,render,encode   (default: all)

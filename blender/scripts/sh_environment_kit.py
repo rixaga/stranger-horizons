@@ -5,8 +5,8 @@ code builds a seabed, a cave floor or a desert plateau with different numbers.
 Safe to rerun: the collection is cleared and rebuilt. No third-party assets.
 
     blender --background --factory-startup --python blender/scripts/sh_environment_kit.py -- \
-        --config episodes/EP001_ocean_prototype/scripts/ep001_set.json \
-        --out episodes/EP001_ocean_prototype/blender/EP001_set.blend
+        --config episodes/EP000_ocean_prototype/scripts/ep001_set.json \
+        --out episodes/EP000_ocean_prototype/blender/EP001_set.blend
 
 Config sections (all optional except terrain):
     terrain     size_m, center_m, resolution, layers[{texture, size_m, strength}], material

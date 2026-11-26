@@ -45,7 +45,7 @@
 │   └── audio/ environments/ materials/ models/   (contents git-ignored)
 ├── episodes/<EPxxx_slug>/           episode.json research/ script/ storyboard/ blender/shots/ renders/
 │                                    audio/ edit/ final/ qc/ logs/   (layout: shpipe.paths.LAYOUT)
-├── episodes/EP001_ocean_prototype/  The 10-second visual prototype (status: prototype)
+├── episodes/EP000_ocean_prototype/  The 10-second visual prototype (status: prototype)
 ├── tests/                           pytest suite + fixtures/EP900_fixture; Blender tests need bpy
 └── requirements.txt
 ```
@@ -56,7 +56,7 @@
 pip install -r requirements.txt
 python3 -m pytest                                  # pipeline + preset + camera tests
 python3 pipeline/check_environment.py              # before rendering
-python3 pipeline/validate_episode.py episodes/EP001_ocean_prototype --profile prototype
+python3 pipeline/validate_episode.py episodes/EP000_ocean_prototype --profile prototype
 python3 pipeline/sh.py --help                      # production CLI; see docs/TECHNICAL_REQUIREMENTS.md
 ```
 

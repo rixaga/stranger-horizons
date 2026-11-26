@@ -64,14 +64,14 @@ Render speed drifted from 2.1 to about 2.4 s/frame during long runs, consistent 
 **Created or changed in the repository**
 
 - `blender/scripts/sh_environment_kit.py` (new): reusable terrain, formations, boulders, gobo
-- `episodes/EP001_ocean_prototype/scripts/ep001_set.json`, `run_ep001.py`, `launch_ep001.py`
-- `episodes/EP001_ocean_prototype/storyboard/storyboard.json`, `assets/README.md`, this report
+- `episodes/EP000_ocean_prototype/scripts/ep001_set.json`, `run_ep001.py`, `launch_ep001.py`
+- `episodes/EP000_ocean_prototype/storyboard/storyboard.json`, `assets/README.md`, this report
 - `config/camera_presets.json` (+ `glide_reveal`), `config/render_config.json` (+ `preview_hd`)
 - `blender/scripts/sh_build_shot.py` (preset overrides, profile override, storyboard DoF), `sh_presets.py` (custom volume range for Blender 5, density drift, light diffuse/specular factors), `sh_validate_scene.py` (profile override)
 - `pipeline/shpipe/ffmpeg.py`, `pipeline/assemble_video.py` (frame colour relabel), `pipeline/shpipe/qc.py` (per-scene expected size, all three colour tags)
 - `schemas/storyboard.schema.json`, `schemas/environment_preset.schema.json`, `tests/test_environment_kit.py`, `.gitignore`
 
-**Generated on the Mac** (in `episodes/EP001_ocean_prototype/`, not in git)
+**Generated on the Mac** (in `episodes/EP000_ocean_prototype/`, not in git)
 
 - `blender/EP001_set.blend`, `blender/shots/S01.blend`: editable scenes
 - `renders/preview/S01/frame_0001–0300.png` + `render_log.json`, `renders/preview/_timing/`
@@ -82,10 +82,10 @@ Render speed drifted from 2.1 to about 2.4 s/frame during long runs, consistent 
 
 From Blender's Python console (Scripting workspace):
 ```python
-import runpy; runpy.run_path('<repo>/episodes/EP001_ocean_prototype/scripts/launch_ep001.py')
+import runpy; runpy.run_path('<repo>/episodes/EP000_ocean_prototype/scripts/launch_ep001.py')
 ```
 Optional `scripts/launch_args.json`, e.g. `["--tag", "v3", "--resolution", "auto"]`. Or from Terminal:
 ```bash
 /Applications/Blender.app/Contents/MacOS/Blender -b --factory-startup \
-  --python episodes/EP001_ocean_prototype/scripts/run_ep001.py -- --tag v3
+  --python episodes/EP000_ocean_prototype/scripts/run_ep001.py -- --tag v3
 ```

@@ -1,5 +1,5 @@
 {
-  "episode_id": "EP001",
+  "episode_id": "EP000",
   "slug": "ocean_prototype",
   "title": "Ocean Prototype (10-second visual proof of concept)",
   "pillar": "Prototype",
@@ -9,7 +9,7 @@
     "script": null,
     "storyboard": null,
     "prototype": {
-      "approved_by": "Ariga (owner) — v4, EP001_preview_v4.mp4",
+      "approved_by": "Ariga (owner) \u2014 v4, EP001_preview_v4.mp4",
       "date": "2026-11-26"
     },
     "final_cut": null
