@@ -17,7 +17,7 @@ Using the verified analysis and channel bible, refine docs/VISUAL_STYLE_GUIDE.md
 Inspect the actual environment. Plan research, source verification, script, narration, storyboard JSON, Blender scene generation, rendering, audio, editing, subtitles, thumbnails, and QA. Identify automation and human approval gates. Create docs/PRODUCTION_IMPLEMENTATION_PLAN.md. Do not overengineer. Stop.
 
 ## Stage 5 — Build Blender prototype
-Create a 10-second cinematic deep-ocean prototype, not a full episode. First inspect Blender, Python, FFmpeg, GPU, memory, and disk. Use preview settings. Build dark underwater environment, volumetric light, particles, readable seabed silhouette, and slow camera move. Save .blend and scripts under episodes/EP001_ocean_prototype/. Validate and render if possible. Report actual versions, settings, files, and outcome. Stop for approval.
+Create a 10-second cinematic deep-ocean prototype, not a full episode. First inspect Blender, Python, FFmpeg, GPU, memory, and disk. Use preview settings. Build dark underwater environment, volumetric light, particles, readable seabed silhouette, and slow camera move. Save .blend and scripts under episodes/EP000_ocean_prototype/. Validate and render if possible. Report actual versions, settings, files, and outcome. Stop for approval.
 
 ## Stage 6 — Evaluate and iterate
 Compare the actual preview against approved guide and verified reference notes. Evaluate composition, scale, lighting, atmosphere, realism, motion, noise, and readability. Create PROTOTYPE_EVALUATION.md, fix high-impact issues, and render a second preview. Stop.

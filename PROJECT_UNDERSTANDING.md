@@ -18,7 +18,7 @@ Every file in the repository was read in full (16 files, ~290 KB including `.git
 | Config | `config/channel.json`, `config/render_config.json`, `config/visual_style.json` |
 | Schema | `schemas/storyboard.schema.json` |
 | Pipeline | `pipeline/assemble_video.py`, `pipeline/validate_episode.py` |
-| Episodes | `episodes/EP001_ocean_prototype/README.md` |
+| Episodes | `episodes/EP000_ocean_prototype/README.md` |
 
 Checks actually run (in the cloud workspace, outside the repo where they produced files):
 
@@ -28,7 +28,7 @@ Checks actually run (in the cloud workspace, outside the repo where they produce
 | `storyboard.schema.json` is a valid JSON Schema draft 2020-12 | OK |
 | Minimal storyboard validates against schema | OK |
 | Both Python scripts compile (Python 3.13.18) | OK |
-| `validate_episode.py episodes/EP001_ocean_prototype` | **FAILED**: 9 missing folders (expected; see §6) |
+| `validate_episode.py episodes/EP000_ocean_prototype` | **FAILED**: 9 missing folders (expected; see §6) |
 | `assemble_video.py` on 30 synthetic 1280×720 PNG frames | OK: H.264, yuv420p, 30 fps, 30 frames. `color_space=unknown` |
 | `assemble_video.py` with a missing frame pattern | Exits 254 (raw FFmpeg error, no friendly message) |
 | `assemble_video.py --help` | **CRASH**: `TypeError` (bug, see §6) |
@@ -298,4 +298,4 @@ Stage 4 plan and Phase A foundations are implemented on branch `claude/stage4-ar
 
 ## Status update — Stage 5 (2026-11-26)
 
-EP001 10-second prototype built and rendered on the owner's Mac (EEVEE, 1920×1080, 300 frames, 11.6 min). See `episodes/EP001_ocean_prototype/PROTOTYPE_REPORT.md`. Awaiting approval before Stage 6.
+EP001 10-second prototype built and rendered on the owner's Mac (EEVEE, 1920×1080, 300 frames, 11.6 min). See `episodes/EP000_ocean_prototype/PROTOTYPE_REPORT.md`. Awaiting approval before Stage 6.

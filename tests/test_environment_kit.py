@@ -9,7 +9,7 @@ bpy = pytest.importorskip("bpy")
 
 from conftest import REPO  # noqa: E402
 
-CFG = json.loads((REPO / "episodes/EP001_ocean_prototype/scripts/ep001_set.json").read_text())
+CFG = json.loads((REPO / "episodes/EP000_ocean_prototype/scripts/ep001_set.json").read_text())
 
 
 def _small():
@@ -49,11 +49,11 @@ def test_ep001_shot_builds_and_validates(tmp_path):
     import sh_environment_kit as kit
     from sh_build_shot import build_shot
     from sh_validate_scene import validate_scene
-    ep = tmp_path / "EP001_ocean_prototype"
-    shutil.copytree(REPO / "episodes/EP001_ocean_prototype", ep, ignore=shutil.ignore_patterns("renders", "final", "*.blend"))
+    ep = tmp_path / "EP000_ocean_prototype"
+    shutil.copytree(REPO / "episodes/EP000_ocean_prototype", ep, ignore=shutil.ignore_patterns("renders", "final", "*.blend"))
     bpy.ops.wm.read_factory_settings(use_empty=True)
     kit.build_set(_small())
-    tpl = REPO / "episodes/EP001_ocean_prototype/blender/EP001_set.blend"
+    tpl = REPO / "episodes/EP000_ocean_prototype/blender/EP001_set.blend"
     sb = json.loads((ep / "storyboard/storyboard.json").read_text())
     tmp_tpl = tmp_path / "set.blend"
     bpy.ops.wm.save_as_mainfile(filepath=str(tmp_tpl))
