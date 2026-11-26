@@ -8,7 +8,10 @@
     "research": null,
     "script": null,
     "storyboard": null,
-    "prototype": null,
+    "prototype": {
+      "approved_by": "Ariga (owner) — v4, EP001_preview_v4.mp4",
+      "date": "2026-11-26"
+    },
     "final_cut": null
   },
   "notes": "Not a published episode. Validates the visual direction and Blender workflow."

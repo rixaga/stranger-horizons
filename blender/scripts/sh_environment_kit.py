@@ -14,8 +14,12 @@ Config sections (all optional except terrain):
                   roughness_m, facet_size_m, strength_m, material, snap_to_ground}]
     boulders    {count, area_m [x0, y0, x1, y1], radius_m [min, max], seed, keep_clear[[x, y, r]],
                  hero[{location_m, radius_m}], material}
-    gobo        {height_m, size_m, cells, open_fraction, drift_m [dx, dy], seed}
-    materials   {name: {base, base2, roughness, noise_size_m, bump}}
+    gobo        {height_m, size_m, cells, open_fraction, drift_m [dx, dy], seed, open_at [[x, y, r]]}
+    vehicles    [{name, location_m [x, y], height_above_ground_m, length_m, face_toward_m [x, y], travel_m,
+                  lamp_energy_w, lamp_color, lamp_spot_deg, nav_color}]: a small ROV as a scale cue,
+                  with its own lamps, gliding travel_m toward face_toward_m over the scene's frame range
+    materials   {name: {base, base2, roughness, noise_size_m, bump, slope_weight, slope_from}}
+    terrain layers may add texture-specific keys such as distortion (DISTORTED_NOISE) or turbulence (STUCCI).
 """
 from __future__ import annotations
 
@@ -82,7 +86,28 @@ def make_material(name: str, spec: dict):
     bump.inputs["Strength"].default_value = spec.get("bump", 0.4)
     nt.links.new(coord.outputs["Object"], tex.inputs["Vector"])
     nt.links.new(coord.outputs["Object"], fine.inputs["Vector"])
-    nt.links.new(tex.outputs["Fac"], ramp.inputs["Fac"])
+    slope_w = spec.get("slope_weight", 0.0)
+    if slope_w > 0:  # sediment settles on upward-facing surfaces; steep faces show bare rock
+        geo = nt.nodes.new("ShaderNodeNewGeometry")
+        sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+        flat = nt.nodes.new("ShaderNodeMapRange")
+        flat.clamp = True
+        flat.inputs["From Min"].default_value = spec.get("slope_from", 0.65)
+        flat.inputs["From Max"].default_value = 1.0
+        mix = nt.nodes.new("ShaderNodeMath")
+        mix.operation = "MULTIPLY_ADD"
+        mix.inputs[1].default_value = 1.0 - slope_w
+        scaled = nt.nodes.new("ShaderNodeMath")
+        scaled.operation = "MULTIPLY"
+        scaled.inputs[1].default_value = slope_w
+        nt.links.new(geo.outputs["Normal"], sep.inputs[0])
+        nt.links.new(sep.outputs["Z"], flat.inputs["Value"])
+        nt.links.new(flat.outputs["Result"], scaled.inputs[0])
+        nt.links.new(tex.outputs["Fac"], mix.inputs[0])
+        nt.links.new(scaled.outputs[0], mix.inputs[2])
+        nt.links.new(mix.outputs[0], ramp.inputs["Fac"])
+    else:
+        nt.links.new(tex.outputs["Fac"], ramp.inputs["Fac"])
     nt.links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
     nt.links.new(fine.outputs["Fac"], bump.inputs["Height"])
     nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
@@ -91,11 +116,18 @@ def make_material(name: str, spec: dict):
     return mat
 
 
-def _displace(obj, name: str, texture: str, size_m: float, strength: float, seed: int = 0):
-    tex = bpy.data.textures.get(name) or bpy.data.textures.new(name, texture)
+def _displace(obj, name: str, texture: str, size_m: float, strength: float, seed: int = 0, extra: dict | None = None):
+    tex = bpy.data.textures.get(name)
+    if tex is not None and tex.type != texture:
+        bpy.data.textures.remove(tex)
+        tex = None
+    tex = tex or bpy.data.textures.new(name, texture)
     tex.noise_scale = size_m
     if texture == "CLOUDS":
         tex.noise_depth = 4
+    for key, value in (extra or {}).items():  # e.g. distortion (DISTORTED_NOISE), turbulence (STUCCI)
+        if hasattr(tex, key):
+            setattr(tex, key, value)
     mod = obj.modifiers.new(name, "DISPLACE")
     mod.texture = tex
     mod.texture_coords = "GLOBAL"
@@ -120,7 +152,8 @@ def make_terrain(col, cfg: dict, materials: dict):
     obj = _new_object(col, "SH_Terrain", mesh)
     obj["sh_kind"] = "terrain"
     for k, layer in enumerate(cfg.get("layers", [])):
-        _displace(obj, f"SH_Terrain_L{k}", layer.get("texture", "CLOUDS"), layer["size_m"], layer["strength"])
+        _displace(obj, f"SH_Terrain_L{k}", layer.get("texture", "CLOUDS"), layer["size_m"], layer["strength"],
+                  extra={k2: v for k2, v in layer.items() if k2 not in ("texture", "size_m", "strength")})
     obj.data.materials.append(materials[cfg.get("material", "sediment")])
     return obj
 
@@ -236,12 +269,16 @@ def make_gobo(col, cfg: dict, scene):
     cell = size / n
     verts, faces = [], []
     values = sorted(noise.noise(off + Vector((i * 0.35, j * 0.35, 0))) for j in range(n) for i in range(n))
-    threshold = values[int(len(values) * (1 - open_frac))]
+    threshold = values[min(int(len(values) * (1 - open_frac)), len(values) - 1)] if open_frac > 0 else float("inf")
+    forced = cfg.get("open_at", [])  # [[x, y, radius_m]] in gobo space: always let light through
     for j in range(n):
         for i in range(n):
+            x, y = (i - n / 2) * cell, (j - n / 2) * cell
+            cx, cy = x + cell / 2, y + cell / 2
+            if any((cx - fx) ** 2 + (cy - fy) ** 2 < fr ** 2 for fx, fy, fr in forced):
+                continue
             if noise.noise(off + Vector((i * 0.35, j * 0.35, 0))) >= threshold:
                 continue  # an opening: light passes here
-            x, y = (i - n / 2) * cell, (j - n / 2) * cell
             b = len(verts)
             verts += [(x, y, 0), (x + cell, y, 0), (x + cell, y + cell, 0), (x, y + cell, 0)]
             faces.append((b, b + 1, b + 2, b + 3))
@@ -258,6 +295,106 @@ def make_gobo(col, cfg: dict, scene):
     if dx or dy:
         obj.keyframe_insert("location", frame=scene.frame_start)
         obj.location = (dx, dy, z)
+        obj.keyframe_insert("location", frame=scene.frame_end)
+        _linear(obj)
+    return obj
+
+
+def _flat_material(name: str, color, roughness=0.5, metallic=0.0, emission=None, strength=0.0):
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    _ensure_nodes(mat)
+    nt = mat.node_tree
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    bsdf.inputs["Base Color"].default_value = (*color, 1)
+    bsdf.inputs["Roughness"].default_value = roughness
+    bsdf.inputs["Metallic"].default_value = metallic
+    if emission is not None:
+        bsdf.inputs["Emission Color"].default_value = (*emission, 1)
+        bsdf.inputs["Emission Strength"].default_value = strength
+    nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
+    return mat
+
+
+def _box(bm, center, size, mat_index):
+    geom = bmesh.ops.create_cube(bm, size=1.0)
+    for v in geom["verts"]:
+        v.co = Vector((center[0] + v.co.x * size[0], center[1] + v.co.y * size[1], center[2] + v.co.z * size[2]))
+    for f in {f for v in geom["verts"] for f in v.link_faces}:
+        f.material_index = mat_index
+
+
+def make_vehicle(col, cfg: dict, scene, terrain=None):
+    """A small work-class ROV: open frame, buoyancy block, thrusters, two lamps that light the water.
+    Built at real size (length_m, default 2.2 m) so it reads as a scale cue against large formations.
+    Local +Y is forward. Glides travel_m toward face_toward_m across the scene's frame range."""
+    name = cfg.get("name", "SH_ROV")
+    L = cfg.get("length_m", 2.2)
+    W, H = 0.6 * L, 0.5 * L
+    bm = bmesh.new()
+    # 0 frame (dark metal), 1 buoyancy block (off-white), 2 lamp lenses (emissive), 3 nav light (accent)
+    for sx in (-1, 1):                                   # side rails
+        for sz in (-1, 1):
+            _box(bm, (sx * W * 0.46, 0, sz * H * 0.42), (0.06 * L, 0.96 * L, 0.06 * L), 0)
+    for sy in (-1, 1):                                   # cross members
+        _box(bm, (0, sy * L * 0.45, -H * 0.42), (W, 0.06 * L, 0.06 * L), 0)
+    _box(bm, (0, -0.02 * L, H * 0.26), (W * 0.98, 0.92 * L, H * 0.42), 1)          # buoyancy block
+    _box(bm, (0, 0.05 * L, -H * 0.12), (W * 0.55, 0.6 * L, H * 0.3), 0)            # electronics pod
+    for sx in (-1, 1):                                   # thrusters
+        _box(bm, (sx * W * 0.5, -0.3 * L, 0), (0.09 * L, 0.22 * L, 0.16 * L), 0)
+        _box(bm, (sx * W * 0.3, 0.46 * L, -H * 0.05), (0.1 * L, 0.06 * L, 0.1 * L), 2)  # lamp heads
+    _box(bm, (0, -0.35 * L, H * 0.5), (0.04 * L, 0.04 * L, 0.04 * L), 3)            # nav light
+    mesh = bpy.data.meshes.new(name)
+    bm.to_mesh(mesh)
+    bm.free()
+    lamp_rgb = cfg.get("lamp_color", [1.0, 0.93, 0.82])
+    for m in (_flat_material(f"{name}_frame", (0.06, 0.065, 0.07), 0.45, 0.6),
+              _flat_material(f"{name}_float", tuple(cfg.get("float_color", [0.62, 0.62, 0.6])), 0.5),
+              _flat_material(f"{name}_lens", (0.9, 0.9, 0.9), 0.2, emission=lamp_rgb, strength=40.0),
+              _flat_material(f"{name}_nav", (0.1, 0.8, 0.9), 0.3, emission=cfg.get("nav_color", [0.2, 0.85, 1.0]),
+                             strength=25.0)):
+        mesh.materials.append(m)
+    obj = _new_object(col, name, mesh)
+    obj["sh_kind"] = "vehicle"
+
+    x, y = cfg.get("location_m", [0.0, 0.0])
+    z = (ground_height(terrain, x, y) if terrain else 0.0) + cfg.get("height_above_ground_m", 5.0)
+    tx, ty = cfg.get("face_toward_m", [x, y + 1.0])
+    d = Vector((tx - x, ty - y, 0.0))
+    d = d.normalized() if d.length > 1e-6 else Vector((0, 1, 0))
+    obj.rotation_euler = (math.radians(cfg.get("pitch_deg", -4.0)), 0.0, math.atan2(d.y, d.x) - math.pi / 2)
+    start = Vector((x, y, z))
+    obj.location = start
+
+    spot = math.radians(cfg.get("lamp_spot_deg", 55.0))
+    for side in (-1, 1):
+        ldata = bpy.data.lights.new(f"{name}_Lamp_{'L' if side < 0 else 'R'}", "SPOT")
+        ldata.energy = cfg.get("lamp_energy_w", 900.0)
+        ldata.color = lamp_rgb
+        ldata.spot_size = spot
+        ldata.spot_blend = 0.6
+        ldata.shadow_soft_size = 0.05
+        if hasattr(ldata, "volume_factor"):
+            ldata.volume_factor = cfg.get("lamp_volume_factor", 1.5)
+        lamp = bpy.data.objects.new(ldata.name, ldata)
+        col.objects.link(lamp)
+        lamp.parent = obj
+        lamp.location = (side * W * 0.3, 0.5 * L, -H * 0.05)
+        lamp.rotation_euler = (math.radians(90 - cfg.get("lamp_tilt_down_deg", 14.0)), 0.0, side * math.radians(6))
+    nav = bpy.data.lights.new(f"{name}_Nav", "POINT")
+    nav.energy = cfg.get("nav_energy_w", 3.0)
+    nav.color = cfg.get("nav_color", [0.2, 0.85, 1.0])
+    nav.shadow_soft_size = 0.05
+    nav_obj = bpy.data.objects.new(nav.name, nav)
+    col.objects.link(nav_obj)
+    nav_obj.parent = obj
+    nav_obj.location = (0, -0.35 * L, H * 0.56)
+
+    travel = cfg.get("travel_m", 0.0)
+    if travel:
+        obj.keyframe_insert("location", frame=scene.frame_start)
+        obj.location = start + d * travel
         obj.keyframe_insert("location", frame=scene.frame_end)
         _linear(obj)
     return obj
@@ -284,14 +421,16 @@ def build_set(config: dict, scene=None) -> dict:
     col = _collection(scene)
     materials = {name: make_material(f"SH_{name}", spec) for name, spec in config.get("materials", {}).items()}
     for default in ("sediment", "basalt"):
-        materials.setdefault(default, make_material(f"SH_{default}", {}))
+        if default not in materials:  # never rebuild (and wipe) a material the config already defined
+            materials[default] = make_material(f"SH_{default}", {})
     terrain = make_terrain(col, config["terrain"], materials)
     formations = [make_formation(col, f, materials, terrain) for f in config.get("formations", [])]
     boulders = scatter_boulders(col, config["boulders"], materials, terrain) if "boulders" in config else []
     gobo = make_gobo(col, config["gobo"], scene) if "gobo" in config else None
+    vehicles = [make_vehicle(col, v, scene, terrain) for v in config.get("vehicles", [])]
     scene["sh_set"] = config.get("name", "set")
     return {"terrain": terrain.name, "formations": [f.name for f in formations], "boulders": len(boulders),
-            "gobo": gobo.name if gobo else None,
+            "gobo": gobo.name if gobo else None, "vehicles": [v.name for v in vehicles],
             "triangles_estimate": sum(len(o.data.polygons) for o in col.objects if o.type == "MESH") * 2}
 
 

@@ -63,3 +63,29 @@ def test_cli_smoke(ep):
     assert result.returncode == 0
     for cmd in ("episode-new", "approve", "research", "script", "storyboard", "assets", "srt", "clip", "concat", "mux", "qc"):
         assert cmd in result.stdout
+
+
+@needs_ffmpeg
+def test_retag_bt709_fixes_an_srgb_transfer_tag(tmp_path):
+    from shpipe import ffmpeg
+    src = tmp_path / "srgb.mp4"
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=navy:s=320x180:r=30:d=1",
+                    "-c:v", "libx264", "-pix_fmt", "yuv420p", "-color_trc", "iec61966-2-1", str(src)], check=True)
+    assert _probe(src)["streams"][0].get("color_transfer") == "iec61966-2-1"
+    ffmpeg.retag_bt709(src)
+    v = _probe(src)["streams"][0]
+    assert (v.get("color_space"), v.get("color_primaries"), v.get("color_transfer")) == ("bt709",) * 3
+    assert int(v["nb_frames"]) == 30                     # a remux: nothing dropped
+
+
+@needs_ffmpeg
+def test_encode_with_grain_and_dark_scene_tuning(tmp_path):
+    from shpipe import ffmpeg
+    frames = tmp_path / "f"
+    _frames(frames, 30, "0x050a0c")
+    clean = ffmpeg.encode_sequence(frames / "frame_%04d.png", tmp_path / "clean.mp4", start_number=1)
+    grain = ffmpeg.encode_sequence(frames / "frame_%04d.png", tmp_path / "grain.mp4", start_number=1,
+                                   grain=2.0, dark_scene=True)
+    assert grain.stat().st_size > clean.stat().st_size   # temporal grain adds real (dithering) detail
+    v = _probe(grain)["streams"][0]
+    assert (v.get("color_primaries"), v.get("color_transfer")) == ("bt709", "bt709")

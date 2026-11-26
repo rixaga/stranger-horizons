@@ -7,11 +7,11 @@
       "scene_id": "S01",
       "duration_seconds": 10,
       "narration": "",
-      "visual_intent": "Establish the channel's deep-ocean look: we drift through dark water toward a towering basalt pinnacle that emerges from the murk.",
+      "visual_intent": "Establish the channel's deep-ocean look: we drift through dark water toward a towering basalt pinnacle; a small ROV with its lamps on gives the human scale.",
       "reconstruction_status": "illustrative_reconstruction",
       "on_screen_label": "Illustrative reconstruction",
       "environment": "Mid-water seabed (~150 m, lower twilight zone), sediment and basalt boulders",
-      "lighting": "Faint downwelling daylight broken into shafts from above; two vehicle lamps for the near field",
+      "lighting": "Faint downwelling daylight broken into shafts from above; two camera-vehicle lamps for the near field; the in-frame ROV's lamps as a motivated focal light",
       "effects": [
         "water_volume",
         "marine_snow",
@@ -56,7 +56,7 @@
               0.36,
               0.42
             ],
-            "density": 0.008,
+            "density": 0.0065,
             "absorption_color": [
               0.1,
               0.5,
@@ -88,9 +88,9 @@
                 0,
                 8
               ],
-              "angle_deg": 2.0,
+              "angle_deg": 5.0,
               "volume_factor": 1.6,
-              "diffuse_factor": 0.3,
+              "diffuse_factor": 0.2,
               "specular_factor": 0.2
             },
             {
@@ -114,8 +114,8 @@
                 0
               ],
               "spot_size_deg": 45,
-              "spot_blend": 0.6,
-              "size_m": 0.15,
+              "spot_blend": 0.85,
+              "size_m": 0.5,
               "volume_factor": 1.0,
               "parent_to_camera": true
             },
@@ -140,23 +140,23 @@
                 0
               ],
               "spot_size_deg": 45,
-              "spot_blend": 0.6,
-              "size_m": 0.15,
+              "spot_blend": 0.85,
+              "size_m": 0.5,
               "volume_factor": 1.0,
               "parent_to_camera": true
             }
           ],
           "particles": {
-            "count": 9000,
+            "count": 22000,
             "bounds_m": [
-              28,
-              36,
-              10
+              16,
+              24,
+              8
             ],
             "center_m": [
               4,
-              -77,
-              4
+              -76,
+              3.5
             ],
             "drift_m_s": [
               0.03,
@@ -164,13 +164,15 @@
               -0.015
             ],
             "color": [
-              0.45,
-              0.5,
-              0.52
-            ]
+              0.55,
+              0.6,
+              0.62
+            ],
+            "size_m": 0.004,
+            "size_random": 0.8
           },
           "color_management": {
-            "exposure": 0.6
+            "exposure": 2.3
           },
           "camera": {
             "clip_end_m": 400,
@@ -180,6 +182,14 @@
             "volumetric_end_m": 220,
             "volumetric_tile_size": "4",
             "volumetric_samples": 96
+          },
+          "world": {
+            "color": [
+              0.002,
+              0.008,
+              0.012
+            ],
+            "strength": 1.0
           }
         }
       }
