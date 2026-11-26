@@ -8,7 +8,7 @@ Files downloaded by the owner from NOAA PMEL into `audio/source_noaa/` (not in g
 | A53JD33Calving_3x.wav | same page | 3× | 282.2 s (≈ 14 min original) | PCM 16-bit, 8 kHz, mono | 0.0 / −24.0 dBFS | 1 clipped sample. Name suggests iceberg A53a, day 33 (inference, not stated on the page) |
 | HarmonicTremor2006_215_09_20UsedOnBloopWebsite.wav | same page | 3× | 138.9 s | PCM 16-bit, **999 Hz**, mono | −6.9 / −19.6 dBFS | Unusual sample rate; resample to 48 kHz for editing |
 | julia_sound.wav | pmel.noaa.gov/acoustics/sounds/julia.html | 16× | 10.34 s | PCM 16-bit, 8 kHz, mono | −0.2 / −16.2 dBFS | |
-| noise97139.wav (Slow Down) | pmel.noaa.gov/acoustics/specs_cryogenic.html | 16× | — | — | — | **Download failed (0 bytes); re-download** |
+| noise97139.wav (Slow Down) | pmel.noaa.gov/acoustics/specs_cryogenic.html | 16× | 18.10 s (≈ 290 s original) | PCM 16-bit, 8 kHz, mono | −2.8 / −16.5 dBFS | md5 4c8b8bd2c2fc8015313016bde4b73c7b. NOAA describes a descent over about 7 min; this file covers ≈ 4.8 min, so it is likely an excerpt |
 
 ## bloop.wav: what the file shows
 
