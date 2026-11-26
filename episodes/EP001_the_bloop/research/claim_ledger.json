@@ -503,6 +503,39 @@
       "counter_evidence": "Fox told New Scientist he did not believe it was man-made; no evidence supports a military source.",
       "script_wording": "There is no evidence it was military.",
       "status": "verified"
+    },
+    {
+      "claim_id": "C44",
+      "text": "The U.S. Navy built hydrophone networks (SOSUS) to track Soviet submarines; after the Cold War, NOAA scientists were allowed to use them for research and detected undersea volcanic eruptions with them.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-035",
+        "SRC-036"
+      ],
+      "script_wording": "During the Cold War, the U.S. Navy wired the deep sea with microphones to hunt submarines. When the Cold War ended, scientists were allowed to listen too, and they heard volcanoes erupting on the seafloor.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C45",
+      "text": "In 1944 Maurice Ewing and J. Lamar Worzel demonstrated that low-frequency sound travels long distances in the deep ocean sound channel (SOFAR).",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-017",
+        "SRC-016"
+      ],
+      "script_wording": "In 1944, two American scientists proved it with small explosive charges: a sound set off in this layer could be heard hundreds of miles away.",
+      "status": "verified"
+    },
+    {
+      "claim_id": "C46",
+      "text": "Blue whale calls measured off the Western Antarctic Peninsula averaged about 189 dB re 1 µPa at 1 m, and calling blue whales were located up to about 200 km away.",
+      "evidence_label": "established_fact",
+      "source_ids": [
+        "SRC-015"
+      ],
+      "counter_evidence": "Underwater decibels use a different reference from decibels in air, so these numbers cannot be compared with everyday sounds.",
+      "script_wording": "Blue whales are among the loudest animals alive. Off Antarctica, scientists measured their calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away.",
+      "status": "verified"
     }
   ]
 }

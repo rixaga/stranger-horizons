@@ -4,7 +4,7 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 
 | Label | Claims |
 |---|---|
-| Established fact | 27 |
+| Established fact | 30 |
 | Strong evidence | 11 |
 | Disputed | 2 |
 | Speculation | 2 |
@@ -55,6 +55,9 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | C41 | After that broadcast, NOAA publicly stated that no evidence of aquatic humanoids has ever been found. | Established fact | SRC-022 | verified |
 | C42 | The Bloop was made by an unknown giant animal. | Speculation | SRC-007, SRC-008 | verified |
 | C43 | The Bloop was a secret military or submarine sound. | Speculation | SRC-004, SRC-007 | verified |
+| C44 | The U.S. Navy built hydrophone networks (SOSUS) to track Soviet submarines; after the Cold War, NOAA scientists were allowed to use them for research and detected undersea volcanic eruptions with them. | Established fact | SRC-035, SRC-036 | verified |
+| C45 | In 1944 Maurice Ewing and J. Lamar Worzel demonstrated that low-frequency sound travels long distances in the deep ocean sound channel (SOFAR). | Established fact | SRC-017, SRC-016 | verified |
+| C46 | Blue whale calls measured off the Western Antarctic Peninsula averaged about 189 dB re 1 µPa at 1 m, and calling blue whales were located up to about 200 km away. | Established fact | SRC-015 | verified |
 
 ## Notes per claim
 
@@ -338,4 +341,22 @@ The Bloop was a secret military or submarine sound.
 - **SRC-007**: Calls from the deep (David Wolman, New Scientist, 2002-06-15)
 - *Counter-evidence / caveats:* Fox told New Scientist he did not believe it was man-made; no evidence supports a military source.
 - *Approved wording (draft):* "There is no evidence it was military."
+
+### C44 — Established fact
+The U.S. Navy built hydrophone networks (SOSUS) to track Soviet submarines; after the Cold War, NOAA scientists were allowed to use them for research and detected undersea volcanic eruptions with them.
+- **SRC-035**: Sound in the Sea 2001 — expedition plan / acoustics background (NOAA Ocean Explorer (Sound in the Sea project, NOAA Vents Program), 2001)
+- **SRC-036**: Acoustic detection of a seafloor spreading episode on the Juan de Fuca Ridge using military hydrophone arrays (Christopher G. Fox, W. Eddie Radford, Robert P. Dziak, Tai-Kwan Lau, Haruyoshi Matsumoto, Anthony E. Schreiner, 1995)
+- *Approved wording (draft):* "During the Cold War, the U.S. Navy wired the deep sea with microphones to hunt submarines. When the Cold War ended, scientists were allowed to listen too, and they heard volcanoes erupting on the seafloor."
+
+### C45 — Established fact
+In 1944 Maurice Ewing and J. Lamar Worzel demonstrated that low-frequency sound travels long distances in the deep ocean sound channel (SOFAR).
+- **SRC-017**: How does sound travel long distances? The SOFAR Channel / History of the SOFAR Channel (Discovery of Sound in the Sea (DOSITS), University of Rhode Island, unknown)
+- **SRC-016**: What is SOFAR? (NOAA National Ocean Service (Ocean Facts), unknown)
+- *Approved wording (draft):* "In 1944, two American scientists proved it with small explosive charges: a sound set off in this layer could be heard hundreds of miles away."
+
+### C46 — Established fact
+Blue whale calls measured off the Western Antarctic Peninsula averaged about 189 dB re 1 µPa at 1 m, and calling blue whales were located up to about 200 km away.
+- **SRC-015**: Blue and fin whale call source levels and propagation range in the Southern Ocean (Ana Širović, John A. Hildebrand, Sean M. Wiggins, 2007-08)
+- *Counter-evidence / caveats:* Underwater decibels use a different reference from decibels in air, so these numbers cannot be compared with everyday sounds.
+- *Approved wording (draft):* "Blue whales are among the loudest animals alive. Off Antarctica, scientists measured their calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away."
 

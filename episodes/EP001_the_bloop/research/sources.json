@@ -275,7 +275,8 @@
       "source_type": "peer_reviewed",
       "passage": "Abstract: average blue whale call source level 189 ± 3 dB re 1 µPa at 1 m (25-29 Hz); blue whales located up to 200 km away",
       "claims_supported": [
-        "C26"
+        "C26",
+        "C46"
       ],
       "limitations": "Measured off the Western Antarctic Peninsula; other studies give similar values (~188 dB, Cummings & Thompson 1971, cited within).",
       "reliability": "high"
@@ -290,7 +291,8 @@
       "source_type": "institutional",
       "passage": "Definition of the SOund Fixing And Ranging channel; hydrophones at the channel axis record distant sounds",
       "claims_supported": [
-        "C12"
+        "C12",
+        "C45"
       ],
       "limitations": "Popular explainer.",
       "reliability": "high",
@@ -306,7 +308,8 @@
       "source_type": "institutional",
       "passage": "Sound channel axis; 1944 Ewing and Worzel test from R/V Saluda",
       "claims_supported": [
-        "C12"
+        "C12",
+        "C45"
       ],
       "limitations": "Educational site; used for background only.",
       "reliability": "high"
@@ -572,6 +575,37 @@
       "limitations": "Coordinates confirmed from an annotated edition excerpt found by search (goodreads notes) and the geohashing.site quotation; Wikisource and Gutenberg copies identified but not opened in this session. Fiction: used only for what the story says.",
       "reliability": "high",
       "license_notes": "Published 1928; in the U.S. public domain since 1 January 2024. Quote only a short line on screen."
+    },
+    {
+      "id": "SRC-035",
+      "title": "Sound in the Sea 2001 — expedition plan / acoustics background",
+      "author_or_org": "NOAA Ocean Explorer (Sound in the Sea project, NOAA Vents Program)",
+      "published": "2001",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanexplorer.noaa.gov/explorations/sound01/background/plan/plan.html",
+      "source_type": "primary",
+      "passage": "Background: the U.S. Navy installed hydrophone arrays to monitor Soviet submarines; after the fall of the Berlin Wall (1989) Vents scientists used Navy arrays and detected three submarine eruptions in the northeast Pacific, confirmed in the field",
+      "claims_supported": [
+        "C44"
+      ],
+      "limitations": "Read via search excerpt; consistent with SRC-036.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-036",
+      "title": "Acoustic detection of a seafloor spreading episode on the Juan de Fuca Ridge using military hydrophone arrays",
+      "author_or_org": "Christopher G. Fox, W. Eddie Radford, Robert P. Dziak, Tai-Kwan Lau, Haruyoshi Matsumoto, Anthony E. Schreiner",
+      "published": "1995",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Geophysical Research Letters 22: 131-134 (1995); abstract at https://www.pmel.noaa.gov/pubs/outstand/fox1526/abstract.shtml",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract: availability of the U.S. Navy's SOSUS for environmental research allowed continuous monitoring of seafloor seismicity",
+      "claims_supported": [
+        "C44"
+      ],
+      "limitations": "Abstract only.",
+      "reliability": "high"
     }
   ]
 }

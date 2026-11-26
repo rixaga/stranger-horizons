@@ -54,6 +54,26 @@ def cmd_research(a):
     return _report(research.coverage(_episode(a.episode)), a.json)
 
 
+def cmd_narration(a):
+    ep = _episode(a.episode)
+    sections = script.narration(ep.script.read_text(encoding="utf-8"))
+    words = sum(len(par.split()) for sec in sections for par in sec["paragraphs"])
+    out = [f"# Narration — {ep.meta.get('title', ep.episode_id)}", "",
+           "Generated from `script/script.md` by `sh.py narration`; edit the script, not this file.",
+           f"Spoken words: {words} (≈ {words / script.WPM:.1f} min at {script.WPM} wpm, before pauses and audio moments).",
+           "Read with `pronunciation_guide.md`. Pause marks: `[pause]` ≈ 0.8 s between paragraphs; "
+           "`[long pause]` ≈ 1.5 s between sections.", ""]
+    for i, sec in enumerate(sections):
+        out += [f"## {sec['heading']}", ""]
+        for j, par in enumerate(sec["paragraphs"]):
+            out += [par, "", "[pause]" if j < len(sec["paragraphs"]) - 1 else
+                    ("[long pause]" if i < len(sections) - 1 else ""), ""]
+    path = ep.root / "script" / "narration.md"
+    path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
+    print(f"wrote {path} ({words} words)")
+    return 0
+
+
 def cmd_ledger_md(a):
     ep = _episode(a.episode)
     out = ep.root / "research" / "CLAIM_LEDGER.md"
@@ -161,6 +181,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--by", required=True, help="who approved")
     add("research", cmd_research, "check source dossier and claim ledger coverage")
     add("ledger-md", cmd_ledger_md, "write research/CLAIM_LEDGER.md from claim_ledger.json")
+    add("narration", cmd_narration, "write script/narration.md (spoken text only) from script.md")
     add("script", cmd_script, "check claim markers, story beats and timing")
     sp = add("storyboard", cmd_storyboard, "validate storyboard, show timeline and requirements")
     sp.add_argument("--shot-list", action="store_true", help="also write storyboard/shot_list.csv")
