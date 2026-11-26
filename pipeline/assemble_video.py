@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 BT709 = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
-# Also write the tags into the H.264 VUI: FFmpeg 9.1 on macOS dropped color_primaries otherwise.
+# Also write the tags into the H.264 VUI so they do not depend on FFmpeg version behaviour.
 H264_BT709_VUI = ["-bsf:v", "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1"]
 
 

@@ -10,11 +10,10 @@ SCRIPT = str(PIPELINE / "assemble_video.py")
 
 
 def probe(path: Path) -> dict:
-    out = subprocess.run(
-        ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-         "stream=color_space,color_primaries,color_transfer,pix_fmt,nb_frames", "-of", "json", str(path)],
-        capture_output=True, text=True, check=True,
-    )
+    # Full -show_streams, not -show_entries: ffprobe 9.1 omits color_primaries/color_transfer
+    # from a -show_entries selection even when the stream carries them.
+    out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_streams", "-of", "json", str(path)],
+                         capture_output=True, text=True, check=True)
     return json.loads(out.stdout)["streams"][0]
 
 
