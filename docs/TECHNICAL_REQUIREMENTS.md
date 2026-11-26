@@ -11,7 +11,7 @@
 | Blender | **5.x** (tested 5.3.0) | 5.3.0 ✅ | Scripts tolerate 4.2+ API differences, but only 5.3 is tested |
 | Python (system) | 3.9+ | `/usr/bin/python3` ✅ | Runs `pipeline/` |
 | Python (Blender) | bundled | 3.13.13 ✅ | Runs `blender/scripts/` |
-| FFmpeg + ffprobe | 6.x or newer, with libx264 and AAC | **Missing** ❌ | `brew install ffmpeg` |
+| FFmpeg + ffprobe | 6.x or newer, with libx264 and AAC | 9.1 (Homebrew) ✅ | `brew install ffmpeg` |
 | jsonschema | ≥ 4.20 | Not checked in system Python | `pip3 install -r requirements.txt` |
 | pytest | ≥ 8.0 | — | Tests only |
 | Git | any recent | — | For pulling the repo |

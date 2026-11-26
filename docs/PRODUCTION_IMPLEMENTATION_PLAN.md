@@ -102,4 +102,4 @@ All deliverables A1–A11 are implemented. Validation:
 **Gaps found and carried into Stage 5:**
 - Shots built without a `blender.template` contain only environment (water volume, lights, marine snow); the EP001 prototype needs a seabed/silhouette template.
 - EEVEE could not be tested in the headless cloud workspace (no GPU context); it must be tested on the Mac.
-- FFmpeg must be installed on the Mac before the edit steps can run there.
+- FFmpeg 9.1 was installed on the Mac via Homebrew on 2026-11-26.
