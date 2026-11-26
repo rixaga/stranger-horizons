@@ -164,6 +164,50 @@
               "render_profile": {
                 "type": "string",
                 "description": "Override the render profile for this scene (e.g. preview_hd)."
+              },
+              "camera_keys": {
+                "type": "array",
+                "minItems": 2,
+                "description": "Explicit camera path; overrides the camera preset. location/target in metres, in relative_to's local space when given.",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "t_s",
+                    "location",
+                    "target"
+                  ],
+                  "properties": {
+                    "t_s": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "location": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "target": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "lens_mm": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "relative_to": {
+                      "type": "string",
+                      "description": "Object name, e.g. SH_ROV for a vehicle POV"
+                    }
+                  }
+                }
               }
             }
           },

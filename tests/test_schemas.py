@@ -53,3 +53,15 @@ def test_claim_ledger_requires_evidence_label():
     v = load("claim_ledger.schema.json")
     claim = {"claim_id": "C1", "text": "x", "source_ids": ["SRC-001"], "evidence_label": "probably true"}
     assert list(v.iter_errors({"episode_id": "E", "claims": [claim]}))
+
+
+def test_storyboard_camera_keys_need_location_and_target():
+    v = load("storyboard.schema.json")
+    def sb(keys):
+        scene = {"scene_id": "S1", "duration_seconds": 1, "visual_intent": "x", "narration": "n",
+                 "reconstruction_status": "abstract_visual", "camera": {}, "blender": {"camera_keys": keys}}
+        return {"episode_id": "E", "title": "T", "fps": 30, "scenes": [scene]}
+    ok = [{"t_s": 0, "location": [0, 0, 0], "target": [0, 1, 0]},
+          {"t_s": 1, "location": [0, 0.4, 1], "target": [0, 40, 0], "relative_to": "SH_ROV", "lens_mm": 18}]
+    assert not [e for e in v.iter_errors(sb(ok)) if "camera_keys" in e.json_path]
+    assert [e for e in v.iter_errors(sb([ok[0], {"t_s": 1, "location": [0, 0, 0]}])) if "camera_keys" in e.json_path]

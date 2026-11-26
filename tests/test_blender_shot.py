@@ -54,3 +54,19 @@ def test_movement_maps_to_camera_preset(ep):
     assert camera_move_for({"camera": {"movement": "Slow push in"}}) == "slow_push_in"
     assert camera_move_for({"camera": {"movement": "orbit"}}) == "controlled_orbit"
     assert camera_move_for({"camera": {}}) == "slow_push_in"
+
+
+def test_explicit_camera_keys_override_the_preset_move(ep):
+    from sh_build_shot import build_shot
+    sb = json.loads((ep / "storyboard/storyboard.json").read_text())
+    sb["scenes"][0].setdefault("blender", {})["camera_keys"] = [
+        {"t_s": 0, "location": [0, -30, 2], "target": [0, 0, 0], "lens_mm": 28},
+        {"t_s": 3, "location": [0, -5, 1], "target": [0, 10, 0], "lens_mm": 18},
+    ]
+    (ep / "storyboard/storyboard.json").write_text(json.dumps(sb))
+    info = build_shot(ep, "S01", "preview", save=False)
+    scene = bpy.context.scene
+    assert info["camera_move"] == "keyed"
+    scene.frame_set(91)
+    assert tuple(round(v, 3) for v in scene.camera.matrix_world.translation) == (0, -5, 1)
+    assert scene.camera.data.lens == 18

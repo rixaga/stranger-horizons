@@ -23,7 +23,7 @@ for p in (HERE, REPO / "pipeline"):
 
 import bpy  # noqa: E402
 
-from sh_camera import build_camera_move  # noqa: E402
+from sh_camera import build_camera_move, build_keyed_camera  # noqa: E402
 from sh_presets import _deep_merge, apply_preset, load_preset  # noqa: E402
 from sh_render import apply_profile, load_profile  # noqa: E402
 from shpipe import storyboard as sb_mod  # noqa: E402
@@ -65,9 +65,13 @@ def build_shot(episode_root, scene_id: str, mode: str = "preview", save: bool = 
     out_prefix = ep.render_dir(mode, scene_id) / "frame_"
     profile = profile or hints.get("render_profile") or PROFILE_FOR_MODE[mode]
     applied = apply_profile(scene, load_profile(profile), str(out_prefix))
-    move = camera_move_for(spec)
-    build_camera_move(scene, move, target=tuple(hints.get("target_m", (0.0, 0.0, 2.0))), frame_start=1,
-                      duration_s=spec["duration_seconds"], lens_mm=spec.get("camera", {}).get("lens_mm"))
+    if hints.get("camera_keys"):  # explicit path (e.g. a fly-in that ends as a vehicle POV) wins over presets
+        move = "keyed"
+        build_keyed_camera(scene, hints["camera_keys"])
+    else:
+        move = camera_move_for(spec)
+        build_camera_move(scene, move, target=tuple(hints.get("target_m", (0.0, 0.0, 2.0))), frame_start=1,
+                          duration_s=spec["duration_seconds"], lens_mm=spec.get("camera", {}).get("lens_mm"))
     merged = _deep_merge(load_preset(spec.get("environment_preset", "base")), hints.get("preset_overrides", {}))
     preset = apply_preset(scene, merged)
     cam_spec = spec.get("camera", {})
