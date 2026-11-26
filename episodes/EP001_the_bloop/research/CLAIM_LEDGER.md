@@ -4,11 +4,11 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 
 | Label | Claims |
 |---|---|
-| Established fact | 30 |
+| Established fact | 35 |
 | Strong evidence | 12 |
+| Unverified report | 3 |
+| Speculation | 3 |
 | Disputed | 2 |
-| Speculation | 2 |
-| Unverified report | 1 |
 
 | ID | Claim | Label | Sources | Status |
 |---|---|---|---|---|
@@ -50,7 +50,7 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | C36 | At distant hydrophones, sounds from disintegrating icebergs can dominate frequencies below 100 Hz, the range used by baleen whales. | Strong evidence | SRC-014 | qualified |
 | C37 | Retellings disagree on how long the mystery lasted; even a 2017 Motherboard headline appears as both 'nearly 10 years' and 'nearly 20 years'. | Established fact | SRC-026, SRC-004 | verified |
 | C38 | In H.P. Lovecraft's 'The Call of Cthulhu', first published in Weird Tales in February 1928, the sunken city of R'lyeh is placed at 47°9′S, 126°43′W. | Strong evidence | SRC-034, SRC-020 | verified |
-| C39 | The Bloop's early 'general location' (50°S 100°W) is about 1,980 km from Lovecraft's R'lyeh coordinates, while R'lyeh is about 313 km from Point Nemo, the oceanic pole of inaccessibility. | Established fact | SRC-001, SRC-034, SRC-020, SRC-021 | verified |
+| C39 | The Bloop's early 'general location' (50°S 100°W) is about 1,980 km from Lovecraft's R'lyeh coordinates, while R'lyeh is about 313 km from Point Nemo, the oceanic pole of inaccessibility. | Established fact | SRC-001, SRC-020, SRC-021, SRC-034, SRC-048 | verified |
 | C40 | Animal Planet's 'Mermaids: The Body Found' (aired 27 May 2012) was fiction presented as documentary, and its publicity named NOAA's 1997 Bloop as one of the real events it used as a springboard. | Established fact | SRC-023, SRC-024 | verified |
 | C41 | After that broadcast, NOAA publicly stated that no evidence of aquatic humanoids has ever been found. | Established fact | SRC-022 | verified |
 | C42 | The Bloop was made by an unknown giant animal. | Speculation | SRC-007, SRC-008 | verified |
@@ -59,6 +59,14 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | C45 | In 1944 Maurice Ewing and J. Lamar Worzel demonstrated that low-frequency sound travels long distances in the deep ocean sound channel (SOFAR). | Established fact | SRC-017, SRC-016 | verified |
 | C46 | Blue whale calls measured off the Western Antarctic Peninsula averaged about 189 dB re 1 µPa at 1 m, and calling blue whales were located up to about 200 km away. | Established fact | SRC-015 | verified |
 | C47 | Our analysis of NOAA's 16x Bloop file (bloop.wav, 10.34 s, 8 kHz) shows it covers about 165 s of original recording; its main rising sweep is roughly 9 to 28 Hz at true speed, near or below the ~20 Hz lower limit of typical human hearing. | Strong evidence | SRC-002, SRC-037 | qualified |
+| C48 | Popular articles and online videos linked the Bloop to the megalodon, a giant prehistoric shark, as a theory that it might survive in the deep. | Established fact | SRC-038, SRC-040 | verified |
+| C49 | According to the fossil record, megalodon lived roughly 23 to 2.6 million years ago; there is no evidence that it survives. | Established fact | SRC-039, SRC-040 | verified |
+| C50 | In UFO circles, some commentators connect the Bloop with alleged 'unidentified submerged objects' (USOs). | Established fact | SRC-041, SRC-042 | qualified |
+| C51 | The Bloop came from an alien craft or an underwater base. | Speculation | SRC-041 | verified |
+| C52 | In an August 2001 NOAA release, Fox was quoted as saying the Bloop had been reported for decades by Navy sonar operators. | Unverified report | SRC-006 | qualified |
+| C53 | Some retellings say Fox asked U.S. Navy intelligence whether the sound was a bomb or submarine, and that the Navy denied testing in the area. | Unverified report | SRC-043, SRC-044 | qualified |
+| C54 | The Bloop became internet folklore: an online first-person story of a sea-monster encounter off Chile, YouTube animations pitting 'the Bloop' against other sea monsters (2023), fan creatures in games, and a meme among younger viewers. | Established fact | SRC-045, SRC-046, SRC-008 | verified |
+| C55 | Some popular articles still present the Bloop as unsolved and say not everyone is convinced. | Established fact | SRC-047, SRC-043 | verified |
 
 ## Notes per claim
 
@@ -312,10 +320,11 @@ In H.P. Lovecraft's 'The Call of Cthulhu', first published in Weird Tales in Feb
 ### C39 — Established fact
 The Bloop's early 'general location' (50°S 100°W) is about 1,980 km from Lovecraft's R'lyeh coordinates, while R'lyeh is about 313 km from Point Nemo, the oceanic pole of inaccessibility.
 - **SRC-001**: A Collection of Sounds from the Sea (Andra M. Bobbitt (NOAA VENTS Program) and Sharon Nieukirk (Acoustic Monitoring Project), NOAA Pacific Marine Environmental Laboratory, via NOAA Ocean Explorer, unknown (undated page; Sound in the Sea 2001 expedition site))
-- **SRC-034**: The Call of Cthulhu (H. P. Lovecraft, 1928-02)
 - **SRC-020**: R'lyeh / The Call of Cthulhu (encyclopedia entries) (Wikipedia contributors, accessed version, 2026)
 - **SRC-021**: Strange maps: Point Nemo (Atlas Obscura, unknown)
-- *Counter-evidence / caveats:* Distances are our own great-circle calculations (research.json → computed_distances) from the published coordinates. The later NOAA location (C09) is even farther from R'lyeh.
+- **SRC-034**: The Call of Cthulhu (H. P. Lovecraft, 1928-02)
+- **SRC-048**: Cryptids: The Bloop (TIME Techland, 2010-05-19)
+- *Counter-evidence / caveats:* Distances are our own great-circle calculations (research.json → computed_distances) from the published coordinates. The later NOAA location (C09) is even farther from R'lyeh. A 2010 TIME article put R'lyeh 'within 500 miles' of the Bloop; our calculation gives about 1,230 miles.
 - *Approved wording (draft):* "The Bloop's first estimated position was nearly two thousand kilometres from Lovecraft's fictional coordinates. Close on a world map. Not close in the ocean."
 
 ### C40 — Established fact
@@ -368,4 +377,55 @@ Our analysis of NOAA's 16x Bloop file (bloop.wav, 10.34 s, 8 kHz) shows it cover
 - **SRC-037**: Stranger Horizons analysis of NOAA audio file bloop.wav (Stranger Horizons production (Claude), 2026-11-26, 2026-11-26)
 - *Counter-evidence / caveats:* Our own measurement, assuming exactly 16x. In the web file the main burst lasts about 0.5 s (~8 s at true speed), which is shorter than NOAA's description of a rise over about one minute; the web file may be an excerpt or processed. Do not state our durations as NOAA's.
 - *Approved wording (draft):* "NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears."
+
+### C48 — Established fact
+Popular articles and online videos linked the Bloop to the megalodon, a giant prehistoric shark, as a theory that it might survive in the deep.
+- **SRC-038**: Truth behind mysterious deep sea 'bloop' that had scientists convinced they'd found giant Megalodon (LADbible, 2025-12-06)
+- **SRC-040**: The Real Science Behind the Megalodon (Smithsonian Magazine, unknown)
+- *Approved wording (draft):* "Others pictured something older: megalodon, a prehistoric shark the size of a bus, surviving in the deep."
+
+### C49 — Established fact
+According to the fossil record, megalodon lived roughly 23 to 2.6 million years ago; there is no evidence that it survives.
+- **SRC-039**: What happened to the megalodon? (Encyclopaedia Britannica, unknown)
+- **SRC-040**: The Real Science Behind the Megalodon (Smithsonian Magazine, unknown)
+- *Approved wording (draft):* "Megalodon disappears from the fossil record around two and a half million years ago."
+
+### C50 — Established fact
+In UFO circles, some commentators connect the Bloop with alleged 'unidentified submerged objects' (USOs).
+- **SRC-041**: The Navy has admitted that UFOs exist. Will USOs be next? (SOFREP, unknown (after 2020))
+- **SRC-042**: The Underwater UFO Factory: The Bermuda Triangle and the Thing Beneath the Ocean (podcast episode) (Audioboom podcast listing, unknown)
+- *Counter-evidence / caveats:* Only evidence that the link is made; no source offers evidence of a craft.
+- *Approved wording (draft):* "In UFO circles, the Bloop became one more 'unidentified submerged object'."
+
+### C51 — Speculation
+The Bloop came from an alien craft or an underwater base.
+- **SRC-041**: The Navy has admitted that UFOs exist. Will USOs be next? (SOFREP, unknown (after 2020))
+- *Counter-evidence / caveats:* No evidence of any craft; the signal matches natural icequakes (C17-C21).
+- *Approved wording (draft):* "There is no evidence of any craft."
+
+### C52 — Unverified report
+In an August 2001 NOAA release, Fox was quoted as saying the Bloop had been reported for decades by Navy sonar operators.
+- **SRC-006**: NOAA News: Pioneer Seamount hydrophone expedition (Sound in the Sea) (NOAA (news release quoting Christopher Fox, director of PMEL's Acoustic Monitoring Project), 2001-08-24)
+- *Counter-evidence / caveats:* The release itself is genuine, but no other source supports decades of Navy reports of this specific sound, and NOAA's own pages describe a 1997 detection. It may refer loosely to similar unexplained sounds.
+- *Approved wording (draft):* "And in a NOAA press release from 2001, the agency's own scientist was quoted saying this kind of sound had been reported for decades by Navy sonar operators."
+
+### C53 — Unverified report
+Some retellings say Fox asked U.S. Navy intelligence whether the sound was a bomb or submarine, and that the Navy denied testing in the area.
+- **SRC-043**: In 1997 Scientists Detected The Loudest Sound Ever Heard Underwater, But The Cause Is Still A Mystery (HuffPost UK, 2017-10)
+- **SRC-044**: What caused the loudest underwater sound ever recorded? ('Sound Mysteries' video series) (Gizmodo, 2018)
+- *Counter-evidence / caveats:* Neither article gives a source for the anecdote.
+- *Approved wording (draft):* "Some retellings even claim the Navy was asked, and said it wasn't theirs. We could not find a primary source for that story."
+
+### C54 — Established fact
+The Bloop became internet folklore: an online first-person story of a sea-monster encounter off Chile, YouTube animations pitting 'the Bloop' against other sea monsters (2023), fan creatures in games, and a meme among younger viewers.
+- **SRC-045**: Sea Monsters as Medium: The Bloop Case Study (Yuchin Chen (Do Not Research, Substack), unknown (after 2023))
+- **SRC-046**: The Bloop (meme entry) (Know Your Meme, 2023)
+- **SRC-008**: The sea monster goes 'bloop'—or does it? (Popular Science, unknown (2020s))
+- *Approved wording (draft):* "Online, the Bloop grew a body. It got fan-made creature designs, invented expedition stories, and animated battles against other sea monsters."
+
+### C55 — Established fact
+Some popular articles still present the Bloop as unsolved and say not everyone is convinced.
+- **SRC-047**: 10 Unsolved Mysteries of the Ocean (AOL Lifestyle, unknown)
+- **SRC-043**: In 1997 Scientists Detected The Loudest Sound Ever Heard Underwater, But The Cause Is Still A Mystery (HuffPost UK, 2017-10)
+- *Approved wording (draft):* "Even today, some articles still call it unsolved."
 

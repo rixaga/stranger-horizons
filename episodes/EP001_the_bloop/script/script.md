@@ -1,9 +1,11 @@
 # Script — EP001 The Bloop: The Ocean Sound Nobody Could Explain
 
-Status: draft v1 — awaiting owner approval (script gate)
-Target length: 12–16 min. Narration ≈ 2,000 words at ~145 wpm, plus audio moments and pauses.
+Status: draft v2 (owner note 2026-11-26: more conspiracy theories, real research revealed at the end) — awaiting owner approval (script gate)
+Target length: 12–16 min. Narration ≈ 2,150 words at ~145 wpm, plus audio moments and pauses.
 
 Conventions: `[C##]` = claim in `research/claim_ledger.json`. `{RECON}` = the visual on that line is an illustrative reconstruction and must carry the on-screen label. `<visual: …>`, `<sfx: …>` and `<card: …>` are production notes and are not spoken. The spoken-only text is in `narration.md`; pronunciations are in `pronunciation_guide.md`.
+
+Structure: mystery (1–2) → the theories, told as their believers tell them (3) → the real investigation, revealed (4–5) → every theory checked against the evidence (6) → verdict (7). Theories in section 3 are always attributed ("so the story goes", "believers say"); none is stated as fact.
 
 ## 1. Opening hook
 
@@ -16,14 +18,15 @@ That sound was recorded in the Pacific Ocean in 1997. [C01]
 
 It was picked up by underwater microphones thousands of kilometres apart. [C25]
 For years, its source was officially unknown. [C14]
-Some people said it had to be alive, something larger than any whale. [C27]
-Others pointed to a horror story written seventy years earlier. [C29]
+
+Some said it was a creature bigger than any whale. [C27]
+Some said it was a monster that should have died out millions of years ago. [C48]
+Some pointed to a horror story, and a sunken city, written seventy years earlier. [C29]
+And some believed the U.S. Navy knew more than it was saying. [C52] [C53]
 
 Scientists gave it a name that sounds almost like a joke. The Bloop.
 
-But before we go any further, here is the first thing you should know. What you just heard is not what the ocean heard. [C06]
-
-This is the story of a sound, the scientists who chased it, and the myth that outgrew them. And at the end, we will tell you exactly how certain anyone can be about what it really was.
+Tonight we follow every one of those theories, as far as they go. And at the end, we will show you what the people who recorded the sound actually found.
 
 <card: STRANGER HORIZONS — Explore Beyond What We Know>
 
@@ -33,19 +36,12 @@ This is the story of a sound, the scientists who chased it, and the myth that ou
 
 Light fades quickly in the sea. Go deep enough, and the ocean is completely dark. But sound behaves differently.
 
-Deep in the ocean there is a layer where sound travels at its slowest, and that layer traps it. Inside this channel, a low rumble can cross an entire ocean basin. [C12]
+Deep in the ocean there is a layer where sound travels at its slowest, and that layer traps it. Inside it, a low rumble can cross an entire ocean basin. [C12]
 
-In 1944, two American scientists proved it with small explosive charges. A sound set off in this layer could be heard hundreds of miles away. [C45]
-
-<visual: diagram of the sound channel; a pulse bending back and forth along its axis> {RECON}
-
-<visual: Cold War-era style archive diagram recreated as a clean graphic: cable runs and listening stations on the seafloor. Label: "Illustrative graphic">
+<visual: recreated graphic of Cold War listening cables on the seafloor. Label: "Illustrative graphic">
 
 During the Cold War, the U.S. Navy wired parts of the deep sea with microphones to hunt submarines. When the Cold War ended, scientists were allowed to listen too, and they heard volcanoes erupting on the seafloor. [C44]
-That success gave NOAA's scientists an idea: build listening stations of their own, in parts of the ocean the Navy's network did not cover. [C03]
-
-In May 1996, scientists at NOAA's Pacific Marine Environmental Laboratory began listening to that channel in the eastern equatorial Pacific, with a line of hydrophones moored in the deep. [C02] [C03]
-They were not hunting for monsters. They were listening for earthquakes and eruptions on the seafloor. [C02]
+So NOAA's Pacific Marine Environmental Laboratory built listening stations of its own. In May 1996, it moored a line of hydrophones in the eastern equatorial Pacific, to hear earthquakes and eruptions on the seafloor. [C02] [C03]
 
 <visual: a moored hydrophone in the dark, cable rising into blackness> {RECON}
 
@@ -54,31 +50,80 @@ Then, in the summer of 1997, the hydrophones caught something else. [C04]
 <visual: spectrogram built from the NOAA file draws itself; a line sweeping upward. Label: "Spectrogram generated from the NOAA recording">
 
 A powerful, low sound. NOAA described its pitch as rising rapidly, over about a minute. [C05]
-It wasn't a single event. NOAA recorded it again and again that summer. [C04]
+It came again and again that summer. [C04]
 And it was loud enough to reach several hydrophones more than five thousand kilometres away. [C07]
+The version you heard has been sped up sixteen times, so that human ears can hear it at all. [C06]
 
 <visual: map of the Pacific; sensor positions; a point appears far off southern South America>
 
 NOAA's first estimate placed its source in the remote South Pacific, roughly fifty degrees south and one hundred degrees west, far off the coast of southern South America. [C08]
 
-<sfx: the 16× clip again, then a 20–30 s excerpt around the main event slowed to approximate real time, labelled "Approximate real-time playback — our reconstruction">
-
-Now listen again, slowed back down. Sixteen times slower, the Bloop is not a bloop at all. It is a deep, rising groan, far below the pitch the clip made famous. [C06] [C05]
-
-Speeding a recording up sixteen times raises every pitch by four full octaves. NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears. That is why the famous version sounds short, round and strangely alive. [C06] [C47]
-
-So what made it?
-
 Earthquakes rumble. Ships hum. This was different. Its pitch changed quickly, the way animal calls do. [C15]
 In 2002, the scientist leading NOAA's acoustic monitoring work, Christopher Fox, told New Scientist that of all the unexplained sounds his team had collected, this was the one that most resembled an animal. [C15]
 
-But there was a problem with that idea. To be heard so far away, the source had to be enormous, or enormously efficient at making sound. [C25] [C26]
+But to be heard so far away, the source had to be enormous, or enormously efficient at making sound. [C25] [C26]
 
 NOAA's own list of guesses from that time reads like the start of a thriller: secret military exercises, ship engines, fishing-boat winches, giant squid, whales, an unknown creature. [C10]
 And by NOAA's estimate, around ninety-five percent of the ocean is unexplored. [C11]
-A sound with no source, from a place almost no one has seen. The mystery was born.
+A sound with no source, from a place almost no one has seen. The theories wrote themselves.
 
-## 3. The investigation
+## 3. The theories (possibilities: what people believed)
+
+<visual: abstract dark shape gliding at the edge of the light. Label: "Illustration — not a real animal"> {RECON}
+
+Theory one: the giant.
+By 2002, news reports were asking whether a giant creature was hiding in the deep, perhaps a giant squid. [C27]
+The most repeated line was that the Bloop was several times louder than a blue whale, the loudest known animal. [C26]
+If that were true, the reasoning went, whatever made it had to be bigger than anything alive. In 2003, cryptozoologist Loren Coleman wrote that it most likely came from a marine beast. [C29]
+Scientists said "unknown". Many readers heard "monster". [C28]
+
+<visual: silhouette of a huge prehistoric shark crossing a shaft of light, dissolving into particles. Label: "Illustration"> {RECON}
+
+Theory two: the survivor.
+Others pictured something older: megalodon, a giant prehistoric shark, still surviving in the deep where no one looks. [C48]
+To believers, the Bloop was its call, finally caught on tape.
+
+<visual: an aged book page with the text block blurred, a single line legible: "S. Latitude 47° 9′, W. Longitude 126° 43′". Label: "From 'The Call of Cthulhu', H. P. Lovecraft, 1928">
+
+Theory three: the sleeper.
+Then there is Cthulhu. [C29]
+In a horror story published in 1928, H. P. Lovecraft described a sunken city called R'lyeh, where a monstrous god lies dreaming beneath the South Pacific. He even gave its coordinates: forty-seven degrees south, one hundred and twenty-six degrees west. [C38]
+Seventy years later, a mysterious sound rose out of the same ocean. Online, the Bloop was said to come from almost exactly there. [C29]
+For some it was a joke. For others it was too perfect to be a coincidence. Hold on to that coordinate. We will come back to it.
+
+<visual: recreated sonar room, dim green screens, no real insignia. Label: "Illustrative reconstruction"> {RECON}
+
+Theory four: the Navy knew.
+Remember who built the ocean's first great listening network. The Navy. [C44]
+In a NOAA press release from 2001, the agency's own scientist was quoted saying this kind of sound had been reported for decades by Navy sonar operators. [C52]
+Decades. Before anyone had heard of the Bloop.
+Some retellings go further. They claim the Navy was asked directly, and said it wasn't theirs. [C53]
+To a suspicious mind, that is exactly what you would say about a secret weapon, or a test you could not admit. [C43]
+
+<visual: deep water, a faint geometric glint that resolves into a drifting ice fragment as the camera nears. Label: "Illustration"> {RECON}
+
+Theory five: something not from here.
+In UFO circles, the Bloop became one more "unidentified submerged object". [C50]
+An alien craft, a hidden base on the seafloor, something using the deep ocean the way we use the sky. [C51]
+
+<visual: stylised TV-frame graphic with the on-screen note "Fiction (2012)"; no footage or branding from the real programme>
+
+Theory six: the mermaids.
+In 2012, a television film presented as a documentary, Mermaids: The Body Found, used the Bloop as part of its evidence for a hidden species of sea people. [C40]
+It was fiction, with a disclaimer. But enough viewers believed it that the questions reached the U.S. government. [C40] [C41]
+
+<visual: phone screens and forum threads, all text illegible and invented; meme-style creature drawings. Label: "Illustration">
+
+And finally: the legend.
+Online, the Bloop grew a body. It got fan-made creature designs, invented expedition stories, and animated battles against other sea monsters. [C54]
+The story itself kept changing as it spread. It was heard only once. It lasted fifteen seconds. Every microphone picked it up. It was never heard again. [C31] [C30]
+Even today, some articles still call it unsolved. [C55]
+
+A giant. A survivor. A sleeping god. A Navy secret. Visitors. Mermaids.
+Every one of these theories has believers.
+But only one explanation has evidence. And it was found by the same people who recorded the sound in the first place.
+
+## 4. The investigation (the real research, revealed)
 
 <visual: research vessel on a grey swell at dusk> {RECON}
 
@@ -87,124 +132,93 @@ Even in 2001, the team suspected an ordinary answer. Christopher Fox said public
 
 <visual: the map rotates south; a faint line extends from the hydrophones toward Antarctica>
 
-But suspicion is not proof. In an official NOAA release that same year, Fox still listed the Bloop as a sound whose origin had not been determined. [C14]
+But suspicion is not proof. Officially, the Bloop's origin had still not been determined. [C14]
 To be sure, the scientists needed to listen much closer to the ice.
 
 <visual: Antarctic Peninsula coastline, icebergs, overcast light> {RECON}
 
-So NOAA went south. In December 2005, a team led by geophysicist Robert Dziak put hydrophones into the water off the Antarctic Peninsula, in the Bransfield Strait. [C16]
-Their arrays kept recording there, and in the Scotia Sea, until 2009. [C16]
-
-And once again, they had come to listen for volcanoes and earthquakes, and heard ice instead. Thousands of times. [C35]
+So NOAA went south. In December 2005, a team led by geophysicist Robert Dziak put hydrophones into the water off the Antarctic Peninsula, in the Bransfield Strait. Their arrays kept recording there, and in the Scotia Sea, until 2009. [C16]
+Once again, they had come to listen for volcanoes and earthquakes. And once again, they heard ice. Thousands of times. [C35]
 
 <visual: an iceberg underwater, its keel fading into the dark; fine cracks spreading> {RECON}
 <sfx: low creak and crack, sound design, not a recording>
 
 Around Antarctica, cracking ice turned out to be one of the most prominent sounds in the sea. [C33]
-Icebergs groan as they run aground. They shudder as they scrape the seafloor. And when they crack and fracture, they release bursts of sound called icequakes. [C17] [C32]
+Icebergs groan as they run aground and scrape the seafloor. And when they crack and fracture, they release bursts of sound called icequakes. [C17] [C32]
 
 In early 2008, the hydrophones followed one iceberg, known as A53a, about sixty kilometres long, as it broke apart near the island of South Georgia. [C18]
 
-<visual: satellite-style map of the Scotia Sea; a long iceberg shape drifting and splitting> {RECON}
+<visual: map of the Scotia Sea; a long iceberg shape drifting and splitting> {RECON}
 
 Its icequakes left a familiar shape on the screen. Spectrograms very similar to the Bloop. [C18]
 And icequakes like these can be heard on hydrophones more than five thousand kilometres away. [C19]
 
-<visual: split-screen spectrograms: left "Bloop (NOAA, 1997)", right "Icequake (NOAA, Scotia Sea)", both labelled with source>
+<visual: split-screen spectrograms: left "Bloop (NOAA, 1997)", right "Iceberg calving (NOAA, 2008)", both labelled with source>
 
-The Bloop also had company. Two other strange sounds from the same years, nicknamed Slow Down and Julia, were traced to icebergs running aground off Antarctica. [C32]
-
-There was one more clue. A sound reaches each hydrophone at a slightly different moment, and those tiny differences reveal the direction it came from. When NOAA traced the Bloop's arrival direction, the line did not stop in that empty patch of ocean. It pointed on, toward the edge of Antarctica, somewhere between the Bransfield Strait and the Ross Sea, or perhaps Cape Adare. [C09]
+There was one more clue. A sound reaches each hydrophone at a slightly different moment, and those tiny differences reveal the direction it came from.
+When NOAA traced the Bloop's arrival direction, the line did not stop in that empty patch of ocean. It pointed on, toward the edge of Antarctica, somewhere between the Bransfield Strait and the Ross Sea, or perhaps Cape Adare. [C09]
 
 <visual: bearing line sweeping across the map to the Antarctic coastline; the arc of possible sources highlighted>
 
-## 4. Scientific explanations (possibilities: the evidence for ice)
+## 5. Scientific explanations (the sound of breaking ice)
 
 <visual: macro of ice under stress; slow cracks propagating> {RECON}
 
 So what is an icequake?
-Large icebergs are not solid, silent blocks. As they drift, warm, collide and ground, they crack and fracture. Each break releases energy into the water as sound. [C17]
+Large icebergs are not solid, silent blocks. As they drift, collide and ground, they crack and fracture, and each break releases energy into the water as sound. [C17]
 Low-frequency sound loses little energy in the deep sound channel, so a big enough event can carry across an ocean. [C12] [C19]
 
-And this isn't rare. In 2012, Robert Dziak said that every year there are tens of thousands of icequakes from cracking sea ice and ice breaking off glaciers. [C22]
+And it isn't rare. In 2012, Robert Dziak said that every year there are tens of thousands of icequakes. [C22]
 Asked about the Bloop directly, he said its frequency and duration were essentially identical to icequakes his team had recorded off Antarctica. [C21]
 
 NOAA's laboratory put its conclusion carefully. The sounds recorded in 1997 are consistent with icequakes generated by large icebergs as they crack and fracture. [C17]
 
 <card: NOAA PMEL: "consistent with icequakes generated by large icebergs as they crack and fracture">
 
-Notice what that sentence does not say. It does not name an iceberg. It does not give a precise location. And it does not say the iceberg broke away from a glacier, although some retellings do. [C24]
+<sfx: the 16× clip again, then a 20–30 s excerpt around the main event slowed to approximate real time, labelled "Approximate real-time playback — our reconstruction">
 
-Other scientists, using other instruments, have heard Antarctic icebergs from astonishing distances. Seismic stations in French Polynesia picked up icebergs drifting in the Ross Sea. [C34]
-Hydrophones have heard two giant icebergs breaking apart from about ten thousand kilometres away, across the equator. [C34]
-At times, breaking ice even dominates the low frequencies that great whales use to call to each other. [C36]
+Now listen again, slowed back down to its real speed.
+Speeding a recording up sixteen times raises every pitch by four full octaves. NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears. [C06] [C47]
+That short, round, strangely living "bloop" was never the voice of anything. It was a side effect of speeding up a deep, slow rumble so that we could hear it. [C06] [C47]
 
-Could it have been a different kind of ice event, such as an iceberg scraping the seafloor? That fits the same family of sounds, and NOAA has linked other signals to groundings. But for the Bloop itself, NOAA points to icequakes. [C20] [C32]
+## 6. What the evidence actually tells us (investigation of every theory)
 
-## 5. Popular theories (possibilities: what people believed)
+<visual: the wall of theory cards from section 3 returns; each one turns over as it is answered>
 
-<visual: abstract dark shape in deep water that resolves into drifting ice as the camera nears. Label: "Illustration — not a real animal"> {RECON}
+So let's go back through every theory.
 
-While scientists quietly gathered evidence, the public story went somewhere else entirely.
+The giant. No published measurement shows the Bloop was "several times louder than a blue whale". That line came from how far the sound travelled, not from measuring it. [C26]
+For scale, scientists off Antarctica measured blue whale calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away. [C46]
+A sound heard more than five thousand kilometres away needed no animal at all, only a very large source of energy, like breaking ice. [C07] [C19]
 
-By 2002, news reports were asking whether a giant creature was hiding in the deep, perhaps a giant squid. [C27]
-Scientists said "unknown". Many readers heard "monster". [C28]
+The survivor. Megalodon disappears from the fossil record around two and a half million years ago. There is no evidence that it survives. [C49]
 
-The most repeated claim was that the Bloop was several times louder than a blue whale, the loudest known animal. That line has been widely quoted as coming from NOAA, but we could not find it in NOAA's current pages, and we found no published measurement of how loud the Bloop actually was at its source. The comparison came from how far it travelled. [C26]
-
-For scale, blue whales really are among the loudest animals alive. Off Antarctica, scientists measured their calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away. [C46]
-Underwater decibels are not the same as decibels in air, so that number cannot be compared with a jet engine or a rock concert. [C46]
-What we can say is this: a sound heard more than five thousand kilometres away needed no whale at all, only a very large source of energy, like breaking ice. [C07] [C19]
-
-There is no evidence for a giant creature. The idea survives partly because the sped-up recording sounds alive. [C42] [C06]
-
-<visual: an aged book page with the text block blurred, a single line of coordinates legible: "S. Latitude 47° 9′, W. Longitude 126° 43′". Label: "From 'The Call of Cthulhu', H. P. Lovecraft, 1928">
-
-Then there is Cthulhu. [C29]
-In a horror story published in 1928, H. P. Lovecraft placed his sunken city, R'lyeh, at forty-seven degrees south, one hundred and twenty-six degrees west. [C38]
-Online, the Bloop was said to come from almost exactly there. [C29]
-
+The sleeper. Remember that coordinate.
 <visual: map. Two pins: "R'lyeh (fiction)" and "Bloop — NOAA's early estimate". A measured line between them: "≈ 1,980 km". Then the bearing line to Antarctica appears>
+The Bloop's first estimated position was nearly two thousand kilometres from Lovecraft's fictional city. On a world map that looks close. In the ocean, it is not. And NOAA's later direction pointed even farther away, toward Antarctica. [C39] [C09]
 
-The Bloop's first estimated position was nearly two thousand kilometres from Lovecraft's fictional coordinates. On a world map that looks close. In the ocean, it is not. [C39]
-And the later direction pointed even farther away, toward Antarctica. [C09] [C39]
+The Navy. That 2001 quote is real, but nothing else we found supports decades of Navy reports of this sound, and we found no primary source for the story that the Navy was asked and denied it. [C52] [C53]
+Fox himself did not believe the sound was man-made, and there is no evidence that it was. [C43]
 
-In 2012, a television film presented as a documentary, Mermaids: The Body Found, used the Bloop as part of its "evidence" for mermaids. It was fiction. [C40]
-So many viewers asked questions that NOAA issued a statement: no evidence of aquatic humanoids has ever been found. [C41]
+The visitors. There is no evidence of any craft. [C51]
 
-And the theory of a secret military test? Fox did not believe the sound was man-made, and there is no evidence that it was. [C43]
+The mermaids. After that broadcast, NOAA issued a public statement: no evidence of aquatic humanoids has ever been found. [C41]
 
-<visual: a wall of cards flips over one by one, each showing a myth, then its correction>
+The legend. NOAA's own record says the sound was recorded repeatedly, rose over about a minute, and was heard on multiple sensors. [C31] [C04] [C05] [C07]
+And that particular event was never heard again, but sounds just like it are recorded every year. [C30] [C22]
 
-Along the way, the story itself kept changing.
-It was heard only once. It lasted fifteen seconds. Every microphone picked it up. [C31]
-None of that matches NOAA's own record: recorded repeatedly, rising over about a minute, heard on multiple sensors. [C31] [C04] [C05] [C07]
-For years people said it was never heard again. [C30]
-In a sense that is true: that particular event never came back. But sounds just like it are recorded every year. [C30] [C22]
-
-## 6. What the evidence actually tells us (investigation summary)
-
-<visual: return to the moored hydrophone in the dark; the spectrogram line drawn faintly beside it> {RECON}
-
-So, after all of it, what do we actually know?
-
-We know the sound was real, recorded repeatedly by NOAA in 1997. [C01] [C04]
-We know the famous clip is sped up sixteen times, and that the real sound was a deep, rising rumble near the bottom of human hearing. [C06] [C47]
-We know its shape matches icequakes recorded near Antarctica, and that its arrival direction points toward the Antarctic coast. [C18] [C21] [C09]
-We know icequakes are common, and loud enough to cross an ocean. [C22] [C19] [C34]
-
-And we should be honest about what we do not know.
+Now, the honest part. The ice explanation has limits too.
 No one saw the event. The iceberg was never identified. We found no scientific paper that analyses the 1997 recording itself; the conclusion lives on NOAA's web pages and in interviews. [C20]
-NOAA says the Bloop was recorded in summer. On an American agency's page, that most likely means the northern summer, which is winter in Antarctica, when icequakes there are less frequent. Less frequent, not absent. [C04] [C20] [C33]
-Even NOAA's own pages disagree about when the case was closed: 2005, 2008, or 2012, depending on where you look. [C23]
+NOAA says the sound was recorded in summer. On an American agency's page, that most likely means the northern summer, which is winter in Antarctica, when icequakes there are less frequent. Less frequent, not absent. [C04] [C20] [C33]
+And even NOAA's own pages disagree about when the case was closed: 2005, 2008, or 2012. [C23]
 
 ## 7. Final verdict (verdict and closing question)
 
 <visual: wide shot. A vast tabular iceberg at dusk, the camera descending below the waterline, where the berg's dark mass disappears into the deep> {RECON}
 
 Here is our verdict.
-The Bloop was almost certainly not a creature. The best-supported explanation, backed by NOAA's own scientists, is an Antarctic icequake: a giant iceberg cracking apart, its sound carried thousands of kilometres by the ocean's deep sound channel. [C20] [C17] [C12]
-That conclusion is strongly supported by the sound itself, by its direction, and by everything heard near Antarctica since. But it was never witnessed, and it never will be. [C20]
+The Bloop was almost certainly not a creature, a weapon or a visitor. The best-supported explanation, from NOAA's own scientists, is an Antarctic icequake: a giant iceberg cracking apart, its sound carried thousands of kilometres by the ocean's deep sound channel. [C20] [C17] [C12]
+That conclusion is backed by the sound itself, by its direction, and by everything heard near Antarctica since. But it was never witnessed, and it never will be. [C20]
 
 <card: VERDICT — Antarctic icequake: strongly supported, not directly observed>
 
@@ -221,8 +235,9 @@ It is what else the ocean is telling us, that we haven't learned to hear.
 ---
 ### Reviewer checklist
 - [x] Every [C##] exists in the claim ledger (checked by `sh.py script EP001`)
+- [x] Every theory in section 3 is attributed, and answered in section 6
 - [x] At least one ordinary explanation is given for each anomaly (ice for the sound; speed-up for the "animal" quality; travel distance for the "louder than a whale" claim)
-- [x] No fabricated quotes, experts or documents. Direct quotation on screen: one NOAA PMEL sentence (U.S. government work). Fox and Dziak are paraphrased.
-- [ ] Owner: approve tone and verdict wording
-- [ ] Owner: confirm the 1928 book-page treatment (public-domain text, no imitation of a real edition)
+- [x] No fabricated quotes, experts or documents. Direct quotation on screen: one NOAA PMEL sentence (U.S. government work). Fox and Dziak are paraphrased; the 2001 NOAA release is paraphrased.
+- [x] No creature reconstruction that could be taken as real: every creature visual is an abstract silhouette that dissolves and is labelled "Illustration"
+- [ ] Owner: approve tone, the conspiracy section, and verdict wording
 - [ ] Before narration: verify C13, C21, C22 wording against the original CNN 2001 and WIRED UK 2012 articles (currently read via secondary copies)

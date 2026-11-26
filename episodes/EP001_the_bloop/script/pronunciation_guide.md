@@ -27,6 +27,11 @@ For the ElevenLabs narration (Phase 5) and any human re-recording. Accent: neutr
 | Peninsula | "puh-NIN-syuh-luh" | — | |
 | Pacific Marine Environmental Laboratory | "luh-BOR-uh-tor-ee" (British) or "LAB-ruh-tor-ee" (American) | — | Choose to match the voice's accent. |
 | Slow Down / Julia | as written | — | Nicknames of two NOAA sounds; slight emphasis, as names. |
+| megalodon | "MEG-uh-luh-don" | Meg-a-lo-don | |
+| Loren Coleman | "LOR-en KOLE-man" | — | |
+| cryptozoologist | "krip-toh-zoh-OL-uh-jist" | — | |
+| humanoids | "HYOO-muh-noydz" | — | |
+| Theory one … six | as written | — | Short beat after each "Theory one: …" title, like a chapter card. |
 
 ## Technical terms
 

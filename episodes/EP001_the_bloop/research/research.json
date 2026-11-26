@@ -272,6 +272,50 @@
         "C40",
         "C41"
       ]
+    },
+    {
+      "explanation": "Surviving megalodon",
+      "verdict": "No evidence (speculation)",
+      "for": [
+        "Popular belief that megalodon survives in unexplored depths"
+      ],
+      "against_or_open": [
+        "Fossil record ends ~2.6 million years ago"
+      ],
+      "claims": [
+        "C48",
+        "C49"
+      ]
+    },
+    {
+      "explanation": "U.S. Navy secret / cover-up",
+      "verdict": "No evidence; one genuine but unsupported 2001 quote",
+      "for": [
+        "2001 NOAA release quotes Fox: reported for decades by Navy sonar operators",
+        "Retellings claim the Navy denied involvement"
+      ],
+      "against_or_open": [
+        "Quote unsupported elsewhere; denial anecdote has no primary source; Fox did not believe it was man-made"
+      ],
+      "claims": [
+        "C52",
+        "C53",
+        "C43"
+      ]
+    },
+    {
+      "explanation": "Alien craft / unidentified submerged object",
+      "verdict": "No evidence (speculation)",
+      "for": [
+        "Linked to the Bloop in UFO commentary"
+      ],
+      "against_or_open": [
+        "No evidence of any craft; signal matches icequakes"
+      ],
+      "claims": [
+        "C50",
+        "C51"
+      ]
     }
   ],
   "popular_claims_vs_record": [
@@ -330,6 +374,14 @@
       "record": "PMEL says icebergs cracking and fracturing; calving specifically is not established",
       "claims": [
         "C24"
+      ]
+    },
+    {
+      "popular": "Still unsolved",
+      "record": "NOAA attributes it to icequakes; limits remain (no witness, iceberg unknown)",
+      "claims": [
+        "C55",
+        "C20"
       ]
     }
   ],
@@ -401,7 +453,8 @@
     "Twist structure: the scientists suspected ice almost from the start; the mystery was bigger in public than in the lab.",
     "Human detail: twice NOAA went listening for volcanoes and heard ice instead (1997 Pacific; 2005 Antarctica).",
     "Myth anatomy: how 'unknown' became 'monster' (2002 headlines → Cthulhu coordinates → 2012 fake mermaid documentary).",
-    "Honest verdict: strongly supported icequake, not a witnessed event; the deeper story is how loud a warming polar ocean is."
+    "Honest verdict: strongly supported icequake, not a witnessed event; the deeper story is how loud a warming polar ocean is.",
+    "Owner direction (2026-11-26): build the theories first, reveal the real research at the end; every theory is attributed in section 3 and answered in section 6."
   ],
   "visual_implications_for_storyboard": [
     "Real: NOAA audio, our spectrogram/waveform built from it, maps from public data (coordinates, bearings, distances computed here).",
