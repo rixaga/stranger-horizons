@@ -88,6 +88,10 @@
               "fstop": {
                 "type": "number",
                 "exclusiveMinimum": 0
+              },
+              "position": {
+                "type": "string",
+                "description": "Where the camera is placed relative to the subject/environment"
               }
             },
             "additionalProperties": false
@@ -162,11 +166,35 @@
                 "description": "Override the render profile for this scene (e.g. preview_hd)."
               }
             }
+          },
+          "script_section": {
+            "type": "string",
+            "description": "Heading of the script section this scene's narration comes from"
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^C[0-9]{2,}$"
+            },
+            "description": "Claim-ledger IDs supported or presented by this scene's narration"
+          },
+          "animation": {
+            "type": "string",
+            "description": "What moves in the shot: creature, object, camera-independent motion, graphic animation"
+          },
+          "title_card": {
+            "type": "string",
+            "description": "On-screen chapter or title card text shown in this scene"
           }
         },
         "additionalProperties": false
       },
       "minItems": 1
+    },
+    "source_script": {
+      "type": "string",
+      "description": "Script version the storyboard was built from"
     }
   }
 }

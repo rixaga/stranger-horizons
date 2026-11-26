@@ -1,0 +1,2708 @@
+{
+  "episode_id": "EP001",
+  "title": "The Bloop: The Ocean Sound Nobody Could Explain",
+  "fps": 30,
+  "source_script": "script/script.md (v2, approved 2026-11-26)",
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 12.5,
+      "narration": "",
+      "visual_intent": "Cold open: the real NOAA Bloop audio over black, then two seconds of silence.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "NOAA hydrophone recording, 1997 — sped up 16×",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "black",
+        "angle": "none",
+        "movement": "none",
+        "position": "no camera",
+        "lens_mm": 24,
+        "dof": false,
+        "fstop": 4.0
+      },
+      "environment": "Black screen",
+      "assets": [
+        "NOAA bloop.wav (16×)"
+      ],
+      "lighting": "None",
+      "animation": "Text label fades in at 0.5 s; a thin waveform line drawn from the real audio pulses with it.",
+      "sound_notes": "NOAA bloop.wav unprocessed at −14 LUFS-I target, then 2 s silence.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S002",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 5.0,
+      "narration": "That sound was recorded in the Pacific Ocean in 1997.",
+      "visual_intent": "First image: endless dark water, the scale of the ocean.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C01"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "eye level",
+        "movement": "slow push forward 6 m, eased",
+        "position": "mid-water 300 m depth, no seabed in view",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "Volume water",
+        "Marine snow particles"
+      ],
+      "lighting": "Faint downwelling shafts from above, almost black below",
+      "animation": "Particles drift upward past lens; shafts shimmer (gobo drift).",
+      "sound_notes": "Low sub rumble pad, very quiet.",
+      "transition": "dissolve 1 s",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S003",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 8.0,
+      "narration": "It was picked up by underwater microphones thousands of kilometres apart. For years, its source was officially unknown.",
+      "visual_intent": "The network: a map of the Pacific with hydrophone points lighting up one after another.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C25",
+        "C14"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "slow pull-back over globe",
+        "position": "orbital globe view of the Pacific",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe, dark ocean, faint graticule",
+      "assets": [
+        "SH_Globe (Natural Earth coastlines, public domain)",
+        "Hydrophone markers"
+      ],
+      "lighting": "Flat graphic light, Signal Cyan accent on markers",
+      "animation": "Markers ignite left to right; a ring pulse expands across thousands of km.",
+      "sound_notes": "Soft UI ticks per marker (−20 dB).",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S004",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 5.0,
+      "narration": "Some said it was a creature bigger than any whale.",
+      "visual_intent": "Teaser: a vast shape moves at the edge of the light.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C27"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "locked, slight drift",
+        "position": "mid-water looking up toward faint surface",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant (procedural squid-like creature)"
+      ],
+      "lighting": "Backlit by surface glow; creature in silhouette",
+      "animation": "A tentacle silhouette crosses the light shaft, 3 s, unhurried.",
+      "sound_notes": "Deep pressure swell, no roars or creature voices.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S005",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 7.0,
+      "narration": "Some said it was a monster that should have died out millions of years ago.",
+      "visual_intent": "Teaser: a shark fin cuts a shaft of light.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C48"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "medium_wide",
+        "angle": "eye level",
+        "movement": "lateral track 4 m left",
+        "position": "beside the creature's path, 20 m away",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Megalodon (procedural)"
+      ],
+      "lighting": "Single sun shaft; creature passes through it",
+      "animation": "Megalodon tail and fin pass through frame, marine snow swirls in its wake.",
+      "sound_notes": "Water displacement whoosh, subtle.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "lateral_track"
+    },
+    {
+      "scene_id": "S006",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 6.5,
+      "narration": "Some pointed to a horror story, and a sunken city, written seventy years earlier.",
+      "visual_intent": "Teaser: ruins on a seafloor in darkness.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C29"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "high angle",
+        "movement": "slow descent 8 m",
+        "position": "above sunken ruins, looking down",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Abyssal floor with tilted monolithic ruins (original design)",
+      "assets": [
+        "SH_Ruins_Monolith (procedural)",
+        "CR_Sleeper (hidden, only a shape)"
+      ],
+      "lighting": "Cold rim light from an unseen source; ruins mostly silhouette",
+      "animation": "Silt drifts off a monolith edge.",
+      "sound_notes": "Distant low drone.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal"
+    },
+    {
+      "scene_id": "S007",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 6.0,
+      "narration": "And some believed the U.S. Navy knew more than it was saying.",
+      "visual_intent": "Teaser: an unmarked submarine shape slides past a lone hydrophone.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C52",
+        "C53"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "locked",
+        "position": "next to a hydrophone mooring cable",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Submarine_Unmarked (no insignia)",
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Near-black; submarine hull catches a faint blue sheen",
+      "animation": "Hull passes left to right over 4 s.",
+      "sound_notes": "Muffled machinery hum, no sonar pings.",
+      "transition": "cut to black",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S008",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 6.0,
+      "narration": "Scientists gave it a name that sounds almost like a joke. The Bloop.",
+      "visual_intent": "Title reveal: the word 'The Bloop' forms out of the real waveform.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Black with faint water caustics",
+      "assets": [
+        "Waveform of NOAA bloop.wav",
+        "Title typeface (VISUAL_STYLE_GUIDE)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Waveform line contracts into the title lettering.",
+      "sound_notes": "A short excerpt of the real clip under the title.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S009",
+      "script_section": "1. Opening hook",
+      "duration_seconds": 17.0,
+      "narration": "Tonight we follow every one of those theories, as far as they go. And at the end, we will show you what the people who recorded the sound actually found.",
+      "visual_intent": "Promise to the viewer, then the channel card.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Stranger Horizons",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Channel ident",
+      "assets": [
+        "Channel ident card"
+      ],
+      "lighting": "Graphic",
+      "animation": "Ident card: STRANGER HORIZONS — Explore Beyond What We Know.",
+      "sound_notes": "Ident tone (owner-approved music from YouTube Audio Library).",
+      "transition": "dissolve 1 s"
+    },
+    {
+      "scene_id": "S010",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 8.5,
+      "narration": "Light fades quickly in the sea. Go deep enough, and the ocean is completely dark. But sound behaves differently.",
+      "visual_intent": "Descent from the bright surface into darkness.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "looking down",
+        "movement": "continuous descent 40 m",
+        "position": "just below the surface, sinking",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Open ocean from surface to 300 m",
+      "assets": [
+        "Ocean surface",
+        "Volume water"
+      ],
+      "lighting": "Sun from above fading with depth",
+      "animation": "Light shafts thin out as the camera sinks.",
+      "sound_notes": "Surface wash fading to deep hum.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal"
+    },
+    {
+      "scene_id": "S011",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 13.0,
+      "narration": "Deep in the ocean there is a layer where sound travels at its slowest, and that layer traps it. Inside it, a low rumble can cross an entire ocean basin.",
+      "visual_intent": "Explain the deep sound channel.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C12"
+      ],
+      "source_ids": [
+        "SRC-016",
+        "SRC-017"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Cross-section diagram of the ocean",
+      "assets": [
+        "SH_SoundChannel diagram (original, from NOAA/DOSITS description)"
+      ],
+      "lighting": "Graphic",
+      "animation": "A pulse leaves a source, bends up and down along the channel axis and travels across the frame.",
+      "sound_notes": "Soft low pulse sound design (labelled as illustration, not a recording).",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S012",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 16.0,
+      "narration": "During the Cold War, the U.S. Navy wired parts of the deep sea with microphones to hunt submarines. When the Cold War ended, scientists were allowed to listen too, and they heard volcanoes erupting on the seafloor.",
+      "visual_intent": "Cold War listening cables on the seafloor.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative graphic",
+      "claim_ids": [
+        "C44"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low over seabed",
+        "movement": "glide along a cable 15 m",
+        "position": "1 m above seabed following a cable",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Mid-water seabed (~150 m): sediment, basalt boulders (EP000 set kit)",
+      "assets": [
+        "SH_Cable (procedural)",
+        "SH_ListeningArray (generic, no insignia)",
+        "EP000 set kit"
+      ],
+      "lighting": "Cold, motivated by distant lamp; mostly dark",
+      "animation": "Camera follows a cable to a listening node; a faint glow of a distant eruption on the horizon.",
+      "sound_notes": "Low hum; distant rumble.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "glide_reveal"
+    },
+    {
+      "scene_id": "S013",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 15.0,
+      "narration": "So NOAA's Pacific Marine Environmental Laboratory built listening stations of its own. In May 1996, it moored a line of hydrophones in the eastern equatorial Pacific, to hear earthquakes and eruptions on the seafloor.",
+      "visual_intent": "NOAA's own moored hydrophone in the dark.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C02",
+        "C03"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "low angle",
+        "movement": "rise along the mooring cable 10 m",
+        "position": "beside the hydrophone mooring",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring (anchor, cable, float, hydrophone)"
+      ],
+      "lighting": "Faint blue ambient; hydrophone catches rim light",
+      "animation": "Cable sways slightly in current; marine snow drifts.",
+      "sound_notes": "Hydrophone 'room tone' sound design.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "rise_reveal"
+    },
+    {
+      "scene_id": "S014",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 5.5,
+      "narration": "Then, in the summer of 1997, the hydrophones caught something else.",
+      "visual_intent": "Something arrives: the hydrophone in close-up, a faint vibration.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C04"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "close_up",
+        "angle": "eye level",
+        "movement": "slow push-in 1 m",
+        "position": "0.5 m from the hydrophone",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Low key; rim light",
+      "animation": "Particles near the hydrophone tremble very slightly.",
+      "sound_notes": "Low rumble begins.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S015A",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 7.0,
+      "narration": "A powerful, low sound. NOAA described its pitch as rising rapidly, over about a minute.",
+      "visual_intent": "The real evidence: our spectrogram of NOAA's file draws itself while the real audio plays.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Spectrogram generated from the NOAA recording (sped up 16×)",
+      "claim_ids": [
+        "C05"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-002",
+        "SRC-037"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Dark graph field",
+      "assets": [
+        "Spectrogram from NOAA bloop.wav (research/audio_analysis.md)"
+      ],
+      "lighting": "Graphic, Signal Cyan accent",
+      "animation": "Spectrogram reveals left to right in sync with the audio; the rising sweep is highlighted.",
+      "sound_notes": "NOAA bloop.wav under narration (ducked).",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S015",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 18.0,
+      "narration": "It came again and again that summer. And it was loud enough to reach several hydrophones more than five thousand kilometres away. The version you heard has been sped up sixteen times, so that human ears can hear it at all.",
+      "visual_intent": "Repeated detections and the speed-up: a summer-1997 timeline with repeated ticks, then a '16×' playback-speed badge on the waveform.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Spectrogram generated from the NOAA recording (sped up 16×)",
+      "claim_ids": [
+        "C04",
+        "C07",
+        "C06"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Dark graph field",
+      "assets": [
+        "Spectrogram from NOAA bloop.wav (research/audio_analysis.md)"
+      ],
+      "lighting": "Graphic, Signal Cyan accent",
+      "animation": "Timeline ticks appear across summer 1997 (illustrative spacing, labelled); waveform speeds up with a 16× badge.",
+      "sound_notes": "Soft ticks.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S016",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 12.5,
+      "narration": "NOAA's first estimate placed its source in the remote South Pacific, roughly fifty degrees south and one hundred degrees west, far off the coast of southern South America.",
+      "visual_intent": "Locate the early estimate: 50°S 100°W.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C08"
+      ],
+      "source_ids": [
+        "SRC-001"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "zoom from Pacific to South Pacific",
+        "position": "orbital globe view",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe",
+      "assets": [
+        "SH_Globe",
+        "Location marker 50°S 100°W"
+      ],
+      "lighting": "Graphic",
+      "animation": "Globe rotates; marker drops at 50°S 100°W with coordinates text.",
+      "sound_notes": "UI tick.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S017A",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 7.5,
+      "narration": "Earthquakes rumble. Ships hum. This was different. Its pitch changed quickly, the way animal calls do.",
+      "visual_intent": "Comparison: an earthquake, a ship and the Bloop as three spectrogram shapes.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C15"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Three-panel graph",
+      "assets": [
+        "Schematic spectrogram shapes (illustrative, labelled)",
+        "Real Bloop spectrogram"
+      ],
+      "lighting": "Graphic",
+      "animation": "Panels appear one by one; the Bloop's rising line is highlighted.",
+      "sound_notes": "Quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S017",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 14.5,
+      "narration": "In 2002, the scientist leading NOAA's acoustic monitoring work, Christopher Fox, told New Scientist that of all the unexplained sounds his team had collected, this was the one that most resembled an animal.",
+      "visual_intent": "Fox's 2002 remark: a recreated, empty acoustics lab (no people), monitors showing the real spectrogram; citation card 'New Scientist, 15 June 2002 (paraphrased)'.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C15"
+      ],
+      "source_ids": [
+        "SRC-007"
+      ],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "eye level",
+        "movement": "slow push past monitors",
+        "position": "inside a generic acoustics lab",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Generic 1990s acoustics lab, night, no people, no real logos",
+      "assets": [
+        "SH_Lab (procedural)",
+        "Real Bloop spectrogram on monitors",
+        "Citation card"
+      ],
+      "lighting": "Monitor glow, desk lamp (Ember Amber accent)",
+      "animation": "Monitor shows the spectrogram scrolling; citation card fades in.",
+      "sound_notes": "Computer fans, quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S018",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 8.5,
+      "narration": "But to be heard so far away, the source had to be enormous, or enormously efficient at making sound.",
+      "visual_intent": "Distance as a puzzle: a pulse ring spans five thousand kilometres.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C25",
+        "C26"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "slow pull-back",
+        "position": "globe",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe",
+      "assets": [
+        "SH_Globe",
+        "Distance ring > 5,000 km"
+      ],
+      "lighting": "Graphic",
+      "animation": "Ring expands from the source to the hydrophones; a ruler reads '> 5,000 km'.",
+      "sound_notes": "Low swell.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S019A",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 12.5,
+      "narration": "NOAA's own list of guesses from that time reads like the start of a thriller: secret military exercises, ship engines, fishing-boat winches, giant squid, whales, an unknown creature.",
+      "visual_intent": "NOAA's list of guesses as an animated list card.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Source: NOAA National Ocean Service",
+      "claim_ids": [
+        "C10"
+      ],
+      "source_ids": [
+        "SRC-004"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "List card",
+      "assets": [
+        "List card: military exercises, ship engines, fishing-boat winches, giant squid, whales, unknown creature"
+      ],
+      "lighting": "Graphic",
+      "animation": "Items appear one by one, the last one ('unknown creature') lingers.",
+      "sound_notes": "Soft ticks.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S019",
+      "script_section": "2. The mysterious recording (context and anomaly)",
+      "duration_seconds": 13.0,
+      "narration": "And by NOAA's estimate, around ninety-five percent of the ocean is unexplored. A sound with no source, from a place almost no one has seen. The theories wrote themselves.",
+      "visual_intent": "Unknown ocean: camera hangs above an unexplored abyss.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C11"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high angle",
+        "movement": "slow push toward a dark trench",
+        "position": "over the edge of a deep trench",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Abyssal plain falling into a trench",
+      "assets": [
+        "EP000 set kit (terrain variant: trench)"
+      ],
+      "lighting": "Single faint shaft; trench is black",
+      "animation": "Marine snow falls into the dark.",
+      "sound_notes": "Music: low pulse builds (Anomaly beat).",
+      "transition": "dissolve 1 s",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S020",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 10.5,
+      "narration": "Theory one: the giant. By 2002, news reports were asking whether a giant creature was hiding in the deep, perhaps a giant squid.",
+      "visual_intent": "THEORY ONE title card, then the Giant appears.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C27"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "rise 6 m as the creature rises",
+        "position": "beside a tiny ROV for scale",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant (procedural: mantle, 8 arms, 2 long tentacles)",
+        "SH_ROV (2.8 m, scale cue)"
+      ],
+      "lighting": "ROV lamps catch the creature's skin; backlit by a shaft",
+      "animation": "Creature rises past the ROV, arms uncoiling slowly; mantle pulses; never attacks.",
+      "sound_notes": "Deep pressure, water movement; no creature voice.",
+      "transition": "cut",
+      "title_card": "THEORY ONE: THE GIANT",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "rise_reveal"
+    },
+    {
+      "scene_id": "S021A",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 16.0,
+      "narration": "The most repeated line was that the Bloop was several times louder than a blue whale, the loudest known animal. If that were true, the reasoning went, whatever made it had to be bigger than anything alive.",
+      "visual_intent": "The Giant's scale: its eye slides through the ROV's lamp beam.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C26",
+        "C29"
+      ],
+      "source_ids": [
+        "SRC-031"
+      ],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "eye level",
+        "movement": "lateral track with the creature 5 m",
+        "position": "10 m from the ROV",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant",
+        "SH_ROV"
+      ],
+      "lighting": "ROV lamps",
+      "animation": "A huge eye slides through the ROV's beam; ROV is dwarfed.",
+      "sound_notes": "Low swell.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "lateral_track"
+    },
+    {
+      "scene_id": "S021",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 10.0,
+      "narration": "In 2003, cryptozoologist Loren Coleman wrote that it most likely came from a marine beast. Scientists said \"unknown\". Many readers heard \"monster\".",
+      "visual_intent": "How the press told it: invented headline cards (no real mastheads) over a dark Giant silhouette.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Illustration",
+      "claim_ids": [
+        "C29",
+        "C28"
+      ],
+      "source_ids": [
+        "SRC-008",
+        "SRC-028"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Graphic collage over 3D inset",
+      "assets": [
+        "Invented headline cards (illegible body text, no real mastheads)",
+        "CR_Giant (silhouette inset)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Cards slide in; the word 'MONSTER' sharpens last.",
+      "sound_notes": "Paper/UI.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S022",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 16.5,
+      "narration": "Theory two: the survivor. Others pictured something older: megalodon, a giant prehistoric shark, still surviving in the deep where no one looks. To believers, the Bloop was its call, finally caught on tape.",
+      "visual_intent": "THEORY TWO: the Survivor, megalodon gliding out of the blue-black.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C48"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "slightly low",
+        "movement": "slow push-in, then hold as it banks away",
+        "position": "mid-water, 30 m ahead of the shark's path",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Megalodon (procedural)",
+        "SH_ROV (distant, scale)"
+      ],
+      "lighting": "Shafts from above; shark crosses two shafts",
+      "animation": "Shark emerges head-on, banks away, tail sweep; marine snow streams off its fins.",
+      "sound_notes": "Water displacement; heartbeat-free, no stingers.",
+      "transition": "cut",
+      "title_card": "THEORY TWO: THE SURVIVOR",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S023A",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 4.0,
+      "narration": "Theory three: the sleeper. Then there is Cthulhu.",
+      "visual_intent": "THEORY THREE title: first glimpse of sunken ruins far below.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C29"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high angle",
+        "movement": "slow descent",
+        "position": "high above the ruins",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Abyssal floor with ruins (original design)",
+      "assets": [
+        "SH_Ruins_Monolith"
+      ],
+      "lighting": "Faint cyan glints",
+      "animation": "Silt haze; ruins emerge.",
+      "sound_notes": "Low drone.",
+      "transition": "cut",
+      "title_card": "THEORY THREE: THE SLEEPER",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal"
+    },
+    {
+      "scene_id": "S023",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 17.5,
+      "narration": "In a horror story published in 1928, H. P. Lovecraft described a sunken city called R'lyeh, where a monstrous god lies dreaming beneath the South Pacific. He even gave its coordinates: forty-seven degrees south, one hundred and twenty-six degrees west.",
+      "visual_intent": "THEORY THREE: Lovecraft's 1928 text, the coordinate line legible.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "From 'The Call of Cthulhu', H. P. Lovecraft, 1928 (public domain)",
+      "claim_ids": [
+        "C38"
+      ],
+      "source_ids": [
+        "SRC-034"
+      ],
+      "camera": {
+        "shot_size": "insert",
+        "angle": "top-down",
+        "movement": "slow push to the coordinate line",
+        "position": "over a book page",
+        "lens_mm": 60,
+        "dof": true,
+        "fstop": 2.8
+      },
+      "environment": "Aged paper on a dark table (original design, no imitation of a real edition)",
+      "assets": [
+        "SH_BookPage (text from public-domain story)"
+      ],
+      "lighting": "Single warm practical (Ember Amber accent)",
+      "animation": "Text blurred except the coordinate line, which sharpens.",
+      "sound_notes": "Page rustle, quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S024",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 10.5,
+      "narration": "Seventy years later, a mysterious sound rose out of the same ocean. Online, the Bloop was said to come from almost exactly there.",
+      "visual_intent": "The Sleeper: camera descends to sunken ruins; an immense dormant figure.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C29"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high angle",
+        "movement": "descent 15 m revealing the figure",
+        "position": "above sunken monolithic ruins",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Abyssal floor, tilted cyclopean monoliths (original design)",
+      "assets": [
+        "SH_Ruins_Monolith",
+        "CR_Sleeper (original design from the 1928 text only)"
+      ],
+      "lighting": "Cold blue rim; faint bioluminescent cyan in the ruins",
+      "animation": "Silt drifts; the figure's folded wings and tentacled head emerge from the dark.",
+      "sound_notes": "Low drone, no voices.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal"
+    },
+    {
+      "scene_id": "S025",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 13.5,
+      "narration": "For some it was a joke. For others it was too perfect to be a coincidence. Hold on to that coordinate. We will come back to it.",
+      "visual_intent": "The Sleeper's eye slowly opens; then a map pin 'R'lyeh (fiction)' appears.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "close_up",
+        "angle": "eye level",
+        "movement": "slow push-in 2 m",
+        "position": "in front of the figure's closed eye",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Ruins",
+      "assets": [
+        "CR_Sleeper"
+      ],
+      "lighting": "Eye catches a cyan glint",
+      "animation": "Eyelid opens a few millimetres; hold; cut to globe pin.",
+      "sound_notes": "Silence for 1 s before the cut.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S026A",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 7.5,
+      "narration": "Theory four: the Navy knew. Remember who built the ocean's first great listening network. The Navy.",
+      "visual_intent": "THEORY FOUR: recreated generic sonar room.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C44"
+      ],
+      "source_ids": [
+        "SRC-035"
+      ],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "eye level",
+        "movement": "slow lateral track along consoles",
+        "position": "inside a generic sonar room",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Generic Cold War-style sonar room (no real insignia or documents)",
+      "assets": [
+        "SH_SonarRoom (procedural)"
+      ],
+      "lighting": "Dim green screen glow",
+      "animation": "Screens show abstract scrolling waterfalls.",
+      "sound_notes": "Room hum; no fabricated radio chatter.",
+      "transition": "cut",
+      "title_card": "THEORY FOUR: THE NAVY KNEW"
+    },
+    {
+      "scene_id": "S026",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 15.5,
+      "narration": "In a NOAA press release from 2001, the agency's own scientist was quoted saying this kind of sound had been reported for decades by Navy sonar operators. Decades. Before anyone had heard of the Bloop.",
+      "visual_intent": "The 2001 NOAA release: paraphrase card with source line, over the sonar screens.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C52"
+      ],
+      "source_ids": [
+        "SRC-006"
+      ],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "eye level",
+        "movement": "slow lateral track along consoles",
+        "position": "inside a generic sonar room",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Generic Cold War-style sonar room (no real insignia or documents)",
+      "assets": [
+        "SH_SonarRoom (procedural)",
+        "Quote card: paraphrase of NOAA release, 24 Aug 2001"
+      ],
+      "lighting": "Dim green screen glow",
+      "animation": "Screens show abstract scrolling waterfalls; quote card fades in with source line.",
+      "sound_notes": "Room hum; no fabricated radio chatter.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S027",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 16.5,
+      "narration": "Some retellings go further. They claim the Navy was asked directly, and said it wasn't theirs. To a suspicious mind, that is exactly what you would say about a secret weapon, or a test you could not admit.",
+      "visual_intent": "An unmarked submarine passes a lone hydrophone.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C53",
+        "C43"
+      ],
+      "source_ids": [
+        "SRC-043",
+        "SRC-044"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "locked",
+        "position": "beside the hydrophone mooring",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Submarine_Unmarked",
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Near-black, faint sheen",
+      "animation": "Submarine slides past over 6 s; its wake disturbs the particles.",
+      "sound_notes": "Muffled hum.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S028",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 18.0,
+      "narration": "Theory five: something not from here. In UFO circles, the Bloop became one more \"unidentified submerged object\". An alien craft, a hidden base on the seafloor, something using the deep ocean the way we use the sky.",
+      "visual_intent": "THEORY FIVE: the Visitor rises from a trench.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C50",
+        "C51"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "rise 8 m with the craft",
+        "position": "at the lip of a trench",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Trench edge (set kit)",
+      "assets": [
+        "CR_Visitor_Craft (smooth, unlit, original)"
+      ],
+      "lighting": "Craft's cyan ring is the only light",
+      "animation": "Craft rises silently, ring pulses once, scattering particles.",
+      "sound_notes": "Pressure swell, no 'alien' sounds.",
+      "transition": "cut",
+      "title_card": "THEORY FIVE: SOMETHING NOT FROM HERE",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "rise_reveal"
+    },
+    {
+      "scene_id": "S029A",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 14.0,
+      "narration": "Theory six: the mermaids. In 2012, a television film presented as a documentary, Mermaids: The Body Found, used the Bloop as part of its evidence for a hidden species of sea people.",
+      "visual_intent": "THEORY SIX: stylised TV frame with the note 'Fiction (2012)'.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Fiction (2012)",
+      "claim_ids": [
+        "C40"
+      ],
+      "source_ids": [
+        "SRC-023",
+        "SRC-024"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised TV frame graphic",
+      "assets": [
+        "TV frame graphic (no programme footage or branding)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Static noise resolves into the 'Fiction (2012)' note.",
+      "sound_notes": "TV static, soft.",
+      "transition": "cut",
+      "title_card": "THEORY SIX: THE MERMAIDS"
+    },
+    {
+      "scene_id": "S029",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 8.0,
+      "narration": "It was fiction, with a disclaimer. But enough viewers believed it that the questions reached the U.S. government.",
+      "visual_intent": "THEORY SIX: 'Fiction (2012)' TV frame, then distant swimmers at the edge of a lamp beam.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C40",
+        "C41"
+      ],
+      "source_ids": [
+        "SRC-022"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "locked, slow focus pull",
+        "position": "behind an ROV lamp beam",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "Stylised TV frame with note 'Fiction (2012)' (no programme footage/branding)",
+        "CR_Swimmers (distant humanoid silhouettes)",
+        "SH_ROV"
+      ],
+      "lighting": "ROV beam; figures in shadow",
+      "animation": "Two figures cross the far edge of the beam and vanish; never close-up.",
+      "sound_notes": "Water hush.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S030A",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 11.0,
+      "narration": "And finally: the legend. Online, the Bloop grew a body. It got fan-made creature designs, invented expedition stories, and animated battles against other sea monsters.",
+      "visual_intent": "The legend online: invented, illegible forum threads and fan-art style creature sketches.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Illustration",
+      "claim_ids": [
+        "C54"
+      ],
+      "source_ids": [
+        "SRC-045",
+        "SRC-046"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Phone/forum UI collage (invented)",
+      "assets": [
+        "Invented forum UI (illegible)",
+        "Original sketch-style creature drawings"
+      ],
+      "lighting": "Screen glow",
+      "animation": "Threads scroll; sketches pile up.",
+      "sound_notes": "Notification taps.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S030",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 12.0,
+      "narration": "The story itself kept changing as it spread. It was heard only once. It lasted fifteen seconds. Every microphone picked it up. It was never heard again.",
+      "visual_intent": "The 'Bloop Beast' of internet legend surfacing in a storm.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [
+        "C31",
+        "C30"
+      ],
+      "source_ids": [
+        "SRC-045",
+        "SRC-046"
+      ],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high angle",
+        "movement": "aerial pull-back over a storm sea",
+        "position": "50 m above the surface",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Storm surface, night",
+      "assets": [
+        "Invented, illegible forum/phone UI",
+        "CR_BloopBeast (pale leviathan, original)"
+      ],
+      "lighting": "Lightning flashes; creature lit only by flashes",
+      "animation": "Phone screens flicker, then the leviathan's back breaks the surface.",
+      "sound_notes": "Wind, rain, waves; no roar.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "aerial_reveal"
+    },
+    {
+      "scene_id": "S031",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 4.0,
+      "narration": "Even today, some articles still call it unsolved.",
+      "visual_intent": "Headlines blur together on screen (invented, illegible).",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Illustration",
+      "claim_ids": [
+        "C55"
+      ],
+      "source_ids": [
+        "SRC-047"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Graphic collage",
+      "assets": [
+        "Invented headline cards (no real mastheads)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Cards stack and shuffle.",
+      "sound_notes": "Paper/UI shuffle.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S032",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 3.5,
+      "narration": "A giant. A survivor. A sleeping god.",
+      "visual_intent": "Montage line-up: Giant, Survivor, Sleeper, one shot each.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "three locked shots, 1 s each",
+        "position": "creature hero angles",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant",
+        "CR_Megalodon",
+        "CR_Sleeper"
+      ],
+      "lighting": "Each creature's hero lighting",
+      "animation": "One beat per creature.",
+      "sound_notes": "Music hit per cut (no horror stinger).",
+      "transition": "hard cuts",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S033",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 3.0,
+      "narration": "A Navy secret. Visitors. Mermaids.",
+      "visual_intent": "Montage line-up continued: submarine, craft, swimmers.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Imagined — theory, not evidence",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "three locked shots",
+        "position": "hero angles",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Submarine_Unmarked",
+        "CR_Visitor_Craft",
+        "CR_Swimmers"
+      ],
+      "lighting": "Hero lighting",
+      "animation": "One beat per shot.",
+      "sound_notes": "Music builds.",
+      "transition": "hard cuts",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S034",
+      "script_section": "3. The theories (possibilities: what people believed)",
+      "duration_seconds": 14.5,
+      "narration": "Every one of these theories has believers. But only one explanation has evidence. And it was found by the same people who recorded the sound in the first place.",
+      "visual_intent": "Turn: all creatures fade; only the lone hydrophone remains in the dark.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "slow push to the hydrophone",
+        "position": "mid-water",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Single faint shaft",
+      "animation": "Silence; particles settle.",
+      "sound_notes": "Music drops out; 1 s of near silence.",
+      "transition": "dip to black 1 s",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S035",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 14.5,
+      "narration": "Here is the part of the story most people never hear. Even in 2001, the team suspected an ordinary answer. Christopher Fox said publicly that they suspected ice, off the coast of Antarctica.",
+      "visual_intent": "Reveal begins: a research vessel on a grey swell at dusk.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C13"
+      ],
+      "source_ids": [
+        "SRC-008"
+      ],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "high angle",
+        "movement": "aerial drift toward the vessel",
+        "position": "60 m above the sea",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Southern Ocean at dusk",
+      "assets": [
+        "SH_ResearchVessel (generic, no real name/livery)"
+      ],
+      "lighting": "Low sun, overcast",
+      "animation": "Ship pitches gently; spray.",
+      "sound_notes": "Wind, swell; music shifts to the Investigation theme.",
+      "transition": "cut",
+      "environment_preset": "antarctica",
+      "camera_preset": "aerial_reveal"
+    },
+    {
+      "scene_id": "S036",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 12.0,
+      "narration": "But suspicion is not proof. Officially, the Bloop's origin had still not been determined. To be sure, the scientists needed to listen much closer to the ice.",
+      "visual_intent": "Map turns south; a faint line from the hydrophones toward Antarctica.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C14"
+      ],
+      "source_ids": [
+        "SRC-006"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "globe rotates south",
+        "position": "globe",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe",
+      "assets": [
+        "SH_Globe",
+        "Antarctic outline (Natural Earth)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Dotted line grows south; '?' marker.",
+      "sound_notes": "UI tick.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S037",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 17.0,
+      "narration": "So NOAA went south. In December 2005, a team led by geophysicist Robert Dziak put hydrophones into the water off the Antarctic Peninsula, in the Bransfield Strait. Their arrays kept recording there, and in the Scotia Sea, until 2009.",
+      "visual_intent": "Antarctic Peninsula: icebergs, grey light; hydrophone lowered over the side.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C16"
+      ],
+      "source_ids": [
+        "SRC-012",
+        "SRC-011"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "glide past icebergs toward the vessel",
+        "position": "10 m above water",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Antarctic Peninsula / Southern Ocean: grey swell, tabular icebergs, overcast",
+      "assets": [
+        "SH_Iceberg_Tabular",
+        "SH_ResearchVessel",
+        "SH_Hydrophone_Mooring (deploying)"
+      ],
+      "lighting": "Flat overcast, cold",
+      "animation": "Mooring lowered on a winch; splash.",
+      "sound_notes": "Winch, water, wind.",
+      "transition": "cut",
+      "environment_preset": "antarctica",
+      "camera_preset": "glide_reveal"
+    },
+    {
+      "scene_id": "S038",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 9.0,
+      "narration": "Once again, they had come to listen for volcanoes and earthquakes. And once again, they heard ice. Thousands of times.",
+      "visual_intent": "Under the ice: dozens of crack-flashes along an iceberg keel.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C35"
+      ],
+      "source_ids": [
+        "SRC-030",
+        "SRC-011"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "lateral track under an iceberg keel",
+        "position": "15 m below the keel",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Under an iceberg, blue-green water",
+      "assets": [
+        "SH_Iceberg_Tabular (underwater keel)",
+        "Crack VFX"
+      ],
+      "lighting": "Glow through the ice from above",
+      "animation": "Small crack flashes ripple along the keel, many of them.",
+      "sound_notes": "Creaks and cracks (sound design, labelled in description).",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "lateral_track"
+    },
+    {
+      "scene_id": "S039",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 17.5,
+      "narration": "Around Antarctica, cracking ice turned out to be one of the most prominent sounds in the sea. Icebergs groan as they run aground and scrape the seafloor. And when they crack and fracture, they release bursts of sound called icequakes.",
+      "visual_intent": "Icequake close-up: a crack propagates; an iceberg scrapes the seafloor.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C33",
+        "C17",
+        "C32"
+      ],
+      "source_ids": [
+        "SRC-002",
+        "SRC-018",
+        "SRC-019"
+      ],
+      "camera": {
+        "shot_size": "medium",
+        "angle": "eye level",
+        "movement": "slow push-in",
+        "position": "near the iceberg wall",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Under an iceberg / seafloor contact",
+      "assets": [
+        "SH_Iceberg_Tabular",
+        "Fracture VFX (cell fracture)",
+        "EP000 set kit"
+      ],
+      "lighting": "Ice glow",
+      "animation": "Crack races through the ice; fragments shear; keel grinds the seabed raising silt.",
+      "sound_notes": "Deep crack, groan (sound design).",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S040",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 11.0,
+      "narration": "In early 2008, the hydrophones followed one iceberg, known as A53a, about sixty kilometres long, as it broke apart near the island of South Georgia.",
+      "visual_intent": "A53a: a 60 km iceberg drifting and splitting near South Georgia (map + 3D).",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C18"
+      ],
+      "source_ids": [
+        "SRC-010",
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "slow push on Scotia Sea",
+        "position": "satellite-style map",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Scotia Sea map, South Georgia outline",
+      "assets": [
+        "SH_Globe",
+        "SH_Iceberg_A53a (60 km long proxy)"
+      ],
+      "lighting": "Graphic + soft sun",
+      "animation": "Iceberg drifts east and splits into pieces.",
+      "sound_notes": "Distant cracks.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S041",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 15.0,
+      "narration": "Its icequakes left a familiar shape on the screen. Spectrograms very similar to the Bloop. And icequakes like these can be heard on hydrophones more than five thousand kilometres away.",
+      "visual_intent": "Side-by-side: the Bloop spectrogram and NOAA's iceberg calving recording.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Spectrograms generated from NOAA recordings: Bloop (1997, 16×) · Iceberg calving (2008, 3×)",
+      "claim_ids": [
+        "C18",
+        "C19"
+      ],
+      "source_ids": [
+        "SRC-002",
+        "SRC-037"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Split graph",
+      "assets": [
+        "Spectrogram: NOAA bloop.wav",
+        "Spectrogram: NOAA A53JD33Calving_3x.wav"
+      ],
+      "lighting": "Graphic",
+      "animation": "Both draw in; shapes highlighted; note that playback speeds differ.",
+      "sound_notes": "Short excerpts of both real NOAA files.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S042",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 11.0,
+      "narration": "There was one more clue. A sound reaches each hydrophone at a slightly different moment, and those tiny differences reveal the direction it came from.",
+      "visual_intent": "How a bearing works: one wavefront reaching three hydrophones at different times.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Top-down diagram",
+      "assets": [
+        "Bearing diagram (original)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Wavefront sweeps across three markers, timing ticks appear; arrow forms.",
+      "sound_notes": "Three soft ticks.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S043",
+      "script_section": "4. The investigation (the real research, revealed)",
+      "duration_seconds": 18.5,
+      "narration": "When NOAA traced the Bloop's arrival direction, the line did not stop in that empty patch of ocean. It pointed on, toward the edge of Antarctica, somewhere between the Bransfield Strait and the Ross Sea, or perhaps Cape Adare.",
+      "visual_intent": "The bearing line sweeps past 50°S 100°W to the Antarctic coast; arc of possible sources.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C09"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "follow the line south",
+        "position": "globe",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe",
+      "assets": [
+        "SH_Globe",
+        "Bearing line",
+        "Arc Bransfield Strait – Ross Sea – Cape Adare"
+      ],
+      "lighting": "Graphic",
+      "animation": "Line extends; coastline arc highlights.",
+      "sound_notes": "Low swell resolves.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S044",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 14.0,
+      "narration": "So what is an icequake? Large icebergs are not solid, silent blocks. As they drift, collide and ground, they crack and fracture, and each break releases energy into the water as sound.",
+      "visual_intent": "Macro: ice under stress, cracks propagating.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C17"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "macro",
+        "angle": "eye level",
+        "movement": "slow push-in",
+        "position": "centimetres from an ice face",
+        "lens_mm": 85,
+        "dof": true,
+        "fstop": 2.8
+      },
+      "environment": "Ice face underwater",
+      "assets": [
+        "SH_IceMacro (procedural)",
+        "Fracture VFX"
+      ],
+      "lighting": "Light through ice",
+      "animation": "Micro-cracks branch and release bubbles.",
+      "sound_notes": "Crackle (sound design).",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S045",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 9.0,
+      "narration": "Low-frequency sound loses little energy in the deep sound channel, so a big enough event can carry across an ocean.",
+      "visual_intent": "Sound channel again, now from an iceberg to a distant hydrophone.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C12",
+        "C19"
+      ],
+      "source_ids": [
+        "SRC-016"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Cross-section diagram",
+      "assets": [
+        "SH_SoundChannel diagram",
+        "Iceberg icon",
+        "Hydrophone icon"
+      ],
+      "lighting": "Graphic",
+      "animation": "Pulse from iceberg travels along the channel to the hydrophone thousands of km away.",
+      "sound_notes": "Pulse.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S046",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 18.0,
+      "narration": "And it isn't rare. In 2012, Robert Dziak said that every year there are tens of thousands of icequakes. Asked about the Bloop directly, he said its frequency and duration were essentially identical to icequakes his team had recorded off Antarctica.",
+      "visual_intent": "Scale of icequakes: a counter of icequakes per year over Antarctic coastline.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C22",
+        "C21"
+      ],
+      "source_ids": [
+        "SRC-009"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "slow orbit around Antarctica",
+        "position": "globe",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Antarctica on globe",
+      "assets": [
+        "SH_Globe",
+        "Flash points (illustrative density)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Many small flashes around the coast; caption 'tens of thousands each year (Dziak, 2012)'.",
+      "sound_notes": "Soft crackle bed.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S047",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 12.0,
+      "narration": "NOAA's laboratory put its conclusion carefully. The sounds recorded in 1997 are consistent with icequakes generated by large icebergs as they crack and fracture.",
+      "visual_intent": "NOAA's conclusion as an on-screen quote card.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "NOAA PMEL Acoustics Program",
+      "claim_ids": [
+        "C17"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Quote card",
+      "assets": [
+        "Quote card (NOAA PMEL wording, U.S. government work)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Text types on; source line under it.",
+      "sound_notes": "Quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S047B",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 5.0,
+      "narration": "Now listen again, slowed back down to its real speed.",
+      "visual_intent": "Set-up for the listening moment: the 16× waveform on screen.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "NOAA recording, sped up 16×",
+      "claim_ids": [],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Dark graph field",
+      "assets": [
+        "Waveform of NOAA bloop.wav"
+      ],
+      "lighting": "Graphic",
+      "animation": "Waveform pulses once.",
+      "sound_notes": "Music out.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S048",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 27.0,
+      "narration": "",
+      "visual_intent": "The slowed-down truth: the real NOAA clip at 16×, then a 20–30 s excerpt slowed to approximate real time.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Approximate real-time playback — our reconstruction from the NOAA recording",
+      "claim_ids": [],
+      "source_ids": [
+        "SRC-037"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Dark graph field",
+      "assets": [
+        "NOAA bloop.wav",
+        "Slowed excerpt (our processing)",
+        "Live spectrogram"
+      ],
+      "lighting": "Graphic",
+      "animation": "Spectrogram stretches 16× horizontally as the slowed audio plays; frequency axis relabels to real Hz.",
+      "sound_notes": "16× clip, then slowed excerpt; no music.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S049A",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 10.5,
+      "narration": "Speeding a recording up sixteen times raises every pitch by four full octaves. NOAA's ten-second clip holds almost three minutes of the original recording.",
+      "visual_intent": "Pitch and time: a note climbs four octave rungs; a 165 s bar compresses into 10.3 s.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C06",
+        "C47"
+      ],
+      "source_ids": [
+        "SRC-037"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Graph",
+      "assets": [
+        "Octave ladder graphic",
+        "Timeline ruler 165 s vs 10.3 s"
+      ],
+      "lighting": "Graphic",
+      "animation": "Ladder and ruler animate.",
+      "sound_notes": "Quiet tones.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S049",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 9.0,
+      "narration": "Most of the real sound sits so low that, at its true speed, it is barely audible to human ears.",
+      "visual_intent": "Hearing threshold: the true-speed sweep (~9–28 Hz, our analysis) drawn against the ~20 Hz lower edge of typical human hearing.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C06",
+        "C47"
+      ],
+      "source_ids": [
+        "SRC-037"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Graph",
+      "assets": [
+        "Octave ladder graphic",
+        "Timeline ruler 165 s vs 10.3 s"
+      ],
+      "lighting": "Graphic",
+      "animation": "Note climbs four octave rungs; a 165 s bar compresses to 10.3 s.",
+      "sound_notes": "Quiet tones.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S050",
+      "script_section": "5. Scientific explanations (the sound of breaking ice)",
+      "duration_seconds": 13.0,
+      "narration": "That short, round, strangely living \"bloop\" was never the voice of anything. It was a side effect of speeding up a deep, slow rumble so that we could hear it.",
+      "visual_intent": "The monster dissolves into sound: the Giant's silhouette turns into a waveform, then into ice.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C06",
+        "C47"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "slow push-in",
+        "position": "mid-water",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant (dissolve)",
+        "Waveform VFX"
+      ],
+      "lighting": "Single shaft",
+      "animation": "Silhouette breaks into particles that align into the Bloop waveform.",
+      "sound_notes": "The 16× clip, once, quiet.",
+      "transition": "dissolve 1 s",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S051",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 3.5,
+      "narration": "So let's go back through every theory.",
+      "visual_intent": "The six theory cards return.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Illustration",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Card wall",
+      "assets": [
+        "Theory cards ×6"
+      ],
+      "lighting": "Graphic",
+      "animation": "Cards slide in as a grid.",
+      "sound_notes": "UI.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S052A",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 13.0,
+      "narration": "The giant. No published measurement shows the Bloop was \"several times louder than a blue whale\". That line came from how far the sound travelled, not from measuring it.",
+      "visual_intent": "The Giant answered (1/3): the creature freezes mid-motion; 'louder than a blue whale' card marked 'no measurement found'.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Answered: no evidence",
+      "claim_ids": [
+        "C26"
+      ],
+      "source_ids": [
+        "SRC-031"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "locked",
+        "position": "same angle as S020",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant (frozen)",
+        "Claim card"
+      ],
+      "lighting": "Shafts",
+      "animation": "Creature motion freezes; frost spreads over its skin.",
+      "sound_notes": "Cold crackle.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S052B",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 10.5,
+      "narration": "For scale, scientists off Antarctica measured blue whale calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away.",
+      "visual_intent": "The Giant answered (2/3): a real-scale blue whale with its measured call range vs the Bloop's detection range.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Illustration + data (Širović et al. 2007)",
+      "claim_ids": [
+        "C46"
+      ],
+      "source_ids": [
+        "SRC-015"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "pull back from 200 km ring to 5,000 km ring",
+        "position": "map",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Map with distance rings",
+      "assets": [
+        "Blue whale model (procedural, labelled illustration)",
+        "Rings: 200 km vs > 5,000 km"
+      ],
+      "lighting": "Graphic",
+      "animation": "Small ring for the whale, then the huge Bloop ring.",
+      "sound_notes": "Quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S052",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 10.5,
+      "narration": "A sound heard more than five thousand kilometres away needed no animal at all, only a very large source of energy, like breaking ice.",
+      "visual_intent": "The Giant answered (3/3): the frozen creature cracks and breaks into drifting ice.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Answered: no evidence",
+      "claim_ids": [
+        "C07",
+        "C19"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "locked",
+        "position": "same angle as S020",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Giant → ice (fracture VFX)",
+        "Blue whale vs Bloop distance graphic"
+      ],
+      "lighting": "Shafts",
+      "animation": "Creature cracks and shatters into ice blocks that drift up.",
+      "sound_notes": "Ice crack (sound design).",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S053",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 10.5,
+      "narration": "The survivor. Megalodon disappears from the fossil record around two and a half million years ago. There is no evidence that it survives.",
+      "visual_intent": "The Survivor answered: megalodon turns to ice; fossil-timeline graphic.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Answered: no evidence",
+      "claim_ids": [
+        "C49"
+      ],
+      "source_ids": [
+        "SRC-039"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "locked",
+        "position": "same angle as S022",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "CR_Megalodon → ice",
+        "Timeline graphic: ~23 to ~2.6 million years ago"
+      ],
+      "lighting": "Shafts",
+      "animation": "Shark freezes and fractures.",
+      "sound_notes": "Crack.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S054",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 18.0,
+      "narration": "The sleeper. Remember that coordinate. The Bloop's first estimated position was nearly two thousand kilometres from Lovecraft's fictional city. On a world map that looks close. In the ocean, it is not. And NOAA's later direction pointed even farther away, toward Antarctica.",
+      "visual_intent": "The Sleeper answered: map with 'R'lyeh (fiction)' and the Bloop's early estimate; measured line ≈ 1,980 km; bearing to Antarctica.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C39",
+        "C09"
+      ],
+      "source_ids": [
+        "SRC-034",
+        "SRC-001",
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "map",
+        "angle": "top-down",
+        "movement": "pull back to show both pins and Antarctica",
+        "position": "globe",
+        "lens_mm": 35,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Stylised globe",
+      "assets": [
+        "SH_Globe",
+        "Pins",
+        "Distance ruler ≈ 1,980 km (research.json computed_distances)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Ruler draws between pins; then the bearing line sweeps to Antarctica; the Sleeper shot (inset) turns to ice.",
+      "sound_notes": "UI ticks; crack.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S055A",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 16.0,
+      "narration": "The Navy. That 2001 quote is real, but nothing else we found supports decades of Navy reports of this sound, and we found no primary source for the story that the Navy was asked and denied it.",
+      "visual_intent": "The Navy answered (1/2): the 2001 quote card gets an 'UNVERIFIED' stamp.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Answered: unverified",
+      "claim_ids": [
+        "C52",
+        "C53"
+      ],
+      "source_ids": [
+        "SRC-006",
+        "SRC-043",
+        "SRC-044"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Quote card",
+      "assets": [
+        "Quote card with UNVERIFIED stamp"
+      ],
+      "lighting": "Graphic",
+      "animation": "Stamp lands.",
+      "sound_notes": "Soft stamp thud.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S055",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 8.0,
+      "narration": "Fox himself did not believe the sound was man-made, and there is no evidence that it was.",
+      "visual_intent": "The Navy answered (2/2): the unmarked submarine dissolves into particles beside the hydrophone.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Answered: unverified / no evidence",
+      "claim_ids": [
+        "C43"
+      ],
+      "source_ids": [
+        "SRC-006",
+        "SRC-043"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Quote card + 3D inset",
+      "assets": [
+        "Quote card with UNVERIFIED stamp",
+        "SH_Submarine_Unmarked → dissolve"
+      ],
+      "lighting": "Graphic",
+      "animation": "Stamp lands on the card; inset submarine fades to particles.",
+      "sound_notes": "Stamp thud (soft).",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S056",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 4.5,
+      "narration": "The visitors. There is no evidence of any craft.",
+      "visual_intent": "The Visitor answered: the craft cracks into ice.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Answered: no evidence",
+      "claim_ids": [
+        "C51"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "low angle",
+        "movement": "locked",
+        "position": "same angle as S028",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Trench edge",
+      "assets": [
+        "CR_Visitor_Craft → ice"
+      ],
+      "lighting": "Cyan ring fades out",
+      "animation": "Ring light dies; hull frosts and fractures.",
+      "sound_notes": "Crack.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold"
+    },
+    {
+      "scene_id": "S057",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 8.5,
+      "narration": "The mermaids. After that broadcast, NOAA issued a public statement: no evidence of aquatic humanoids has ever been found.",
+      "visual_intent": "The Mermaids answered: NOAA's statement as a quote card; swimmers fade.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Answered: NOAA statement, 2012",
+      "claim_ids": [
+        "C41"
+      ],
+      "source_ids": [
+        "SRC-022"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Quote card",
+      "assets": [
+        "Quote card: 'No evidence of aquatic humanoids has ever been found.' (NOAA)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Card types on; inset swimmers fade.",
+      "sound_notes": "Quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S058",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 17.0,
+      "narration": "The legend. NOAA's own record says the sound was recorded repeatedly, rose over about a minute, and was heard on multiple sensors. And that particular event was never heard again, but sounds just like it are recorded every year.",
+      "visual_intent": "The Legend answered: myth vs record table; the Bloop Beast freezes and sinks as ice.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Answered: NOAA record",
+      "claim_ids": [
+        "C31",
+        "C04",
+        "C05",
+        "C07",
+        "C30",
+        "C22"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-032"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Two-column table",
+      "assets": [
+        "Myth vs record table",
+        "CR_BloopBeast → ice (inset)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Myth lines strike through one by one; NOAA facts appear.",
+      "sound_notes": "Soft ticks.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S059A",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 9.0,
+      "narration": "Now, the honest part. The ice explanation has limits too. No one saw the event. The iceberg was never identified.",
+      "visual_intent": "The honest part (1/3): an iceberg at dusk; 'No witness. Iceberg unknown.'",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C20"
+      ],
+      "source_ids": [
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "slow push-in on an iceberg at dusk",
+        "position": "sea level, 200 m from the berg",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Antarctic Peninsula / Southern Ocean: grey swell, tabular icebergs, overcast",
+      "assets": [
+        "SH_Iceberg_Tabular",
+        "Open-questions card"
+      ],
+      "lighting": "Last light",
+      "animation": "First two open questions fade in.",
+      "sound_notes": "Wind; music recedes.",
+      "transition": "cut",
+      "environment_preset": "antarctica",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S059B",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 9.5,
+      "narration": "We found no scientific paper that analyses the 1997 recording itself; the conclusion lives on NOAA's web pages and in interviews.",
+      "visual_intent": "The honest part (2/3): stack of papers and web pages; none analyses the 1997 recording itself.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Illustration",
+      "claim_ids": [
+        "C20"
+      ],
+      "source_ids": [
+        "SRC-005",
+        "SRC-010",
+        "SRC-011",
+        "SRC-002"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Document stack graphic (titles of real cited papers, no fake documents)",
+      "assets": [
+        "Citation cards: Fox 2001, Dziak 2013, Dziak 2015, NOAA PMEL page"
+      ],
+      "lighting": "Graphic",
+      "animation": "Cards fan out; a missing slot 'paper on the 1997 Bloop — not found'.",
+      "sound_notes": "Paper.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S059C",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 15.5,
+      "narration": "NOAA says the sound was recorded in summer. On an American agency's page, that most likely means the northern summer, which is winter in Antarctica, when icequakes there are less frequent. Less frequent, not absent.",
+      "visual_intent": "The honest part (3/3, season): calendar of 1997 showing northern summer = austral winter, with icequake seasonality.",
+      "reconstruction_status": "data_visualization",
+      "on_screen_label": "Data visualisation",
+      "claim_ids": [
+        "C04",
+        "C20",
+        "C33"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-011"
+      ],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Calendar/season graphic",
+      "assets": [
+        "Season ring: northern vs southern seasons",
+        "Icequake activity curve (qualitative, Dziak 2015)"
+      ],
+      "lighting": "Graphic",
+      "animation": "Ring rotates to June–August; curve dips but stays above zero.",
+      "sound_notes": "Quiet.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S059",
+      "script_section": "6. What the evidence actually tells us (investigation of every theory)",
+      "duration_seconds": 7.5,
+      "narration": "And even NOAA's own pages disagree about when the case was closed: 2005, 2008, or 2012.",
+      "visual_intent": "The honest part: three different 'solved' dates side by side.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C23"
+      ],
+      "source_ids": [
+        "SRC-004",
+        "SRC-002",
+        "SRC-009"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "slow push-in on an iceberg at dusk",
+        "position": "sea level, 200 m from the berg",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Antarctic Peninsula / Southern Ocean: grey swell, tabular icebergs, overcast",
+      "assets": [
+        "SH_Iceberg_Tabular",
+        "Open-questions card (no witness, iceberg unknown, no paper on 1997 signal, austral winter, dates differ)"
+      ],
+      "lighting": "Last light",
+      "animation": "Three date cards: 2005 (NOAA NOS), 2008 (PMEL data), 2012 (WIRED UK interview).",
+      "sound_notes": "Wind.",
+      "transition": "dissolve 1 s",
+      "environment_preset": "antarctica",
+      "camera_preset": "slow_push_in"
+    },
+    {
+      "scene_id": "S060",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 19.5,
+      "narration": "Here is our verdict. The Bloop was almost certainly not a creature, a weapon or a visitor. The best-supported explanation, from NOAA's own scientists, is an Antarctic icequake: a giant iceberg cracking apart, its sound carried thousands of kilometres by the ocean's deep sound channel.",
+      "visual_intent": "Verdict: a vast tabular iceberg at dusk; camera descends below the waterline into the deep.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C20",
+        "C17",
+        "C12"
+      ],
+      "source_ids": [
+        "SRC-002",
+        "SRC-009"
+      ],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "eye level → below waterline",
+        "movement": "descent through the surface 12 m",
+        "position": "beside the iceberg",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Iceberg above and below water",
+      "assets": [
+        "SH_Iceberg_Tabular (above + keel)"
+      ],
+      "lighting": "Dusk above; blue-black below",
+      "animation": "Camera breaks the surface; the berg's dark mass disappears into the deep; one crack flash.",
+      "sound_notes": "Surface to underwater transition; one deep crack.",
+      "transition": "cut",
+      "environment_preset": "antarctica",
+      "camera_preset": "descent_reveal"
+    },
+    {
+      "scene_id": "S061",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 15.5,
+      "narration": "That conclusion is backed by the sound itself, by its direction, and by everything heard near Antarctica since. But it was never witnessed, and it never will be.",
+      "visual_intent": "Verdict card.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Stranger Horizons verdict",
+      "claim_ids": [
+        "C20"
+      ],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "Verdict card",
+      "assets": [
+        "VERDICT — Antarctic icequake: strongly supported, not directly observed"
+      ],
+      "lighting": "Graphic",
+      "animation": "Card holds 3 s after the line.",
+      "sound_notes": "Music resolves.",
+      "transition": "cut"
+    },
+    {
+      "scene_id": "S062",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 11.0,
+      "narration": "Maybe that is the real lesson of the Bloop. The mystery was never about a monster. It was about how little we had been listening.",
+      "visual_intent": "Reflection: the lone hydrophone in the dark, the ROV passing far off.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "glide toward the hydrophone",
+        "position": "mid-water",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring",
+        "SH_ROV (distant)"
+      ],
+      "lighting": "Prototype v4 look",
+      "animation": "Particles drift; ROV lamps far away.",
+      "sound_notes": "Low pad.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "glide_reveal"
+    },
+    {
+      "scene_id": "S063A",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 10.5,
+      "narration": "NOAA's hydrophones still listen to the ocean, and its scientists have always expected that some of what they hear will remain a mystery.",
+      "visual_intent": "NOAA still listening: the hydrophone in the dark, cable rising.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [
+        "C14"
+      ],
+      "source_ids": [
+        "SRC-006"
+      ],
+      "camera": {
+        "shot_size": "wide",
+        "angle": "eye level",
+        "movement": "glide toward the hydrophone",
+        "position": "mid-water",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Prototype v4 look",
+      "animation": "Particles drift.",
+      "sound_notes": "Low pad.",
+      "transition": "cut",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "glide_reveal"
+    },
+    {
+      "scene_id": "S063",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 13.5,
+      "narration": "The question is no longer what made the Bloop. It is what else the ocean is telling us, that we haven't learned to hear.",
+      "visual_intent": "Closing: camera rises toward a faint surface; hydrophone silhouette in foreground.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "low angle",
+        "movement": "slow rise 20 m",
+        "position": "below the hydrophone looking up",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "environment": "Deep open ocean, blue-black water, drifting marine snow",
+      "assets": [
+        "SH_Hydrophone_Mooring"
+      ],
+      "lighting": "Surface glow growing",
+      "animation": "Rise; hold on the surface glow.",
+      "sound_notes": "Music swells gently; fade.",
+      "transition": "dip to black",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "rise_reveal"
+    },
+    {
+      "scene_id": "S064",
+      "script_section": "7. Final verdict (verdict and closing question)",
+      "duration_seconds": 10.0,
+      "narration": "",
+      "visual_intent": "End card: sources and evidence labels in the description; subscribe card.",
+      "reconstruction_status": "abstract_visual",
+      "on_screen_label": "Sources: see description",
+      "claim_ids": [],
+      "source_ids": [],
+      "camera": {
+        "shot_size": "full_frame_graphic",
+        "angle": "flat",
+        "movement": "slow push-in on graphic",
+        "position": "2D graphic plane",
+        "lens_mm": 50,
+        "dof": false,
+        "fstop": 8.0
+      },
+      "environment": "End card",
+      "assets": [
+        "End card",
+        "YouTube end-screen safe areas"
+      ],
+      "lighting": "Graphic",
+      "animation": "Static end card for end-screen elements.",
+      "sound_notes": "Music tail.",
+      "transition": "end"
+    }
+  ]
+}
