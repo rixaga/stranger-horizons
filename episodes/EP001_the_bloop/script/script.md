@@ -7,6 +7,8 @@ Conventions: `[C##]` = claim in `research/claim_ledger.json`. `{RECON}` = the vi
 
 Structure: mystery (1–2) → the theories, told as their believers tell them (3) → the real investigation, revealed (4–5) → every theory checked against the evidence (6) → verdict (7). Theories in section 3 are always attributed ("so the story goes", "believers say"); none is stated as fact.
 
+Creature animation rule (owner direction 2026-11-26): each theory in section 3 gets a full Blender creature animation, cinematic and realistic, never cartoonish and never a jump-scare. Every creature shot carries the on-screen label "Imagined — theory, not evidence" for its whole duration and is never intercut with the real NOAA audio or spectrogram, so it cannot be read as footage of the event. In section 6 each creature is answered on screen: it freezes, cracks and turns into drifting ice. All creature designs are original (no imitation of film, game or published artwork designs).
+
 ## 1. Opening hook
 
 <visual: black. Sound first. On-screen: "NOAA hydrophone recording, 1997 — sped up 16×">
@@ -69,7 +71,7 @@ A sound with no source, from a place almost no one has seen. The theories wrote 
 
 ## 3. The theories (possibilities: what people believed)
 
-<visual: abstract dark shape gliding at the edge of the light. Label: "Illustration — not a real animal"> {RECON}
+<visual: CREATURE 1 "The Giant": a colossal squid-like animal rises out of the dark past a tiny ROV for scale, tentacles uncoiling through the light shafts; slow, heavy, majestic, not attacking. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory one: the giant.
 By 2002, news reports were asking whether a giant creature was hiding in the deep, perhaps a giant squid. [C27]
@@ -77,13 +79,14 @@ The most repeated line was that the Bloop was several times louder than a blue w
 If that were true, the reasoning went, whatever made it had to be bigger than anything alive. In 2003, cryptozoologist Loren Coleman wrote that it most likely came from a marine beast. [C29]
 Scientists said "unknown". Many readers heard "monster". [C28]
 
-<visual: silhouette of a huge prehistoric shark crossing a shaft of light, dissolving into particles. Label: "Illustration"> {RECON}
+<visual: CREATURE 2 "The Survivor": a megalodon glides out of the blue-black toward camera and banks away, marine snow streaming off its fins; scale against a tiny ROV. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory two: the survivor.
 Others pictured something older: megalodon, a giant prehistoric shark, still surviving in the deep where no one looks. [C48]
 To believers, the Bloop was its call, finally caught on tape.
 
 <visual: an aged book page with the text block blurred, a single line legible: "S. Latitude 47° 9′, W. Longitude 126° 43′". Label: "From 'The Call of Cthulhu', H. P. Lovecraft, 1928">
+<visual: CREATURE 3 "The Sleeper": camera descends to sunken monolithic ruins; an immense dormant figure (original design inspired only by the 1928 text: tentacled head, folded wings, dragon-like body) is half-buried, its eye slowly opening. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory three: the sleeper.
 Then there is Cthulhu. [C29]
@@ -91,7 +94,7 @@ In a horror story published in 1928, H. P. Lovecraft described a sunken city cal
 Seventy years later, a mysterious sound rose out of the same ocean. Online, the Bloop was said to come from almost exactly there. [C29]
 For some it was a joke. For others it was too perfect to be a coincidence. Hold on to that coordinate. We will come back to it.
 
-<visual: recreated sonar room, dim green screens, no real insignia. Label: "Illustrative reconstruction"> {RECON}
+<visual: recreated sonar room, dim green screens, no real insignia; then a dark submarine shape with no markings passing a lone hydrophone. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory four: the Navy knew.
 Remember who built the ocean's first great listening network. The Navy. [C44]
@@ -100,19 +103,19 @@ Decades. Before anyone had heard of the Bloop.
 Some retellings go further. They claim the Navy was asked directly, and said it wasn't theirs. [C53]
 To a suspicious mind, that is exactly what you would say about a secret weapon, or a test you could not admit. [C43]
 
-<visual: deep water, a faint geometric glint that resolves into a drifting ice fragment as the camera nears. Label: "Illustration"> {RECON}
+<visual: CREATURE 5 "The Visitor": a smooth, unlit craft rises silently from a seafloor trench, a ring of cyan light pulsing once, scattering particles. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory five: something not from here.
 In UFO circles, the Bloop became one more "unidentified submerged object". [C50]
 An alien craft, a hidden base on the seafloor, something using the deep ocean the way we use the sky. [C51]
 
-<visual: stylised TV-frame graphic with the on-screen note "Fiction (2012)"; no footage or branding from the real programme>
+<visual: stylised TV-frame graphic with the on-screen note "Fiction (2012)"; no footage or branding from the real programme. Then CREATURE 6 "The Mermaids": distant, fully clothed-in-shadow humanoid swimmers glimpsed at the edge of a lamp beam, never shown close or sexualised. Label: "Imagined — theory, not evidence"> {RECON}
 
 Theory six: the mermaids.
 In 2012, a television film presented as a documentary, Mermaids: The Body Found, used the Bloop as part of its evidence for a hidden species of sea people. [C40]
 It was fiction, with a disclaimer. But enough viewers believed it that the questions reached the U.S. government. [C40] [C41]
 
-<visual: phone screens and forum threads, all text illegible and invented; meme-style creature drawings. Label: "Illustration">
+<visual: phone screens and forum threads, all text illegible and invented; then the "Bloop Beast" of internet legend, an enormous pale leviathan, surfacing in a storm. Label: "Imagined — theory, not evidence"> {RECON}
 
 And finally: the legend.
 Online, the Bloop grew a body. It got fan-made creature designs, invented expedition stories, and animated battles against other sea monsters. [C54]
@@ -183,7 +186,7 @@ That short, round, strangely living "bloop" was never the voice of anything. It 
 
 ## 6. What the evidence actually tells us (investigation of every theory)
 
-<visual: the wall of theory cards from section 3 returns; each one turns over as it is answered>
+<visual: each creature from section 3 returns for one beat, freezes mid-motion, cracks like ice and breaks apart into drifting icebergs as its theory is answered; label changes to "Answered: no evidence"> {RECON}
 
 So let's go back through every theory.
 
@@ -238,6 +241,6 @@ It is what else the ocean is telling us, that we haven't learned to hear.
 - [x] Every theory in section 3 is attributed, and answered in section 6
 - [x] At least one ordinary explanation is given for each anomaly (ice for the sound; speed-up for the "animal" quality; travel distance for the "louder than a whale" claim)
 - [x] No fabricated quotes, experts or documents. Direct quotation on screen: one NOAA PMEL sentence (U.S. government work). Fox and Dziak are paraphrased; the 2001 NOAA release is paraphrased.
-- [x] No creature reconstruction that could be taken as real: every creature visual is an abstract silhouette that dissolves and is labelled "Illustration"
+- [x] No creature reconstruction that could be taken as real: every creature shot is labelled "Imagined — theory, not evidence" throughout, is never cut against the real NOAA audio or spectrogram, and is shown turning into ice when answered in section 6
 - [ ] Owner: approve tone, the conspiracy section, and verdict wording
 - [ ] Before narration: verify C13, C21, C22 wording against the original CNN 2001 and WIRED UK 2012 articles (currently read via secondary copies)
