@@ -53,7 +53,7 @@ Then, in the summer of 1997, the hydrophones caught something else. [C04]
 
 <visual: spectrogram built from the NOAA file draws itself; a line sweeping upward. Label: "Spectrogram generated from the NOAA recording">
 
-A powerful, low sound. Its pitch climbed steeply over about a minute. [C05]
+A powerful, low sound. NOAA described its pitch as rising rapidly, over about a minute. [C05]
 It wasn't a single event. NOAA recorded it again and again that summer. [C04]
 And it was loud enough to reach several hydrophones more than five thousand kilometres away. [C07]
 
@@ -61,11 +61,11 @@ And it was loud enough to reach several hydrophones more than five thousand kilo
 
 NOAA's first estimate placed its source in the remote South Pacific, roughly fifty degrees south and one hundred degrees west, far off the coast of southern South America. [C08]
 
-<sfx: the 16× clip again, then the same clip slowed to approximate real time, labelled "Approximate real-time playback — our reconstruction">
+<sfx: the 16× clip again, then a 20–30 s excerpt around the main event slowed to approximate real time, labelled "Approximate real-time playback — our reconstruction">
 
 Now listen again, slowed back down. Sixteen times slower, the Bloop is not a bloop at all. It is a deep, rising groan, far below the pitch the clip made famous. [C06] [C05]
 
-Speeding a recording up sixteen times raises every pitch by four full octaves, and squeezes a minute of sound into less than four seconds. That is why the famous clip sounds short, round and strangely alive. [C06] [C05]
+Speeding a recording up sixteen times raises every pitch by four full octaves. NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears. That is why the famous version sounds short, round and strangely alive. [C06] [C47]
 
 So what made it?
 
@@ -189,7 +189,7 @@ In a sense that is true: that particular event never came back. But sounds just 
 So, after all of it, what do we actually know?
 
 We know the sound was real, recorded repeatedly by NOAA in 1997. [C01] [C04]
-We know the famous clip is sped up, and that the real sound is a slow, deep rise lasting about a minute. [C06] [C05]
+We know the famous clip is sped up sixteen times, and that the real sound was a deep, rising rumble near the bottom of human hearing. [C06] [C47]
 We know its shape matches icequakes recorded near Antarctica, and that its arrival direction points toward the Antarctic coast. [C18] [C21] [C09]
 We know icequakes are common, and loud enough to cross an ocean. [C22] [C19] [C34]
 

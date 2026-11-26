@@ -43,7 +43,8 @@
         "C19",
         "C20",
         "C23",
-        "C24"
+        "C24",
+        "C47"
       ],
       "limitations": "Undated and uncited; gives the conclusion and the arrival-azimuth reasoning but no published paper specific to the 1997 signal. Location stated as a range of possible origins along a bearing, not a fix.",
       "reliability": "high",
@@ -606,6 +607,21 @@
       ],
       "limitations": "Abstract only.",
       "reliability": "high"
+    },
+    {
+      "id": "SRC-037",
+      "title": "Stranger Horizons analysis of NOAA audio file bloop.wav",
+      "author_or_org": "Stranger Horizons production (Claude), 2026-11-26",
+      "published": "2026-11-26",
+      "accessed": "2026-11-26",
+      "url_or_reference": "episodes/EP001_the_bloop/research/audio_analysis.md; file https://pmel.noaa.gov/acoustics/sounds/bloop.wav (md5 c5226273efefafa435d30cd064a5f58d)",
+      "source_type": "primary",
+      "passage": "Duration, sample rate, spectrogram and energy envelope of bloop.wav",
+      "claims_supported": [
+        "C47"
+      ],
+      "limitations": "Non-specialist analysis of a web copy; assumes the stated 16x speed-up is exact; not peer reviewed.",
+      "reliability": "medium"
     }
   ]
 }

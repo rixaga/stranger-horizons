@@ -5,30 +5,144 @@
   "researcher": "Claude (Stranger Horizons technical/research partner)",
   "status": "awaiting_research_approval",
   "method": "Web search and page reads of NOAA primary pages, peer-reviewed papers (abstracts and open PDFs), and news coverage. Every factual statement below cites claim IDs in claim_ledger.json, which cite sources.json. Distances were computed by us (great-circle, haversine, mean Earth radius 6,371 km) from the published coordinates.",
-
   "one_paragraph_summary": "In the northern summer of 1997, a civilian NOAA hydrophone array in the eastern equatorial Pacific, built to listen for seafloor earthquakes and volcanoes, repeatedly recorded a loud, low sound whose pitch rose over about a minute. Sped up 16 times so people could hear it, it became the 'Bloop'. NOAA first placed it roughly at 50°S 100°W and listed its origin as unknown; its scientists suspected Antarctic ice as early as 2001, yet also said its shape resembled an animal call. Media and the internet turned it into a sea-monster story, later tied to Lovecraft's Cthulhu and a 2012 fake mermaid documentary. After NOAA deployed hydrophones off the Antarctic Peninsula (2005-2009) and recorded thousands of icequakes, PMEL concluded the 1997 sounds are consistent with icequakes from large icebergs cracking and fracturing, with an arrival direction pointing to the Antarctic margin. The icequake explanation is strongly supported but rests on comparison and direction; no one saw the event and the exact iceberg is unknown.",
-
   "timeline": [
-    {"date": "1928-02", "event": "Lovecraft's 'The Call of Cthulhu' (Weird Tales) places the sunken city R'lyeh at 47°9'S 126°43'W.", "claims": ["C38"]},
-    {"date": "1944", "event": "Ewing and Worzel demonstrate long-range sound in the deep sound (SOFAR) channel.", "claims": ["C12"]},
-    {"date": "1996-05", "event": "NOAA PMEL begins continuous autonomous hydrophone monitoring in the eastern equatorial Pacific.", "claims": ["C02", "C03"]},
-    {"date": "1997-05-19", "event": "'Slow Down' recorded (later attributed to an iceberg running aground off the Antarctic Peninsula).", "claims": ["C32"]},
-    {"date": "1997 (northern summer)", "event": "The 'Bloop' is recorded repeatedly; pitch rises over ~1 minute; heard on multiple sensors >5,000 km away; general location ~50°S 100°W; origin unknown.", "claims": ["C01", "C04", "C05", "C07", "C08"]},
-    {"date": "1999-03-01", "event": "'Julia' recorded (later attributed to a grounded iceberg off Antarctica).", "claims": ["C32"]},
-    {"date": "2001", "event": "Christopher Fox tells CNN the team suspects ice off Antarctica; in an August 2001 NOAA release he still lists the Bloop's origin as undetermined.", "claims": ["C13", "C14"]},
-    {"date": "2002-06-15", "event": "New Scientist reports Fox's 'hunch' that the Bloop is the most animal-like of the unidentified sounds; giant-squid / sea-monster coverage follows.", "claims": ["C15", "C27"]},
-    {"date": "2003", "event": "Cryptozoologist Loren Coleman says it most likely comes from a marine beast.", "claims": ["C29"]},
-    {"date": "2005 (per NOS)", "event": "NOAA National Ocean Service says the source was found in Antarctica in 2005.", "claims": ["C23"]},
-    {"date": "2005-12", "event": "Dziak's team deploys autonomous hydrophones in the Bransfield Strait (arrays run to 2009 with Scotia Sea).", "claims": ["C16"]},
-    {"date": "2008 (early)", "event": "Icequakes very similar to the Bloop used to track iceberg A53a breaking up near South Georgia.", "claims": ["C18"]},
-    {"date": "2010-04-27", "event": "NASA APOD says no further Bloops have been heard since 1997.", "claims": ["C30"]},
-    {"date": "2012-05-27", "event": "Animal Planet airs the fictional 'Mermaids: The Body Found', which uses the Bloop as a springboard.", "claims": ["C40"]},
-    {"date": "2012-07", "event": "NOAA states no evidence of aquatic humanoids has ever been found.", "claims": ["C41"]},
-    {"date": "2012-11-29", "event": "WIRED UK: Dziak confirms the Bloop matches Antarctic icequakes; tens of thousands occur yearly.", "claims": ["C21", "C22"]},
-    {"date": "2013-07", "event": "Dziak et al., 'Life and Death Sounds of Iceberg A53a' (Oceanography).", "claims": ["C18", "C34"]},
-    {"date": "2015-04", "event": "Dziak et al. (PLoS ONE): icequakes are a prominent feature of the Antarctic Peninsula soundscape.", "claims": ["C33"]}
+    {
+      "date": "1928-02",
+      "event": "Lovecraft's 'The Call of Cthulhu' (Weird Tales) places the sunken city R'lyeh at 47°9'S 126°43'W.",
+      "claims": [
+        "C38"
+      ]
+    },
+    {
+      "date": "1944",
+      "event": "Ewing and Worzel demonstrate long-range sound in the deep sound (SOFAR) channel.",
+      "claims": [
+        "C12"
+      ]
+    },
+    {
+      "date": "1996-05",
+      "event": "NOAA PMEL begins continuous autonomous hydrophone monitoring in the eastern equatorial Pacific.",
+      "claims": [
+        "C02",
+        "C03"
+      ]
+    },
+    {
+      "date": "1997-05-19",
+      "event": "'Slow Down' recorded (later attributed to an iceberg running aground off the Antarctic Peninsula).",
+      "claims": [
+        "C32"
+      ]
+    },
+    {
+      "date": "1997 (northern summer)",
+      "event": "The 'Bloop' is recorded repeatedly; pitch rises over ~1 minute; heard on multiple sensors >5,000 km away; general location ~50°S 100°W; origin unknown.",
+      "claims": [
+        "C01",
+        "C04",
+        "C05",
+        "C07",
+        "C08"
+      ]
+    },
+    {
+      "date": "1999-03-01",
+      "event": "'Julia' recorded (later attributed to a grounded iceberg off Antarctica).",
+      "claims": [
+        "C32"
+      ]
+    },
+    {
+      "date": "2001",
+      "event": "Christopher Fox tells CNN the team suspects ice off Antarctica; in an August 2001 NOAA release he still lists the Bloop's origin as undetermined.",
+      "claims": [
+        "C13",
+        "C14"
+      ]
+    },
+    {
+      "date": "2002-06-15",
+      "event": "New Scientist reports Fox's 'hunch' that the Bloop is the most animal-like of the unidentified sounds; giant-squid / sea-monster coverage follows.",
+      "claims": [
+        "C15",
+        "C27"
+      ]
+    },
+    {
+      "date": "2003",
+      "event": "Cryptozoologist Loren Coleman says it most likely comes from a marine beast.",
+      "claims": [
+        "C29"
+      ]
+    },
+    {
+      "date": "2005 (per NOS)",
+      "event": "NOAA National Ocean Service says the source was found in Antarctica in 2005.",
+      "claims": [
+        "C23"
+      ]
+    },
+    {
+      "date": "2005-12",
+      "event": "Dziak's team deploys autonomous hydrophones in the Bransfield Strait (arrays run to 2009 with Scotia Sea).",
+      "claims": [
+        "C16"
+      ]
+    },
+    {
+      "date": "2008 (early)",
+      "event": "Icequakes very similar to the Bloop used to track iceberg A53a breaking up near South Georgia.",
+      "claims": [
+        "C18"
+      ]
+    },
+    {
+      "date": "2010-04-27",
+      "event": "NASA APOD says no further Bloops have been heard since 1997.",
+      "claims": [
+        "C30"
+      ]
+    },
+    {
+      "date": "2012-05-27",
+      "event": "Animal Planet airs the fictional 'Mermaids: The Body Found', which uses the Bloop as a springboard.",
+      "claims": [
+        "C40"
+      ]
+    },
+    {
+      "date": "2012-07",
+      "event": "NOAA states no evidence of aquatic humanoids has ever been found.",
+      "claims": [
+        "C41"
+      ]
+    },
+    {
+      "date": "2012-11-29",
+      "event": "WIRED UK: Dziak confirms the Bloop matches Antarctic icequakes; tens of thousands occur yearly.",
+      "claims": [
+        "C21",
+        "C22"
+      ]
+    },
+    {
+      "date": "2013-07",
+      "event": "Dziak et al., 'Life and Death Sounds of Iceberg A53a' (Oceanography).",
+      "claims": [
+        "C18",
+        "C34"
+      ]
+    },
+    {
+      "date": "2015-04",
+      "event": "Dziak et al. (PLoS ONE): icequakes are a prominent feature of the Antarctic Peninsula soundscape.",
+      "claims": [
+        "C33"
+      ]
+    }
   ],
-
   "the_original_evidence": {
     "instrument": "NOAA PMEL Equatorial Pacific autonomous hydrophone array: moored hydrophones recording low-frequency sound in the SOFAR channel (not the Navy SOSUS network itself).",
     "what_was_recorded": "A broad-spectrum, low-frequency signal rising rapidly in pitch over about one minute; recorded repeatedly in summer 1997; heard on multiple sensors at ranges over 5,000 km.",
@@ -43,76 +157,221 @@
       "A peer-reviewed paper analysing the 1997 signal itself",
       "Any visual observation of the event"
     ],
-    "claims": ["C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C26"]
+    "claims": [
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C26",
+      "C47"
+    ],
+    "our_file_analysis": "bloop.wav covers ~165 s of original recording; main rising sweep ~9-28 Hz at true speed, ~8 s long (our measurement, research/audio_analysis.md, C47)."
   },
-
   "the_investigation": {
     "summary": "NOAA's scientists suspected ice early but could not confirm it. They later recorded the Antarctic soundscape directly (Bransfield Strait and Scotia Sea, 2005-2009), found that icequakes are common and loud, tracked iceberg A53a by its sound in 2008, and found icequake spectrograms very similar to the Bloop. Combined with the arrival direction, this led PMEL to describe the Bloop as consistent with icequakes from large icebergs.",
     "independent_support": "Other teams detected Antarctic iceberg sounds at great ranges: Ross Sea icebergs heard in French Polynesia (Talandier et al. 2002); B15a and C19a heard ~10,000 km away (Matsumoto et al.).",
     "sister_signals": "'Slow Down' (1997) and 'Julia' (1999) were also attributed to grounded icebergs off Antarctica.",
-    "claims": ["C13", "C14", "C15", "C16", "C17", "C18", "C19", "C21", "C22", "C32", "C33", "C34", "C35"]
+    "claims": [
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C21",
+      "C22",
+      "C32",
+      "C33",
+      "C34",
+      "C35"
+    ]
   },
-
   "explanations_assessed": [
     {
       "explanation": "Icequake from a large Antarctic iceberg cracking and fracturing",
       "verdict": "Best supported (strong_evidence)",
-      "for": ["Spectrograms very similar to recorded icequakes", "Arrival direction points to the Antarctic margin", "Icequakes are frequent and can be heard >5,000 km away", "Independent teams have heard icebergs at 5,000-10,000 km", "Sister signals (Slow Down, Julia) also traced to icebergs"],
-      "against_or_open": ["No direct observation; iceberg never identified", "No peer-reviewed analysis of the 1997 signal found", "Recorded in austral winter, when Peninsula icequake activity is lower (not zero)"],
-      "claims": ["C17", "C18", "C19", "C20", "C21", "C33", "C34"]
+      "for": [
+        "Spectrograms very similar to recorded icequakes",
+        "Arrival direction points to the Antarctic margin",
+        "Icequakes are frequent and can be heard >5,000 km away",
+        "Independent teams have heard icebergs at 5,000-10,000 km",
+        "Sister signals (Slow Down, Julia) also traced to icebergs"
+      ],
+      "against_or_open": [
+        "No direct observation; iceberg never identified",
+        "No peer-reviewed analysis of the 1997 signal found",
+        "Recorded in austral winter, when Peninsula icequake activity is lower (not zero)"
+      ],
+      "claims": [
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C33",
+        "C34"
+      ]
     },
     {
       "explanation": "Other cryogenic process (iceberg grounding/scraping, harmonic tremor)",
       "verdict": "Plausible alternative within the same 'ice' family",
-      "for": ["NOAA attributes Slow Down and Julia to groundings"],
-      "against_or_open": ["NOAA specifically matches the Bloop to icequakes (cracking), not groundings"],
-      "claims": ["C20", "C32"]
+      "for": [
+        "NOAA attributes Slow Down and Julia to groundings"
+      ],
+      "against_or_open": [
+        "NOAA specifically matches the Bloop to icequakes (cracking), not groundings"
+      ],
+      "claims": [
+        "C20",
+        "C32"
+      ]
     },
     {
       "explanation": "Unknown giant animal (giant squid, sea monster, Cthulhu)",
       "verdict": "No evidence (speculation)",
-      "for": ["The sped-up clip sounds animal-like; Fox noted the frequency variation resembles animal calls (2002)"],
-      "against_or_open": ["Implausibly loud for any animal; no observation; matches icequakes", "Giant squid are not known to produce loud calls (not cited; omit unless sourced)"],
-      "claims": ["C15", "C26", "C42"]
+      "for": [
+        "The sped-up clip sounds animal-like; Fox noted the frequency variation resembles animal calls (2002)"
+      ],
+      "against_or_open": [
+        "Implausibly loud for any animal; no observation; matches icequakes",
+        "Giant squid are not known to produce loud calls (not cited; omit unless sourced)"
+      ],
+      "claims": [
+        "C15",
+        "C26",
+        "C42"
+      ]
     },
     {
       "explanation": "Secret military test / submarine / ship engines / winches",
       "verdict": "No evidence (speculation)",
-      "for": ["Listed by NOAA as theories that circulated"],
-      "against_or_open": ["Fox said he did not believe it was man-made; no supporting evidence"],
-      "claims": ["C10", "C43"]
+      "for": [
+        "Listed by NOAA as theories that circulated"
+      ],
+      "against_or_open": [
+        "Fox said he did not believe it was man-made; no supporting evidence"
+      ],
+      "claims": [
+        "C10",
+        "C43"
+      ]
     },
     {
       "explanation": "Mermaids ('Mermaids: The Body Found', 2012)",
       "verdict": "Fiction",
       "for": [],
-      "against_or_open": ["The program was labelled science fiction; NOAA stated no evidence of aquatic humanoids exists"],
-      "claims": ["C40", "C41"]
+      "against_or_open": [
+        "The program was labelled science fiction; NOAA stated no evidence of aquatic humanoids exists"
+      ],
+      "claims": [
+        "C40",
+        "C41"
+      ]
     }
   ],
-
   "popular_claims_vs_record": [
-    {"popular": "Recorded only once, never heard again", "record": "Recorded repeatedly in summer 1997; similar icequake signals are common", "claims": ["C04", "C30", "C31"]},
-    {"popular": "Lasted ~15 seconds", "record": "Pitch rose over about one minute; the famous clip is 16x faster", "claims": ["C05", "C06", "C31"]},
-    {"popular": "Heard by every sensor / by Navy submarine-hunting SOSUS", "record": "Heard on multiple sensors of NOAA's own autonomous array", "claims": ["C03", "C07", "C31"]},
-    {"popular": "Several times louder than a blue whale (quoted as NOAA)", "record": "No measured source level found; loudness inferred from detection range", "claims": ["C26"]},
-    {"popular": "Came from right next to R'lyeh", "record": "Early estimate is ~1,980 km from Lovecraft's coordinates; later direction points to Antarctica", "claims": ["C39", "C09"]},
-    {"popular": "Solved in 2005 (or 2012, or took 20 years)", "record": "Sources disagree; evidence developed 2005-2012", "claims": ["C23", "C37"]},
-    {"popular": "An iceberg calving off a glacier", "record": "PMEL says icebergs cracking and fracturing; calving specifically is not established", "claims": ["C24"]}
+    {
+      "popular": "Recorded only once, never heard again",
+      "record": "Recorded repeatedly in summer 1997; similar icequake signals are common",
+      "claims": [
+        "C04",
+        "C30",
+        "C31"
+      ]
+    },
+    {
+      "popular": "Lasted ~15 seconds",
+      "record": "Pitch rose over about one minute; the famous clip is 16x faster",
+      "claims": [
+        "C05",
+        "C06",
+        "C31"
+      ]
+    },
+    {
+      "popular": "Heard by every sensor / by Navy submarine-hunting SOSUS",
+      "record": "Heard on multiple sensors of NOAA's own autonomous array",
+      "claims": [
+        "C03",
+        "C07",
+        "C31"
+      ]
+    },
+    {
+      "popular": "Several times louder than a blue whale (quoted as NOAA)",
+      "record": "No measured source level found; loudness inferred from detection range",
+      "claims": [
+        "C26"
+      ]
+    },
+    {
+      "popular": "Came from right next to R'lyeh",
+      "record": "Early estimate is ~1,980 km from Lovecraft's coordinates; later direction points to Antarctica",
+      "claims": [
+        "C39",
+        "C09"
+      ]
+    },
+    {
+      "popular": "Solved in 2005 (or 2012, or took 20 years)",
+      "record": "Sources disagree; evidence developed 2005-2012",
+      "claims": [
+        "C23",
+        "C37"
+      ]
+    },
+    {
+      "popular": "An iceberg calving off a glacier",
+      "record": "PMEL says icebergs cracking and fracturing; calving specifically is not established",
+      "claims": [
+        "C24"
+      ]
+    }
   ],
-
   "computed_distances_km": {
     "method": "Great-circle (haversine), mean Earth radius 6,371.0 km; inputs are the published coordinates; rounded to nearest km.",
-    "inputs": {"bloop_early_estimate": [-50.0, -100.0], "rlyeh_lovecraft": [-47.15, -126.7167], "point_nemo": [-48.8767, -123.3933], "bransfield_strait_approx": [-63.0, -59.0], "cape_adare": [-71.3, 170.2], "ross_sea_approx": [-75.0, -175.0]},
+    "inputs": {
+      "bloop_early_estimate": [
+        -50.0,
+        -100.0
+      ],
+      "rlyeh_lovecraft": [
+        -47.15,
+        -126.7167
+      ],
+      "point_nemo": [
+        -48.8767,
+        -123.3933
+      ],
+      "bransfield_strait_approx": [
+        -63.0,
+        -59.0
+      ],
+      "cape_adare": [
+        -71.3,
+        170.2
+      ],
+      "ross_sea_approx": [
+        -75.0,
+        -175.0
+      ]
+    },
     "bloop_to_rlyeh": 1980,
     "bloop_to_point_nemo": 1689,
     "rlyeh_to_point_nemo": 313,
     "bloop_to_bransfield_strait": 2832,
     "bloop_to_cape_adare": 4828,
     "bloop_to_ross_sea": 4277,
-    "claims": ["C09", "C39"]
+    "claims": [
+      "C09",
+      "C39"
+    ]
   },
-
   "discrepancies_found": [
     "Location: 50°S 100°W (early NOAA page) vs. a bearing toward Bransfield Strait–Ross Sea–Cape Adare (later NOAA page).",
     "Distance figures: sensors >3,219 km apart (NOS), up to 4,800 km apart (New Scientist), heard at >5,000 km (PMEL) — different measures.",
@@ -122,13 +381,12 @@
     "A 2001 NOAA release quotes Fox saying the Bloop had been reported 'for decades by Navy sonar men' — unsupported elsewhere; not used.",
     "Fox in 2001 (suspects ice) vs. 2002 (most animal-like of the unknown sounds) — both reported; the script should show this honest uncertainty."
   ],
-
   "open_questions": [
     "Which iceberg, and exactly where? Unknown; likely unknowable from the 1997 data alone.",
     "Was there ever a formal NOAA analysis of the 1997 Bloop? We found none; the conclusion is published only on NOAA web pages and in interviews.",
-    "Original (non-sped-up) Bloop audio: is a real-time file available from NOAA? Only the 16x versions were found."
+    "Original (non-sped-up) Bloop audio: is a real-time file available from NOAA? Only the 16x versions were found.",
+    "Duration: NOAA describes a rise over about one minute, but the main burst in NOAA's 16x web file lasts ~0.5 s (~8 s at true speed); see research/audio_analysis.md (C47)."
   ],
-
   "media_and_rights_plan": {
     "authentic_material_available": [
       "NOAA PMEL 16x Bloop audio (WAV 162k; Ocean Explorer MP3 452k) — U.S. federal work, generally public domain; verify credit lines",
@@ -138,7 +396,6 @@
     "plan": "Play the real NOAA 16x audio, labelled 'NOAA recording, sped up 16x'. Build our own spectrogram and waveform from that file, labelled as such. Also play a slowed-back version labelled 'approximate real-time playback (our reconstruction)'. Everything else is Blender CGI labelled 'Illustrative reconstruction'. Never show CGI as the recording event.",
     "network_note": "This workspace's shell cannot download from noaa.gov (network allowlist). The owner may need to download the WAV/MP3 files manually during Phase 4/5."
   },
-
   "story_angles": [
     "Hook: the clip everyone knows is a lie of speed — a one-minute groan squeezed into a 'bloop'.",
     "Twist structure: the scientists suspected ice almost from the start; the mystery was bigger in public than in the lab.",
@@ -146,7 +403,6 @@
     "Myth anatomy: how 'unknown' became 'monster' (2002 headlines → Cthulhu coordinates → 2012 fake mermaid documentary).",
     "Honest verdict: strongly supported icequake, not a witnessed event; the deeper story is how loud a warming polar ocean is."
   ],
-
   "visual_implications_for_storyboard": [
     "Real: NOAA audio, our spectrogram/waveform built from it, maps from public data (coordinates, bearings, distances computed here).",
     "Reconstruction (labelled): moored hydrophone in the SOFAR channel, sound propagation across the Pacific, Antarctic iceberg cracking underwater, iceberg A53a drifting near South Georgia, deep empty ocean at 50°S 100°W.",

@@ -55,8 +55,9 @@
       "source_ids": [
         "SRC-001"
       ],
-      "script_wording": "Its pitch climbed steeply, over about a minute.",
-      "status": "verified"
+      "script_wording": "NOAA described its pitch as rising rapidly, over about a minute.",
+      "status": "qualified",
+      "counter_evidence": "Our analysis of NOAA's web file shows a main burst of ~8 s at true speed (C47); keep the one-minute figure attributed to NOAA."
     },
     {
       "claim_id": "C06",
@@ -536,6 +537,18 @@
       "counter_evidence": "Underwater decibels use a different reference from decibels in air, so these numbers cannot be compared with everyday sounds.",
       "script_wording": "Blue whales are among the loudest animals alive. Off Antarctica, scientists measured their calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away.",
       "status": "verified"
+    },
+    {
+      "claim_id": "C47",
+      "text": "Our analysis of NOAA's 16x Bloop file (bloop.wav, 10.34 s, 8 kHz) shows it covers about 165 s of original recording; its main rising sweep is roughly 9 to 28 Hz at true speed, near or below the ~20 Hz lower limit of typical human hearing.",
+      "evidence_label": "strong_evidence",
+      "source_ids": [
+        "SRC-002",
+        "SRC-037"
+      ],
+      "counter_evidence": "Our own measurement, assuming exactly 16x. In the web file the main burst lasts about 0.5 s (~8 s at true speed), which is shorter than NOAA's description of a rise over about one minute; the web file may be an excerpt or processed. Do not state our durations as NOAA's.",
+      "script_wording": "NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears.",
+      "status": "qualified"
     }
   ]
 }

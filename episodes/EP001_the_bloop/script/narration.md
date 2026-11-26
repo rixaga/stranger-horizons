@@ -1,7 +1,7 @@
 # Narration — The Bloop: The Ocean Sound Nobody Could Explain
 
 Generated from `script/script.md` by `sh.py narration`; edit the script, not this file.
-Spoken words: 1906 (≈ 13.1 min at 145 wpm, before pauses and audio moments).
+Spoken words: 1933 (≈ 13.3 min at 145 wpm, before pauses and audio moments).
 Read with `pronunciation_guide.md`. Pause marks: `[pause]` ≈ 0.8 s between paragraphs; `[long pause]` ≈ 1.5 s between sections.
 
 ## 1. Opening hook
@@ -52,7 +52,7 @@ Then, in the summer of 1997, the hydrophones caught something else.
 
 [pause]
 
-A powerful, low sound. Its pitch climbed steeply over about a minute. It wasn't a single event. NOAA recorded it again and again that summer. And it was loud enough to reach several hydrophones more than five thousand kilometres away.
+A powerful, low sound. NOAA described its pitch as rising rapidly, over about a minute. It wasn't a single event. NOAA recorded it again and again that summer. And it was loud enough to reach several hydrophones more than five thousand kilometres away.
 
 [pause]
 
@@ -64,7 +64,7 @@ Now listen again, slowed back down. Sixteen times slower, the Bloop is not a blo
 
 [pause]
 
-Speeding a recording up sixteen times raises every pitch by four full octaves, and squeezes a minute of sound into less than four seconds. That is why the famous clip sounds short, round and strangely alive.
+Speeding a recording up sixteen times raises every pitch by four full octaves. NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears. That is why the famous version sounds short, round and strangely alive.
 
 [pause]
 
@@ -196,7 +196,7 @@ So, after all of it, what do we actually know?
 
 [pause]
 
-We know the sound was real, recorded repeatedly by NOAA in 1997. We know the famous clip is sped up, and that the real sound is a slow, deep rise lasting about a minute. We know its shape matches icequakes recorded near Antarctica, and that its arrival direction points toward the Antarctic coast. We know icequakes are common, and loud enough to cross an ocean.
+We know the sound was real, recorded repeatedly by NOAA in 1997. We know the famous clip is sped up sixteen times, and that the real sound was a deep, rising rumble near the bottom of human hearing. We know its shape matches icequakes recorded near Antarctica, and that its arrival direction points toward the Antarctic coast. We know icequakes are common, and loud enough to cross an ocean.
 
 [pause]
 

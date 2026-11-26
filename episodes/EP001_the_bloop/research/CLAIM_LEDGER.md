@@ -5,7 +5,7 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | Label | Claims |
 |---|---|
 | Established fact | 30 |
-| Strong evidence | 11 |
+| Strong evidence | 12 |
 | Disputed | 2 |
 | Speculation | 2 |
 | Unverified report | 1 |
@@ -16,7 +16,7 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | C02 | The recording was made by an autonomous hydrophone array that NOAA had kept in the eastern equatorial Pacific since May 1996 to monitor seafloor earthquakes and volcanic activity. | Established fact | SRC-005, SRC-004 | verified |
 | C03 | The array was designed by NOAA's Pacific Marine Environmental Laboratory (PMEL) to record low-frequency sound in the SOFAR channel, producing results comparable to the U.S. Navy's SOSUS network, which NOAA scientists had also used for research. | Established fact | SRC-005, SRC-001 | qualified |
 | C04 | NOAA says the Bloop was recorded repeatedly during the summer of 1997, not once. | Established fact | SRC-001, SRC-004 | verified |
-| C05 | The Bloop rose rapidly in frequency over about one minute. | Established fact | SRC-001 | verified |
+| C05 | The Bloop rose rapidly in frequency over about one minute. | Established fact | SRC-001 | qualified |
 | C06 | The famous audio clip of the Bloop is the original recording sped up 16 times. | Established fact | SRC-001, SRC-002 | verified |
 | C07 | The Bloop was loud enough to be heard on multiple sensors at a range of over 5,000 km. | Established fact | SRC-001 | verified |
 | C08 | NOAA's early description gave a general location near 50°S, 100°W, far off the west coast of southern South America. | Established fact | SRC-001 | qualified |
@@ -58,6 +58,7 @@ Generated from `research/claim_ledger.json` by `sh.py ledger-md`; edit the JSON,
 | C44 | The U.S. Navy built hydrophone networks (SOSUS) to track Soviet submarines; after the Cold War, NOAA scientists were allowed to use them for research and detected undersea volcanic eruptions with them. | Established fact | SRC-035, SRC-036 | verified |
 | C45 | In 1944 Maurice Ewing and J. Lamar Worzel demonstrated that low-frequency sound travels long distances in the deep ocean sound channel (SOFAR). | Established fact | SRC-017, SRC-016 | verified |
 | C46 | Blue whale calls measured off the Western Antarctic Peninsula averaged about 189 dB re 1 µPa at 1 m, and calling blue whales were located up to about 200 km away. | Established fact | SRC-015 | verified |
+| C47 | Our analysis of NOAA's 16x Bloop file (bloop.wav, 10.34 s, 8 kHz) shows it covers about 165 s of original recording; its main rising sweep is roughly 9 to 28 Hz at true speed, near or below the ~20 Hz lower limit of typical human hearing. | Strong evidence | SRC-002, SRC-037 | qualified |
 
 ## Notes per claim
 
@@ -91,7 +92,8 @@ NOAA says the Bloop was recorded repeatedly during the summer of 1997, not once.
 ### C05 — Established fact
 The Bloop rose rapidly in frequency over about one minute.
 - **SRC-001**: A Collection of Sounds from the Sea (Andra M. Bobbitt (NOAA VENTS Program) and Sharon Nieukirk (Acoustic Monitoring Project), NOAA Pacific Marine Environmental Laboratory, via NOAA Ocean Explorer, unknown (undated page; Sound in the Sea 2001 expedition site))
-- *Approved wording (draft):* "Its pitch climbed steeply, over about a minute."
+- *Counter-evidence / caveats:* Our analysis of NOAA's web file shows a main burst of ~8 s at true speed (C47); keep the one-minute figure attributed to NOAA.
+- *Approved wording (draft):* "NOAA described its pitch as rising rapidly, over about a minute."
 
 ### C06 — Established fact
 The famous audio clip of the Bloop is the original recording sped up 16 times.
@@ -359,4 +361,11 @@ Blue whale calls measured off the Western Antarctic Peninsula averaged about 189
 - **SRC-015**: Blue and fin whale call source levels and propagation range in the Southern Ocean (Ana Širović, John A. Hildebrand, Sean M. Wiggins, 2007-08)
 - *Counter-evidence / caveats:* Underwater decibels use a different reference from decibels in air, so these numbers cannot be compared with everyday sounds.
 - *Approved wording (draft):* "Blue whales are among the loudest animals alive. Off Antarctica, scientists measured their calls at around 189 underwater decibels, and located calling whales up to two hundred kilometres away."
+
+### C47 — Strong evidence
+Our analysis of NOAA's 16x Bloop file (bloop.wav, 10.34 s, 8 kHz) shows it covers about 165 s of original recording; its main rising sweep is roughly 9 to 28 Hz at true speed, near or below the ~20 Hz lower limit of typical human hearing.
+- **SRC-002**: Icequakes (Bloop) (NOAA Pacific Marine Environmental Laboratory, Acoustics Program, unknown (undated page; refers to events of early 2008))
+- **SRC-037**: Stranger Horizons analysis of NOAA audio file bloop.wav (Stranger Horizons production (Claude), 2026-11-26, 2026-11-26)
+- *Counter-evidence / caveats:* Our own measurement, assuming exactly 16x. In the web file the main burst lasts about 0.5 s (~8 s at true speed), which is shorter than NOAA's description of a rise over about one minute; the web file may be an excerpt or processed. Do not state our durations as NOAA's.
+- *Approved wording (draft):* "NOAA's ten-second clip holds almost three minutes of the original recording. Most of the real sound sits so low that, at its true speed, it is barely audible to human ears."
 
