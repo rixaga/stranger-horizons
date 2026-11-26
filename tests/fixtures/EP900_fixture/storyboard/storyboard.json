@@ -1,0 +1,35 @@
+{
+  "episode_id": "EP900",
+  "title": "Fixture Episode",
+  "fps": 30,
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "duration_seconds": 4,
+      "narration": "Far below the surface, the light gives out.",
+      "visual_intent": "Descent",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "descent_reveal",
+      "camera": {
+        "movement": "descent",
+        "lens_mm": 24
+      },
+      "source_ids": [
+        "SRC-001"
+      ],
+      "asset_ids": []
+    },
+    {
+      "scene_id": "S02",
+      "duration_seconds": 2,
+      "narration": "This sentence is deliberately far too long to be spoken comfortably in only two seconds of screen time.",
+      "visual_intent": "Hold",
+      "reconstruction_status": "illustrative_reconstruction",
+      "environment_preset": "deep_ocean",
+      "camera_preset": "static_hold",
+      "camera": {}
+    }
+  ]
+}

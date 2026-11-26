@@ -1,0 +1,17 @@
+{
+  "episode_id": "EP900",
+  "slug": "fixture",
+  "title": "Fixture Episode",
+  "pillar": "Deep Unknown",
+  "status": "script",
+  "approvals": {
+    "research": {
+      "approved_by": "owner",
+      "date": "2026-11-26"
+    },
+    "script": null,
+    "storyboard": null,
+    "prototype": null,
+    "final_cut": null
+  }
+}

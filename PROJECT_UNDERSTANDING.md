@@ -287,7 +287,11 @@ Measured on the owner's Mac by running `blender/scripts/sh_run_checks.py` inside
 | Cycles GPU | **Metal: Apple M4 GPU, 10 cores** |
 | Free disk | 254.9 GB |
 | Xcode command-line tools | Installed; `/usr/bin/python3` available |
-| **FFmpeg** | **Not found** (not on PATH, `/opt/homebrew/bin` or `/usr/local/bin`). Needed by `assemble_video.py` and `measure_loudness.py` |
+| **FFmpeg** | Initially missing; **installed 2026-11-26: FFmpeg/ffprobe 9.1 via Homebrew** (`/opt/homebrew`, with libx264, VideoToolbox, AudioToolbox). Verified with `ffmpeg -version` / `ffprobe -version` on the Mac |
 | jsonschema | Not in Blender's Python; not checked for the system Python |
 
-Implications for Stage 5: EEVEE preview at 1280×720 is the right default. Cycles with volumes runs on Metal but will be slow and warm on a fanless machine, so keep it for final shots with modest samples. FFmpeg must be installed before any video can be encoded.
+Implications for Stage 5: EEVEE preview at 1280×720 is the right default. Cycles with volumes runs on Metal but will be slow and warm on a fanless machine, so keep it for final shots with modest samples. FFmpeg is now installed, so encoding and loudness checks can run on the Mac.
+
+## Status update — Stage 4 (2026-11-26)
+
+Stage 4 plan and Phase A foundations are implemented on branch `claude/stage4-architecture`. See `docs/PRODUCTION_IMPLEMENTATION_PLAN.md` §7 for validation results and `docs/SYSTEM_ARCHITECTURE.md` for module layout. Stage 5 (EP001 prototype) has not started.

@@ -16,6 +16,8 @@ import sys
 from pathlib import Path
 
 BT709 = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
+# Also write the tags into the H.264 VUI: FFmpeg 9.1 on macOS dropped color_primaries otherwise.
+H264_BT709_VUI = ["-bsf:v", "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1"]
 
 
 def pattern_has_frames(pattern: str) -> bool:
@@ -32,7 +34,7 @@ def build_command(ffmpeg: str, args: argparse.Namespace, output: Path) -> list[s
     command += ["-i", args.input]
     if args.audio:
         command += ["-i", str(args.audio)]
-    command += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(args.crf), "-preset", args.preset, *BT709]
+    command += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(args.crf), "-preset", args.preset, *BT709, *H264_BT709_VUI]
     if args.audio:
         command += ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest"]
     command += ["-movflags", "+faststart", "-f", "mp4", str(output)]

@@ -9,6 +9,13 @@ An English-language cinematic mystery documentary channel exploring hidden place
 3. Understand the channel in [docs/CHANNEL_BIBLE.md](docs/CHANNEL_BIBLE.md).
 4. Follow [docs/PRODUCTION_PIPELINE.md](docs/PRODUCTION_PIPELINE.md).
 5. Do not start a full episode until the visual prototype is approved.
+6. Setup and commands: [docs/TECHNICAL_REQUIREMENTS.md](docs/TECHNICAL_REQUIREMENTS.md). Architecture: [docs/SYSTEM_ARCHITECTURE.md](docs/SYSTEM_ARCHITECTURE.md).
+
+```bash
+pip3 install -r requirements.txt && brew install ffmpeg
+python3 -m pytest
+python3 pipeline/sh.py --help
+```
 
 ## Principles
 - Cinematic, realistic, atmospheric documentary visuals.

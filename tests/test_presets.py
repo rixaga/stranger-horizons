@@ -85,3 +85,9 @@ def test_orbit_keyframes_stay_on_radius():
 def test_every_camera_move_builds(move):
     from sh_camera import compute_keyframes
     assert len(compute_keyframes(move, target=(0, 0, 0), fps=30, frame_start=1)) >= 2
+
+
+def test_camera_lens_override():
+    from sh_camera import compute_keyframes
+    keys = compute_keyframes("slow_push_in", fps=30, lens_mm=85)
+    assert {k["lens"] for k in keys} == {85}
