@@ -69,7 +69,7 @@
           0.96,
           1.0
         ],
-        "energy": 120,
+        "energy": 350,
         "location": [
           -0.6,
           -0.2,
@@ -95,7 +95,7 @@
           0.96,
           1.0
         ],
-        "energy": 120,
+        "energy": 350,
         "location": [
           0.6,
           -0.2,
@@ -116,14 +116,14 @@
     "particles": {
       "count": 26000,
       "bounds_m": [
-        40,
-        30,
+        26,
+        34,
         14
       ],
       "center_m": [
-        -4,
-        30,
-        5
+        0,
+        -2,
+        1
       ],
       "drift_m_s": [
         0.03,
@@ -158,95 +158,5 @@
       ],
       "strength": 1.0
     }
-  },
-  "camera_keys": [
-    {
-      "t_s": 0,
-      "location": [
-        2,
-        -16,
-        3
-      ],
-      "target": [
-        -12,
-        33,
-        3
-      ],
-      "lens_mm": 28
-    },
-    {
-      "t_s": 2.5,
-      "location": [
-        0,
-        -8,
-        3.5
-      ],
-      "target": [
-        -12,
-        33,
-        3.5
-      ],
-      "lens_mm": 28
-    },
-    {
-      "t_s": 7.5,
-      "location": [
-        0,
-        -7,
-        2.2
-      ],
-      "target": [
-        0,
-        40,
-        0
-      ],
-      "lens_mm": 24,
-      "relative_to": "SH_ROV"
-    },
-    {
-      "t_s": 9.0,
-      "location": [
-        0,
-        0.3,
-        1.6
-      ],
-      "target": [
-        0,
-        40,
-        0
-      ],
-      "lens_mm": 24,
-      "relative_to": "SH_ROV"
-    },
-    {
-      "t_s": 10.5,
-      "location": [
-        0,
-        1.55,
-        0.15
-      ],
-      "target": [
-        0,
-        40,
-        0.5
-      ],
-      "lens_mm": 24,
-      "relative_to": "SH_ROV"
-    },
-    {
-      "t_s": 16.5,
-      "location": [
-        0,
-        1.55,
-        0.15
-      ],
-      "target": [
-        0,
-        40,
-        0.5
-      ],
-      "lens_mm": 24,
-      "relative_to": "SH_ROV"
-    }
-  ]
+  }
 }
