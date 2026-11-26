@@ -829,22 +829,22 @@
       ],
       "source_ids": [],
       "camera": {
-        "shot_size": "wide",
-        "angle": "slightly low",
-        "movement": "slow push-in, then hold as it banks away",
-        "position": "mid-water, 30 m ahead of the shark's path",
-        "lens_mm": 24,
+        "shot_size": "wide → POV",
+        "angle": "eye level",
+        "movement": "drift, then fly in behind the ROV and settle onto it as its own forward camera",
+        "position": "starts mid-water with the ROV small in frame; ends mounted on top of the ROV",
+        "lens_mm": 18,
         "dof": true,
         "fstop": 4.0
       },
       "environment": "Deep open ocean, blue-black water, drifting marine snow",
       "assets": [
-        "CR_Megalodon (procedural)",
-        "SH_ROV (distant, scale)"
+        "CR_Megalodon (procedural, 18 m)",
+        "SH_ROV (scale; becomes the POV)"
       ],
-      "lighting": "Shafts from above; shark crosses two shafts",
-      "animation": "Shark emerges head-on, banks away, tail sweep; marine snow streams off its fins.",
-      "sound_notes": "Water displacement; heartbeat-free, no stingers.",
+      "lighting": "Shafts from above; in POV the ROV lamps light the shark head-on",
+      "animation": "From the ROV's view the shark grows out of the dark straight at the lens, rises at the last moment and its belly and tail pass overhead.",
+      "sound_notes": "Water displacement; low pressure-wave whoosh as it passes over; heartbeat-free, no stingers.",
       "transition": "cut",
       "title_card": "THEORY TWO: THE SURVIVOR",
       "environment_preset": "deep_ocean",
@@ -920,7 +920,7 @@
                 0.96,
                 1.0
               ],
-              "energy": 350,
+              "energy": 120,
               "location": [
                 -0.6,
                 -0.2,
@@ -946,7 +946,7 @@
                 0.96,
                 1.0
               ],
-              "energy": 350,
+              "energy": 120,
               "location": [
                 0.6,
                 -0.2,
@@ -967,14 +967,14 @@
           "particles": {
             "count": 26000,
             "bounds_m": [
-              26,
-              34,
+              40,
+              30,
               14
             ],
             "center_m": [
-              0,
-              -2,
-              1
+              -4,
+              30,
+              5
             ],
             "drift_m_s": [
               0.03,
@@ -1009,7 +1009,97 @@
             ],
             "strength": 1.0
           }
-        }
+        },
+        "camera_keys": [
+          {
+            "t_s": 0,
+            "location": [
+              2,
+              -16,
+              3
+            ],
+            "target": [
+              -12,
+              33,
+              3
+            ],
+            "lens_mm": 28
+          },
+          {
+            "t_s": 2.5,
+            "location": [
+              0,
+              -8,
+              3.5
+            ],
+            "target": [
+              -12,
+              33,
+              3.5
+            ],
+            "lens_mm": 28
+          },
+          {
+            "t_s": 7.5,
+            "location": [
+              0,
+              -7,
+              2.2
+            ],
+            "target": [
+              0,
+              40,
+              0
+            ],
+            "lens_mm": 24,
+            "relative_to": "SH_ROV"
+          },
+          {
+            "t_s": 9.0,
+            "location": [
+              0,
+              0.3,
+              1.6
+            ],
+            "target": [
+              0,
+              40,
+              0
+            ],
+            "lens_mm": 24,
+            "relative_to": "SH_ROV"
+          },
+          {
+            "t_s": 10.5,
+            "location": [
+              0,
+              1.55,
+              0.15
+            ],
+            "target": [
+              0,
+              40,
+              0.5
+            ],
+            "lens_mm": 24,
+            "relative_to": "SH_ROV"
+          },
+          {
+            "t_s": 16.5,
+            "location": [
+              0,
+              1.55,
+              0.15
+            ],
+            "target": [
+              0,
+              40,
+              0.5
+            ],
+            "lens_mm": 24,
+            "relative_to": "SH_ROV"
+          }
+        ]
       }
     },
     {
