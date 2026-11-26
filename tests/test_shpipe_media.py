@@ -15,8 +15,9 @@ def _frames(d: Path, n: int, color: str):
 
 
 def _probe(p: Path) -> dict:
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,color_space,color_primaries,color_transfer",
-                          "-of", "json", str(p)], capture_output=True, text=True, check=True)
+    # Full output on purpose: ffprobe 9.1 drops colour fields from -show_entries selections.
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_format", "-show_streams", "-of", "json", str(p)],
+                         capture_output=True, text=True, check=True)
     return json.loads(out.stdout)
 
 

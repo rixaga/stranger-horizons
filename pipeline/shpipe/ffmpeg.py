@@ -11,8 +11,8 @@ from .errors import CommandFailed, ToolMissing
 # macOS apps launched from the Dock do not inherit Homebrew's PATH.
 EXTRA_DIRS = ("/opt/homebrew/bin", "/usr/local/bin")
 BT709 = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
-# Newer FFmpeg (seen with 9.1 on macOS) can drop the primaries/transfer tags given as
-# output options. Writing them straight into the H.264 VUI is version-independent.
+# Belt and braces: also write the tags straight into the H.264 VUI, so they survive any
+# change in how FFmpeg versions pass output colour options to the encoder.
 H264_BT709_VUI = ["-bsf:v", "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1"]
 INSTALL_HINT = "Install it with `brew install ffmpeg` (macOS) or your package manager, then retry."
 
