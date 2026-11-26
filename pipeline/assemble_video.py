@@ -34,7 +34,7 @@ def build_command(ffmpeg: str, args: argparse.Namespace, output: Path) -> list[s
     command += ["-i", args.input]
     if args.audio:
         command += ["-i", str(args.audio)]
-    command += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(args.crf), "-preset", args.preset, *BT709, *H264_BT709_VUI]
+    command += ["-vf", "setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(args.crf), "-preset", args.preset, *BT709, *H264_BT709_VUI]
     if args.audio:
         command += ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest"]
     command += ["-movflags", "+faststart", "-f", "mp4", str(output)]

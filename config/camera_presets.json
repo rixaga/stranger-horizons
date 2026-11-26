@@ -192,6 +192,31 @@
       ],
       "hold_s": 1.5,
       "notes": "Requires a foreground observer object between camera and target; deep focus (dof off or f/8+)."
+    },
+    "glide_reveal": {
+      "label": "Glide reveal",
+      "duration_s": 10,
+      "lens_mm": 24,
+      "keys": [
+        {
+          "t": 0,
+          "offset": [
+            0,
+            -86,
+            -11.8
+          ]
+        },
+        {
+          "t": 1,
+          "offset": [
+            0,
+            -68,
+            -8.4
+          ]
+        }
+      ],
+      "hold_s": 1.5,
+      "notes": "Forward glide of about 18 m with a gentle rise; the subject emerges from the murk as visibility doubles. For distant subjects 70-90 m away."
     }
   }
 }

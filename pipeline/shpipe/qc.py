@@ -45,13 +45,19 @@ def check_renders(ep: Episode, mode: str) -> dict:
         folder = ep.render_dir(mode, row["scene_id"])
         frames = sorted(folder.glob("frame_*.png")) if folder.is_dir() else []
         sizes = {_png_size(f) for f in frames[:1] + frames[-1:]}
+        scene_size = expected_size
+        log = folder / "render_log.json"
+        if log.is_file():  # a scene may use a profile override (e.g. preview_hd)
+            res = config.load_json(log).get("resolution")
+            if res:
+                scene_size = tuple(res)
         ok = len(frames) == row["frames"]
         scenes[row["scene_id"]] = {"expected": row["frames"], "found": len(frames), "ok": ok,
                                    "size": sorted(s for s in sizes if s)}
         if not ok:
             errors.append(f"{row['scene_id']}: {len(frames)}/{row['frames']} frames")
-        if frames and sizes != {expected_size}:
-            warnings.append(f"{row['scene_id']}: frame size {sorted(sizes)} differs from {mode} profile {expected_size}")
+        if frames and sizes != {scene_size}:
+            warnings.append(f"{row['scene_id']}: frame size {sorted(sizes)} differs from expected {scene_size}")
         if frames and not (folder / "render_log.json").is_file():
             warnings.append(f"{row['scene_id']}: render_log.json missing")
     return {"status": "fail" if errors else ("warn" if warnings else "pass"), "scenes": scenes,
@@ -89,8 +95,9 @@ def check_final_video(ep: Episode) -> dict:
     if v is None:
         errors.append("no video stream")
     else:
-        if v.get("color_space") != "bt709":
-            errors.append(f"video not tagged BT.709 ({v.get('color_space')})")
+        tags = {k: v.get(k) for k in ("color_space", "color_primaries", "color_transfer")}
+        if set(tags.values()) != {"bt709"}:
+            errors.append(f"video not fully tagged BT.709 ({tags})")
         if (v.get("width"), v.get("height")) not in {(1920, 1080), (3840, 2160)}:
             errors.append(f"unexpected delivery size {v.get('width')}x{v.get('height')}")
     if a is None:

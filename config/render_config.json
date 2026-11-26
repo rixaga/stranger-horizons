@@ -62,5 +62,15 @@
     "Sample counts are starting points; tune per shot and record the final value in render_log.json.",
     "Use image sequences as render masters and encode MP4 separately with pipeline/assemble_video.py.",
     "Run pipeline/check_environment.py and blender/scripts/sh_env_check.py before rendering."
-  ]
+  ],
+  "preview_hd": {
+    "resolution_x": 1920,
+    "resolution_y": 1080,
+    "resolution_percentage": 100,
+    "engine": "EEVEE",
+    "samples": 32,
+    "file_format": "PNG",
+    "color_depth": "8",
+    "color_management": "AgX"
+  }
 }

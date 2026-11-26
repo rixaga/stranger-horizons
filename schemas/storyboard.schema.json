@@ -81,6 +81,13 @@
               "focal_length_mm": {
                 "type": "number",
                 "description": "Deprecated alias of lens_mm"
+              },
+              "dof": {
+                "type": "boolean"
+              },
+              "fstop": {
+                "type": "number",
+                "exclusiveMinimum": 0
               }
             },
             "additionalProperties": false
@@ -145,6 +152,14 @@
               "template": {
                 "type": "string",
                 "description": "Repo-relative .blend with the hero set, e.g. blender/templates/seabed_ridge.blend"
+              },
+              "preset_overrides": {
+                "type": "object",
+                "description": "Deep-merged over the environment preset for this scene only (same fields as config/presets)."
+              },
+              "render_profile": {
+                "type": "string",
+                "description": "Override the render profile for this scene (e.g. preview_hd)."
               }
             }
           }

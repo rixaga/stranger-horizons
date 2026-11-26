@@ -295,3 +295,7 @@ Implications for Stage 5: EEVEE preview at 1280×720 is the right default. Cycle
 ## Status update — Stage 4 (2026-11-26)
 
 Stage 4 plan and Phase A foundations are implemented on branch `claude/stage4-architecture`. See `docs/PRODUCTION_IMPLEMENTATION_PLAN.md` §7 for validation results and `docs/SYSTEM_ARCHITECTURE.md` for module layout. Stage 5 (EP001 prototype) has not started.
+
+## Status update — Stage 5 (2026-11-26)
+
+EP001 10-second prototype built and rendered on the owner's Mac (EEVEE, 1920×1080, 300 frames, 11.6 min). See `episodes/EP001_ocean_prototype/PROTOTYPE_REPORT.md`. Awaiting approval before Stage 6.
