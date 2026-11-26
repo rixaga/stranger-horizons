@@ -1,0 +1,195 @@
+{
+  "name": "EP001_S022",
+  "set": {
+    "name": "EP001_S022_midwater",
+    "materials": {
+      "sediment": {
+        "base": [
+          0.03,
+          0.034,
+          0.034
+        ],
+        "base2": [
+          0.13,
+          0.12,
+          0.105
+        ],
+        "roughness": 0.95,
+        "noise_size_m": 6.0,
+        "bump": 0.35,
+        "slope_weight": 0.45,
+        "slope_from": 0.7
+      },
+      "basalt": {
+        "base": [
+          0.018,
+          0.02,
+          0.022
+        ],
+        "base2": [
+          0.06,
+          0.06,
+          0.062
+        ],
+        "roughness": 0.8,
+        "noise_size_m": 3.0,
+        "bump": 0.6,
+        "slope_weight": 0.35,
+        "slope_from": 0.6
+      }
+    },
+    "terrain": {
+      "size_m": [
+        260,
+        280
+      ],
+      "center_m": [
+        0,
+        10
+      ],
+      "resolution": 120,
+      "material": "sediment",
+      "layers": [
+        {
+          "texture": "CLOUDS",
+          "size_m": 40.0,
+          "strength": 5.0
+        },
+        {
+          "texture": "CLOUDS",
+          "size_m": 10.0,
+          "strength": 2.2
+        },
+        {
+          "texture": "DISTORTED_NOISE",
+          "size_m": 7.0,
+          "strength": 1.1,
+          "distortion": 1.5
+        },
+        {
+          "texture": "STUCCI",
+          "size_m": 0.8,
+          "strength": 0.18,
+          "turbulence": 5.0
+        }
+      ],
+      "z_m": -140
+    },
+    "gobo": {
+      "height_m": 40,
+      "size_m": 180,
+      "cells": 96,
+      "open_fraction": 0.25,
+      "drift_m": [
+        1.2,
+        0.6
+      ],
+      "seed": 4,
+      "open_at": [
+        [
+          0,
+          18,
+          10
+        ],
+        [
+          -8,
+          30,
+          8
+        ]
+      ]
+    },
+    "vehicles": [
+      {
+        "name": "SH_ROV",
+        "location_m": [
+          -14,
+          33
+        ],
+        "height_above_ground_m": 144,
+        "length_m": 2.8,
+        "face_toward_m": [
+          40,
+          34
+        ],
+        "travel_m": 3.0,
+        "lamp_energy_w": 1500,
+        "lamp_color": [
+          1.0,
+          0.93,
+          0.82
+        ],
+        "lamp_spot_deg": 50,
+        "lamp_tilt_down_deg": 12,
+        "lamp_volume_factor": 3.0,
+        "float_color": [
+          0.85,
+          0.84,
+          0.8
+        ],
+        "nav_color": [
+          0.2,
+          0.85,
+          1.0
+        ]
+      }
+    ]
+  },
+  "creatures": [
+    {
+      "type": "shark",
+      "cfg": {
+        "name": "CR_Megalodon",
+        "length_m": 15.0,
+        "bones": 8,
+        "seed": 7
+      },
+      "path": [
+        [
+          6,
+          36,
+          -2.5
+        ],
+        [
+          4.5,
+          26,
+          -1.8
+        ],
+        [
+          2.5,
+          16,
+          -0.8
+        ],
+        [
+          0.5,
+          8,
+          0.0
+        ],
+        [
+          -5,
+          2.5,
+          0.8
+        ],
+        [
+          -16,
+          -1.5,
+          1.6
+        ],
+        [
+          -32,
+          -4,
+          2.4
+        ]
+      ],
+      "path_span": [
+        0.0,
+        1.0
+      ],
+      "bank_deg": 28,
+      "swim": {
+        "freq_hz": 0.3,
+        "head_deg": 1.5,
+        "tail_deg": 16
+      }
+    }
+  ]
+}

@@ -480,6 +480,9 @@ def build() -> dict:
             scene["environment_preset"] = spec["preset"]
         if spec.get("move"):
             scene["camera_preset"] = spec["move"]
+        hints_file = EP / "blender" / "templates" / f"{spec['id']}_shot.json"
+        if hints_file.is_file():  # Blender build hints live next to the shot template
+            scene["blender"] = json.loads(hints_file.read_text(encoding="utf-8"))
         scenes.append(scene)
     if i != len(sents):
         raise SystemExit(f"{len(sents) - i} narration sentences not assigned to any scene; next: {sents[i]['text']!r}")

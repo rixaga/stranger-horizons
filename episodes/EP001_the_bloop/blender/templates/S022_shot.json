@@ -1,0 +1,162 @@
+{
+  "template": "episodes/EP001_the_bloop/blender/templates/S022.blend",
+  "target_m": [
+    0,
+    0,
+    0
+  ],
+  "render_profile": "preview_hd",
+  "preset_overrides": {
+    "volume": {
+      "bounds_m": [
+        240,
+        280,
+        260
+      ],
+      "center_m": [
+        0,
+        10,
+        -60
+      ],
+      "scatter_color": [
+        0.08,
+        0.36,
+        0.42
+      ],
+      "density": 0.0065,
+      "absorption_color": [
+        0.1,
+        0.5,
+        0.58
+      ],
+      "absorption_density": 0.02,
+      "anisotropy": 0.78,
+      "noise_scale": 0.04,
+      "noise_amount": 0.3,
+      "noise_drift_m_s": [
+        0.15,
+        0.05,
+        0.02
+      ]
+    },
+    "lights": [
+      {
+        "name": "SH_Downwelling_Sun",
+        "type": "SUN",
+        "role": "key",
+        "color": [
+          0.42,
+          0.74,
+          0.86
+        ],
+        "energy": 3.0,
+        "rotation_deg": [
+          -22,
+          0,
+          8
+        ],
+        "angle_deg": 5.0,
+        "volume_factor": 1.6,
+        "diffuse_factor": 0.2,
+        "specular_factor": 0.2
+      },
+      {
+        "name": "SH_SubLamp_L",
+        "type": "SPOT",
+        "role": "motivated_source",
+        "color": [
+          0.92,
+          0.96,
+          1.0
+        ],
+        "energy": 350,
+        "location": [
+          -0.6,
+          -0.2,
+          0.1
+        ],
+        "rotation_deg": [
+          0,
+          -6,
+          0
+        ],
+        "spot_size_deg": 45,
+        "spot_blend": 0.85,
+        "size_m": 0.5,
+        "volume_factor": 1.0,
+        "parent_to_camera": true
+      },
+      {
+        "name": "SH_SubLamp_R",
+        "type": "SPOT",
+        "role": "motivated_source",
+        "color": [
+          0.92,
+          0.96,
+          1.0
+        ],
+        "energy": 350,
+        "location": [
+          0.6,
+          -0.2,
+          0.1
+        ],
+        "rotation_deg": [
+          0,
+          6,
+          0
+        ],
+        "spot_size_deg": 45,
+        "spot_blend": 0.85,
+        "size_m": 0.5,
+        "volume_factor": 1.0,
+        "parent_to_camera": true
+      }
+    ],
+    "particles": {
+      "count": 26000,
+      "bounds_m": [
+        26,
+        34,
+        14
+      ],
+      "center_m": [
+        0,
+        -2,
+        1
+      ],
+      "drift_m_s": [
+        0.03,
+        0.02,
+        -0.015
+      ],
+      "color": [
+        0.55,
+        0.6,
+        0.62
+      ],
+      "size_m": 0.004,
+      "size_random": 0.8
+    },
+    "color_management": {
+      "exposure": 2.3
+    },
+    "camera": {
+      "clip_end_m": 400,
+      "clip_start_m": 0.6
+    },
+    "eevee": {
+      "volumetric_end_m": 220,
+      "volumetric_tile_size": "4",
+      "volumetric_samples": 96
+    },
+    "world": {
+      "color": [
+        0.002,
+        0.008,
+        0.012
+      ],
+      "strength": 1.0
+    }
+  }
+}

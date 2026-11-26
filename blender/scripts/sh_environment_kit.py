@@ -9,7 +9,7 @@ Safe to rerun: the collection is cleared and rebuilt. No third-party assets.
         --out episodes/EP000_ocean_prototype/blender/EP001_set.blend
 
 Config sections (all optional except terrain):
-    terrain     size_m, center_m, resolution, layers[{texture, size_m, strength}], material
+    terrain     size_m, center_m, z_m, resolution, layers[{texture, size_m, strength}], material
     formations  [{name, location_m, height_m, base_radius_m, top_radius_m, lean_m, rings, segments,
                   roughness_m, facet_size_m, strength_m, material, snap_to_ground}]
     boulders    {count, area_m [x0, y0, x1, y1], radius_m [min, max], seed, keep_clear[[x, y, r]],
@@ -151,6 +151,7 @@ def make_terrain(col, cfg: dict, materials: dict):
     mesh.shade_smooth() if hasattr(mesh, "shade_smooth") else None
     obj = _new_object(col, "SH_Terrain", mesh)
     obj["sh_kind"] = "terrain"
+    obj.location.z = float(cfg.get("z_m", 0.0))  # lower the seabed for mid-water shots
     for k, layer in enumerate(cfg.get("layers", [])):
         _displace(obj, f"SH_Terrain_L{k}", layer.get("texture", "CLOUDS"), layer["size_m"], layer["strength"],
                   extra={k2: v for k2, v in layer.items() if k2 not in ("texture", "size_m", "strength")})

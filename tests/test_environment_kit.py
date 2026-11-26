@@ -141,3 +141,14 @@ def test_vehicle_rebuild_is_rerun_safe():
     n = len(bpy.data.objects)
     kit.build_set(cfg)
     assert len(bpy.data.objects) == n
+
+
+def test_terrain_can_be_lowered_for_midwater_shots():
+    import sh_environment_kit as kit
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    cfg = _small()
+    cfg["terrain"]["z_m"] = -55.0
+    cfg.pop("formations", None)
+    kit.build_set(cfg)
+    terrain = bpy.data.objects["SH_Terrain"]
+    assert kit.ground_height(terrain, 0.0, 0.0) < -40.0
