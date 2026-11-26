@@ -3,7 +3,7 @@
   "slug": "the_bloop",
   "title": "The Bloop: The Ocean Sound Nobody Could Explain",
   "pillar": "Strange Signals",
-  "status": "storyboard",
+  "status": "production",
   "approvals": {
     "research": {
       "approved_by": "Ariga (owner)",
@@ -13,7 +13,10 @@
       "approved_by": "Ariga (owner) \u2014 script v2 with creature animations",
       "date": "2026-11-26"
     },
-    "storyboard": null,
+    "storyboard": {
+      "approved_by": "Ariga (owner)",
+      "date": "2026-11-26"
+    },
     "prototype": null,
     "final_cut": null
   },
