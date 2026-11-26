@@ -7,11 +7,11 @@
       "scene_id": "S01",
       "duration_seconds": 10,
       "narration": "",
-      "visual_intent": "Establish the channel's deep-ocean look: we drift through dark water toward a towering basalt pinnacle that emerges from the murk.",
+      "visual_intent": "Establish the channel's deep-ocean look: we drift through dark water toward a towering basalt pinnacle; a small ROV with its lamps on gives the human scale.",
       "reconstruction_status": "illustrative_reconstruction",
       "on_screen_label": "Illustrative reconstruction",
       "environment": "Mid-water seabed (~150 m, lower twilight zone), sediment and basalt boulders",
-      "lighting": "Faint downwelling daylight broken into shafts from above; two vehicle lamps for the near field",
+      "lighting": "Faint downwelling daylight broken into shafts from above; two camera-vehicle lamps for the near field; the in-frame ROV's lamps as a motivated focal light",
       "effects": [
         "water_volume",
         "marine_snow",
@@ -172,7 +172,7 @@
             "size_random": 0.8
           },
           "color_management": {
-            "exposure": 1.8
+            "exposure": 2.3
           },
           "camera": {
             "clip_end_m": 400,

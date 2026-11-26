@@ -1,7 +1,7 @@
 # EP001 Ocean Prototype — Stage 6 Evaluation
 
-**Status:** evaluation complete; v3 rendered. **Awaiting owner approval.** Full episode production has *not* started.
-**Evaluated:** `final/EP001_preview_v2.mp4` (the Stage 5 deliverable). The improved version is v3 (see `IMPROVEMENT_LOG.md`).
+**Status:** evaluation complete; v3 and v4 rendered. **Awaiting owner approval.** Full episode production has *not* started.
+**Evaluated:** `final/EP001_preview_v2.mp4` (the Stage 5 deliverable). The improved version is v3; v4 adds the scale cue and brighter exposure the owner asked for (see `IMPROVEMENT_LOG.md`).
 **Compared against:** `REFERENCE_VIDEO_ANALYSIS.md` (§6 "Adopt / Do not adopt"), `docs/VISUAL_STYLE_GUIDE.md`, `docs/CINEMATOGRAPHY_GUIDE.md`, `docs/LIGHTING_GUIDE.md`, `docs/ENVIRONMENT_GUIDE.md`.
 
 ## How this was evaluated (what was actually done)
@@ -99,15 +99,25 @@ Typing into Blender's console via remote control drops characters, and the scree
 | 5. Restricted palette, one accent | Yes (cyan) | Yes |
 | "Do not adopt" 4: darkness for its own sake | **Violated** | Fixed |
 
+## v4: scale cue and brighter exposure (owner request, 2026-11-26)
+
+The owner asked for a scale-cue subject that is clearly visible and an image that is not too dark.
+
+- **Scale cue:** a 2.8 m work-class ROV (`make_vehicle` in the environment kit). It hovers 5 m above the seabed in the mid-ground left of the pinnacle and crosses the frame left → right at 0.4 m/s, side-on to the camera so its profile (frame, buoyancy block, thrusters) reads. Its two 1,500 W lamps throw visible beams through the water and a warm pool onto the seabed ahead. A small cyan navigation light is the frame's single accent. Against the 38 m pinnacle it makes the scale obvious (Cinematography §1, Quality Gate Q3).
+- **Motivated light on the ROV:** a gobo opening is placed so a sun shaft falls on the ROV along its whole path (computed from the sun direction in Blender, not guessed).
+- **Exposure:** +1.8 → +2.3 EV. Calibration stills: no pixels below luma 5, mean 31–35 (v3: 23–26).
+- **Iterations (calibration stills on the Mac):** facing the pinnacle (beams pointed away from camera and were nearly invisible; the body read as dark blocks) → in a sun shaft with a brighter float (better, still a back view) → side-on with stronger beam scattering (clearly readable). That last version is v4.
+- **Editorial:** the ROV is generic, not a real vehicle or brand, and the shot keeps its "Illustrative reconstruction" label. An ROV at ~150 m is a common, plausible sight; it implies a survey, not a discovery.
+
 ## Remaining limits (honest list)
 
-- Subject separation is better but still moderate; a stronger fix is an actual rim/backlight object or a scale cue (a small ROV with lamps) in the frame, which also answers Cinematography §1 "scale cue in every establishing shot". Not added: it is a content decision for the owner.
+- Subject separation of the pinnacle is better but still moderate. The ROV now gives the frame a clear, lit focal point and the scale cue the Cinematography Guide asks for.
+- The ROV is a simple box-built model: good at 100–160 px on screen, not for close-ups. A close shot would need a detailed model (CC0 asset or a proper build).
 - Sun shafts at this depth (~150 m) are at the edge of plausible (Lighting Guide: shafts only above ~200 m). Below that the scene should be lamp-only.
 - Rendering stays at EEVEE preview quality (32 samples). Final-quality settings are untested.
 - Phone/TV viewing was not tested.
 
 ## Decision needed from the owner
 
-1. Approve v3 as the visual baseline for EP001, or ask for another iteration.
-2. Whether to add a scale cue (ROV/diver) to establishing shots.
-3. Approval to move to the next stage. **I will not start full episode production without explicit approval.**
+1. Approve v4 (v3 + ROV scale cue + brighter exposure) as the visual baseline for EP001, or ask for another iteration.
+2. Approval to move to the next stage. **I will not start full episode production without explicit approval.**

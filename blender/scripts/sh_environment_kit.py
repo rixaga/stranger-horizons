@@ -15,6 +15,9 @@ Config sections (all optional except terrain):
     boulders    {count, area_m [x0, y0, x1, y1], radius_m [min, max], seed, keep_clear[[x, y, r]],
                  hero[{location_m, radius_m}], material}
     gobo        {height_m, size_m, cells, open_fraction, drift_m [dx, dy], seed, open_at [[x, y, r]]}
+    vehicles    [{name, location_m [x, y], height_above_ground_m, length_m, face_toward_m [x, y], travel_m,
+                  lamp_energy_w, lamp_color, lamp_spot_deg, nav_color}]: a small ROV as a scale cue,
+                  with its own lamps, gliding travel_m toward face_toward_m over the scene's frame range
     materials   {name: {base, base2, roughness, noise_size_m, bump, slope_weight, slope_from}}
     terrain layers may add texture-specific keys such as distortion (DISTORTED_NOISE) or turbulence (STUCCI).
 """
@@ -297,6 +300,106 @@ def make_gobo(col, cfg: dict, scene):
     return obj
 
 
+def _flat_material(name: str, color, roughness=0.5, metallic=0.0, emission=None, strength=0.0):
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    _ensure_nodes(mat)
+    nt = mat.node_tree
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    bsdf.inputs["Base Color"].default_value = (*color, 1)
+    bsdf.inputs["Roughness"].default_value = roughness
+    bsdf.inputs["Metallic"].default_value = metallic
+    if emission is not None:
+        bsdf.inputs["Emission Color"].default_value = (*emission, 1)
+        bsdf.inputs["Emission Strength"].default_value = strength
+    nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
+    return mat
+
+
+def _box(bm, center, size, mat_index):
+    geom = bmesh.ops.create_cube(bm, size=1.0)
+    for v in geom["verts"]:
+        v.co = Vector((center[0] + v.co.x * size[0], center[1] + v.co.y * size[1], center[2] + v.co.z * size[2]))
+    for f in {f for v in geom["verts"] for f in v.link_faces}:
+        f.material_index = mat_index
+
+
+def make_vehicle(col, cfg: dict, scene, terrain=None):
+    """A small work-class ROV: open frame, buoyancy block, thrusters, two lamps that light the water.
+    Built at real size (length_m, default 2.2 m) so it reads as a scale cue against large formations.
+    Local +Y is forward. Glides travel_m toward face_toward_m across the scene's frame range."""
+    name = cfg.get("name", "SH_ROV")
+    L = cfg.get("length_m", 2.2)
+    W, H = 0.6 * L, 0.5 * L
+    bm = bmesh.new()
+    # 0 frame (dark metal), 1 buoyancy block (off-white), 2 lamp lenses (emissive), 3 nav light (accent)
+    for sx in (-1, 1):                                   # side rails
+        for sz in (-1, 1):
+            _box(bm, (sx * W * 0.46, 0, sz * H * 0.42), (0.06 * L, 0.96 * L, 0.06 * L), 0)
+    for sy in (-1, 1):                                   # cross members
+        _box(bm, (0, sy * L * 0.45, -H * 0.42), (W, 0.06 * L, 0.06 * L), 0)
+    _box(bm, (0, -0.02 * L, H * 0.26), (W * 0.98, 0.92 * L, H * 0.42), 1)          # buoyancy block
+    _box(bm, (0, 0.05 * L, -H * 0.12), (W * 0.55, 0.6 * L, H * 0.3), 0)            # electronics pod
+    for sx in (-1, 1):                                   # thrusters
+        _box(bm, (sx * W * 0.5, -0.3 * L, 0), (0.09 * L, 0.22 * L, 0.16 * L), 0)
+        _box(bm, (sx * W * 0.3, 0.46 * L, -H * 0.05), (0.1 * L, 0.06 * L, 0.1 * L), 2)  # lamp heads
+    _box(bm, (0, -0.35 * L, H * 0.5), (0.04 * L, 0.04 * L, 0.04 * L), 3)            # nav light
+    mesh = bpy.data.meshes.new(name)
+    bm.to_mesh(mesh)
+    bm.free()
+    lamp_rgb = cfg.get("lamp_color", [1.0, 0.93, 0.82])
+    for m in (_flat_material(f"{name}_frame", (0.06, 0.065, 0.07), 0.45, 0.6),
+              _flat_material(f"{name}_float", tuple(cfg.get("float_color", [0.62, 0.62, 0.6])), 0.5),
+              _flat_material(f"{name}_lens", (0.9, 0.9, 0.9), 0.2, emission=lamp_rgb, strength=40.0),
+              _flat_material(f"{name}_nav", (0.1, 0.8, 0.9), 0.3, emission=cfg.get("nav_color", [0.2, 0.85, 1.0]),
+                             strength=25.0)):
+        mesh.materials.append(m)
+    obj = _new_object(col, name, mesh)
+    obj["sh_kind"] = "vehicle"
+
+    x, y = cfg.get("location_m", [0.0, 0.0])
+    z = (ground_height(terrain, x, y) if terrain else 0.0) + cfg.get("height_above_ground_m", 5.0)
+    tx, ty = cfg.get("face_toward_m", [x, y + 1.0])
+    d = Vector((tx - x, ty - y, 0.0))
+    d = d.normalized() if d.length > 1e-6 else Vector((0, 1, 0))
+    obj.rotation_euler = (math.radians(cfg.get("pitch_deg", -4.0)), 0.0, math.atan2(d.y, d.x) - math.pi / 2)
+    start = Vector((x, y, z))
+    obj.location = start
+
+    spot = math.radians(cfg.get("lamp_spot_deg", 55.0))
+    for side in (-1, 1):
+        ldata = bpy.data.lights.new(f"{name}_Lamp_{'L' if side < 0 else 'R'}", "SPOT")
+        ldata.energy = cfg.get("lamp_energy_w", 900.0)
+        ldata.color = lamp_rgb
+        ldata.spot_size = spot
+        ldata.spot_blend = 0.6
+        ldata.shadow_soft_size = 0.05
+        if hasattr(ldata, "volume_factor"):
+            ldata.volume_factor = cfg.get("lamp_volume_factor", 1.5)
+        lamp = bpy.data.objects.new(ldata.name, ldata)
+        col.objects.link(lamp)
+        lamp.parent = obj
+        lamp.location = (side * W * 0.3, 0.5 * L, -H * 0.05)
+        lamp.rotation_euler = (math.radians(90 - cfg.get("lamp_tilt_down_deg", 14.0)), 0.0, side * math.radians(6))
+    nav = bpy.data.lights.new(f"{name}_Nav", "POINT")
+    nav.energy = cfg.get("nav_energy_w", 3.0)
+    nav.color = cfg.get("nav_color", [0.2, 0.85, 1.0])
+    nav.shadow_soft_size = 0.05
+    nav_obj = bpy.data.objects.new(nav.name, nav)
+    col.objects.link(nav_obj)
+    nav_obj.parent = obj
+    nav_obj.location = (0, -0.35 * L, H * 0.56)
+
+    travel = cfg.get("travel_m", 0.0)
+    if travel:
+        obj.keyframe_insert("location", frame=scene.frame_start)
+        obj.location = start + d * travel
+        obj.keyframe_insert("location", frame=scene.frame_end)
+        _linear(obj)
+    return obj
+
+
 def _linear(obj):
     action = obj.animation_data.action
     curves = list(getattr(action, "fcurves", []) or [])
@@ -324,9 +427,10 @@ def build_set(config: dict, scene=None) -> dict:
     formations = [make_formation(col, f, materials, terrain) for f in config.get("formations", [])]
     boulders = scatter_boulders(col, config["boulders"], materials, terrain) if "boulders" in config else []
     gobo = make_gobo(col, config["gobo"], scene) if "gobo" in config else None
+    vehicles = [make_vehicle(col, v, scene, terrain) for v in config.get("vehicles", [])]
     scene["sh_set"] = config.get("name", "set")
     return {"terrain": terrain.name, "formations": [f.name for f in formations], "boulders": len(boulders),
-            "gobo": gobo.name if gobo else None,
+            "gobo": gobo.name if gobo else None, "vehicles": [v.name for v in vehicles],
             "triangles_estimate": sum(len(o.data.polygons) for o in col.objects if o.type == "MESH") * 2}
 
 
