@@ -70,7 +70,7 @@
     "engine": "EEVEE",
     "samples": 32,
     "file_format": "PNG",
-    "color_depth": "8",
+    "color_depth": "16",
     "color_management": "AgX"
   }
 }

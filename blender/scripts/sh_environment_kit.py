@@ -14,8 +14,9 @@ Config sections (all optional except terrain):
                   roughness_m, facet_size_m, strength_m, material, snap_to_ground}]
     boulders    {count, area_m [x0, y0, x1, y1], radius_m [min, max], seed, keep_clear[[x, y, r]],
                  hero[{location_m, radius_m}], material}
-    gobo        {height_m, size_m, cells, open_fraction, drift_m [dx, dy], seed}
-    materials   {name: {base, base2, roughness, noise_size_m, bump}}
+    gobo        {height_m, size_m, cells, open_fraction, drift_m [dx, dy], seed, open_at [[x, y, r]]}
+    materials   {name: {base, base2, roughness, noise_size_m, bump, slope_weight, slope_from}}
+    terrain layers may add texture-specific keys such as distortion (DISTORTED_NOISE) or turbulence (STUCCI).
 """
 from __future__ import annotations
 
@@ -82,7 +83,28 @@ def make_material(name: str, spec: dict):
     bump.inputs["Strength"].default_value = spec.get("bump", 0.4)
     nt.links.new(coord.outputs["Object"], tex.inputs["Vector"])
     nt.links.new(coord.outputs["Object"], fine.inputs["Vector"])
-    nt.links.new(tex.outputs["Fac"], ramp.inputs["Fac"])
+    slope_w = spec.get("slope_weight", 0.0)
+    if slope_w > 0:  # sediment settles on upward-facing surfaces; steep faces show bare rock
+        geo = nt.nodes.new("ShaderNodeNewGeometry")
+        sep = nt.nodes.new("ShaderNodeSeparateXYZ")
+        flat = nt.nodes.new("ShaderNodeMapRange")
+        flat.clamp = True
+        flat.inputs["From Min"].default_value = spec.get("slope_from", 0.65)
+        flat.inputs["From Max"].default_value = 1.0
+        mix = nt.nodes.new("ShaderNodeMath")
+        mix.operation = "MULTIPLY_ADD"
+        mix.inputs[1].default_value = 1.0 - slope_w
+        scaled = nt.nodes.new("ShaderNodeMath")
+        scaled.operation = "MULTIPLY"
+        scaled.inputs[1].default_value = slope_w
+        nt.links.new(geo.outputs["Normal"], sep.inputs[0])
+        nt.links.new(sep.outputs["Z"], flat.inputs["Value"])
+        nt.links.new(flat.outputs["Result"], scaled.inputs[0])
+        nt.links.new(tex.outputs["Fac"], mix.inputs[0])
+        nt.links.new(scaled.outputs[0], mix.inputs[2])
+        nt.links.new(mix.outputs[0], ramp.inputs["Fac"])
+    else:
+        nt.links.new(tex.outputs["Fac"], ramp.inputs["Fac"])
     nt.links.new(ramp.outputs["Color"], bsdf.inputs["Base Color"])
     nt.links.new(fine.outputs["Fac"], bump.inputs["Height"])
     nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
@@ -91,11 +113,18 @@ def make_material(name: str, spec: dict):
     return mat
 
 
-def _displace(obj, name: str, texture: str, size_m: float, strength: float, seed: int = 0):
-    tex = bpy.data.textures.get(name) or bpy.data.textures.new(name, texture)
+def _displace(obj, name: str, texture: str, size_m: float, strength: float, seed: int = 0, extra: dict | None = None):
+    tex = bpy.data.textures.get(name)
+    if tex is not None and tex.type != texture:
+        bpy.data.textures.remove(tex)
+        tex = None
+    tex = tex or bpy.data.textures.new(name, texture)
     tex.noise_scale = size_m
     if texture == "CLOUDS":
         tex.noise_depth = 4
+    for key, value in (extra or {}).items():  # e.g. distortion (DISTORTED_NOISE), turbulence (STUCCI)
+        if hasattr(tex, key):
+            setattr(tex, key, value)
     mod = obj.modifiers.new(name, "DISPLACE")
     mod.texture = tex
     mod.texture_coords = "GLOBAL"
@@ -120,7 +149,8 @@ def make_terrain(col, cfg: dict, materials: dict):
     obj = _new_object(col, "SH_Terrain", mesh)
     obj["sh_kind"] = "terrain"
     for k, layer in enumerate(cfg.get("layers", [])):
-        _displace(obj, f"SH_Terrain_L{k}", layer.get("texture", "CLOUDS"), layer["size_m"], layer["strength"])
+        _displace(obj, f"SH_Terrain_L{k}", layer.get("texture", "CLOUDS"), layer["size_m"], layer["strength"],
+                  extra={k2: v for k2, v in layer.items() if k2 not in ("texture", "size_m", "strength")})
     obj.data.materials.append(materials[cfg.get("material", "sediment")])
     return obj
 
@@ -236,12 +266,16 @@ def make_gobo(col, cfg: dict, scene):
     cell = size / n
     verts, faces = [], []
     values = sorted(noise.noise(off + Vector((i * 0.35, j * 0.35, 0))) for j in range(n) for i in range(n))
-    threshold = values[int(len(values) * (1 - open_frac))]
+    threshold = values[min(int(len(values) * (1 - open_frac)), len(values) - 1)] if open_frac > 0 else float("inf")
+    forced = cfg.get("open_at", [])  # [[x, y, radius_m]] in gobo space: always let light through
     for j in range(n):
         for i in range(n):
+            x, y = (i - n / 2) * cell, (j - n / 2) * cell
+            cx, cy = x + cell / 2, y + cell / 2
+            if any((cx - fx) ** 2 + (cy - fy) ** 2 < fr ** 2 for fx, fy, fr in forced):
+                continue
             if noise.noise(off + Vector((i * 0.35, j * 0.35, 0))) >= threshold:
                 continue  # an opening: light passes here
-            x, y = (i - n / 2) * cell, (j - n / 2) * cell
             b = len(verts)
             verts += [(x, y, 0), (x + cell, y, 0), (x + cell, y + cell, 0), (x, y + cell, 0)]
             faces.append((b, b + 1, b + 2, b + 3))
@@ -284,7 +318,8 @@ def build_set(config: dict, scene=None) -> dict:
     col = _collection(scene)
     materials = {name: make_material(f"SH_{name}", spec) for name, spec in config.get("materials", {}).items()}
     for default in ("sediment", "basalt"):
-        materials.setdefault(default, make_material(f"SH_{default}", {}))
+        if default not in materials:  # never rebuild (and wipe) a material the config already defined
+            materials[default] = make_material(f"SH_{default}", {})
     terrain = make_terrain(col, config["terrain"], materials)
     formations = [make_formation(col, f, materials, terrain) for f in config.get("formations", [])]
     boulders = scatter_boulders(col, config["boulders"], materials, terrain) if "boulders" in config else []

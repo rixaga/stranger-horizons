@@ -215,8 +215,9 @@ def render_stills(frames: list[int]) -> dict:
 def encode(tag: str = "") -> dict:
     sfx = f"_{tag}" if tag else ""
     pattern = str(RENDER_DIR / "frame_%04d.png")
-    mp4 = ffmpeg.encode_sequence(pattern, FINAL / f"EP001_preview{sfx}.mp4", fps=30, crf=18, preset="medium",
-                                 start_number=1)
+    # Dark scene: subtle temporal grain dithers the gradients and x264 AQ protects shadows (Stage 6, W4)
+    mp4 = ffmpeg.encode_sequence(pattern, FINAL / f"EP001_preview{sfx}.mp4", fps=30, crf=16, preset="medium",
+                                 start_number=1, grain=2.0, dark_scene=True)
     sheet = FINAL / f"EP001_contact_sheet{sfx}.jpg"
     ffmpeg.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-framerate", "30", "-start_number", "1",
                 "-i", pattern, "-vf", "select='not(mod(n\\,60))',scale=480:-1,tile=5x1", "-frames:v", "1",
