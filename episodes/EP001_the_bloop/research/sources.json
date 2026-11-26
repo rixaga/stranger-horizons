@@ -43,7 +43,8 @@
         "C19",
         "C20",
         "C23",
-        "C24"
+        "C24",
+        "C47"
       ],
       "limitations": "Undated and uncited; gives the conclusion and the arrival-azimuth reasoning but no published paper specific to the 1997 signal. Location stated as a range of possible origins along a bearing, not a fix.",
       "reliability": "high",
@@ -122,7 +123,8 @@
       "source_type": "primary",
       "passage": "Closing quote by Fox on sounds that remain mysteries, naming the 'bloop'",
       "claims_supported": [
-        "C14"
+        "C14",
+        "C52"
       ],
       "limitations": "Archived copy in a government-documents research corpus, not the live NOAA page. Fox's remark that the sound had been reported 'for decades by Navy sonar men' is not supported anywhere else we found and conflicts with the 1997 detection story; treated as unverified.",
       "reliability": "medium",
@@ -161,7 +163,8 @@
         "C27",
         "C28",
         "C29",
-        "C42"
+        "C42",
+        "C54"
       ],
       "limitations": "Secondary account; quotes CNN 2001/2002 and Coleman 2003, which we could not open directly (CNN fetch needed approval that was not available). Exact dates of quotes rely on this article.",
       "reliability": "medium"
@@ -275,7 +278,8 @@
       "source_type": "peer_reviewed",
       "passage": "Abstract: average blue whale call source level 189 ± 3 dB re 1 µPa at 1 m (25-29 Hz); blue whales located up to 200 km away",
       "claims_supported": [
-        "C26"
+        "C26",
+        "C46"
       ],
       "limitations": "Measured off the Western Antarctic Peninsula; other studies give similar values (~188 dB, Cummings & Thompson 1971, cited within).",
       "reliability": "high"
@@ -290,7 +294,8 @@
       "source_type": "institutional",
       "passage": "Definition of the SOund Fixing And Ranging channel; hydrophones at the channel axis record distant sounds",
       "claims_supported": [
-        "C12"
+        "C12",
+        "C45"
       ],
       "limitations": "Popular explainer.",
       "reliability": "high",
@@ -306,7 +311,8 @@
       "source_type": "institutional",
       "passage": "Sound channel axis; 1944 Ewing and Worzel test from R/V Saluda",
       "claims_supported": [
-        "C12"
+        "C12",
+        "C45"
       ],
       "limitations": "Educational site; used for background only.",
       "reliability": "high"
@@ -572,6 +578,220 @@
       "limitations": "Coordinates confirmed from an annotated edition excerpt found by search (goodreads notes) and the geohashing.site quotation; Wikisource and Gutenberg copies identified but not opened in this session. Fiction: used only for what the story says.",
       "reliability": "high",
       "license_notes": "Published 1928; in the U.S. public domain since 1 January 2024. Quote only a short line on screen."
+    },
+    {
+      "id": "SRC-035",
+      "title": "Sound in the Sea 2001 — expedition plan / acoustics background",
+      "author_or_org": "NOAA Ocean Explorer (Sound in the Sea project, NOAA Vents Program)",
+      "published": "2001",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanexplorer.noaa.gov/explorations/sound01/background/plan/plan.html",
+      "source_type": "primary",
+      "passage": "Background: the U.S. Navy installed hydrophone arrays to monitor Soviet submarines; after the fall of the Berlin Wall (1989) Vents scientists used Navy arrays and detected three submarine eruptions in the northeast Pacific, confirmed in the field",
+      "claims_supported": [
+        "C44"
+      ],
+      "limitations": "Read via search excerpt; consistent with SRC-036.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-036",
+      "title": "Acoustic detection of a seafloor spreading episode on the Juan de Fuca Ridge using military hydrophone arrays",
+      "author_or_org": "Christopher G. Fox, W. Eddie Radford, Robert P. Dziak, Tai-Kwan Lau, Haruyoshi Matsumoto, Anthony E. Schreiner",
+      "published": "1995",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Geophysical Research Letters 22: 131-134 (1995); abstract at https://www.pmel.noaa.gov/pubs/outstand/fox1526/abstract.shtml",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract: availability of the U.S. Navy's SOSUS for environmental research allowed continuous monitoring of seafloor seismicity",
+      "claims_supported": [
+        "C44"
+      ],
+      "limitations": "Abstract only.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-037",
+      "title": "Stranger Horizons analysis of NOAA audio file bloop.wav",
+      "author_or_org": "Stranger Horizons production (Claude), 2026-11-26",
+      "published": "2026-11-26",
+      "accessed": "2026-11-26",
+      "url_or_reference": "episodes/EP001_the_bloop/research/audio_analysis.md; file https://pmel.noaa.gov/acoustics/sounds/bloop.wav (md5 c5226273efefafa435d30cd064a5f58d)",
+      "source_type": "primary",
+      "passage": "Duration, sample rate, spectrogram and energy envelope of bloop.wav",
+      "claims_supported": [
+        "C47"
+      ],
+      "limitations": "Non-specialist analysis of a web copy; assumes the stated 16x speed-up is exact; not peer reviewed.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-038",
+      "title": "Truth behind mysterious deep sea 'bloop' that had scientists convinced they'd found giant Megalodon",
+      "author_or_org": "LADbible",
+      "published": "2025-12-06",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.ladbible.com/news/world-news/ocean-noise-the-big-bloop-origin-536828-20251206",
+      "source_type": "news",
+      "passage": "Says some believed the Bloop was a call from the extinct megalodon, and calls a surviving megalodon a widespread conspiracy theory",
+      "claims_supported": [
+        "C48"
+      ],
+      "limitations": "Headline overstates ('had scientists convinced'); used only as evidence that the megalodon link circulates.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-039",
+      "title": "What happened to the megalodon?",
+      "author_or_org": "Encyclopaedia Britannica",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.britannica.com/story/what-happened-to-the-megalodon",
+      "source_type": "institutional",
+      "passage": "Megalodon lived roughly 23 to 2.6 million years ago (Miocene and Pliocene)",
+      "claims_supported": [
+        "C49"
+      ],
+      "limitations": "Encyclopedia summary of the fossil record.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-040",
+      "title": "The Real Science Behind the Megalodon",
+      "author_or_org": "Smithsonian Magazine",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.smithsonianmag.com/articles/real-science-megalodon-180969860/",
+      "source_type": "specialist_press",
+      "passage": "Notes the popular belief that megalodon still lurks in unexplored depths",
+      "claims_supported": [
+        "C48",
+        "C49"
+      ],
+      "limitations": "Used for the existence of the belief and the scientific view that it is extinct.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-041",
+      "title": "The Navy has admitted that UFOs exist. Will USOs be next?",
+      "author_or_org": "SOFREP",
+      "published": "unknown (after 2020)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://sofrep.com/119936/the-navy-has-admitted-that-ufos-exist-will-usos-be-next/",
+      "source_type": "news",
+      "passage": "States that, in the minds of some, 'unidentified submerged object' sightings are related to the Bloop",
+      "claims_supported": [
+        "C50",
+        "C51"
+      ],
+      "limitations": "Opinion-style article; evidence only that the link is made.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-042",
+      "title": "The Underwater UFO Factory: The Bermuda Triangle and the Thing Beneath the Ocean (podcast episode)",
+      "author_or_org": "Audioboom podcast listing",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://audioboom.com/posts/8818379",
+      "source_type": "social_or_forum",
+      "passage": "Episode description lists NOAA ocean audio anomalies including the Bloop alongside undersea UFO claims",
+      "claims_supported": [
+        "C50"
+      ],
+      "limitations": "Episode description only; not listened to.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-043",
+      "title": "In 1997 Scientists Detected The Loudest Sound Ever Heard Underwater, But The Cause Is Still A Mystery",
+      "author_or_org": "HuffPost UK",
+      "published": "2017-10",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://huffingtonpost.co.uk/entry/scientists-detected-the-loudest-sound-ever-heard-underwater-its-cause-is-still-a-mystery_uk_59e9d0dfe4b0f9d35bc9e461",
+      "source_type": "news",
+      "passage": "Claims Fox asked U.S. Navy intelligence whether it was a bomb or a submarine and was told it was not theirs; also calls it a one-minute sound never heard again",
+      "claims_supported": [
+        "C53",
+        "C55"
+      ],
+      "limitations": "No source given for the Navy anecdote; the 'never heard again' and 'still a mystery' framing conflicts with NOAA. Unverified.",
+      "reliability": "low"
+    },
+    {
+      "id": "SRC-044",
+      "title": "What caused the loudest underwater sound ever recorded? ('Sound Mysteries' video series)",
+      "author_or_org": "Gizmodo",
+      "published": "2018",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://gizmodo.com/what-caused-the-loudest-underwater-sound-ever-recorded-1827483906",
+      "source_type": "news",
+      "passage": "Says the U.S. Navy denied doing testing in the area and that conspiracy theories followed the sped-up release",
+      "claims_supported": [
+        "C53"
+      ],
+      "limitations": "No source given for the Navy denial. Unverified.",
+      "reliability": "low"
+    },
+    {
+      "id": "SRC-045",
+      "title": "Sea Monsters as Medium: The Bloop Case Study",
+      "author_or_org": "Yuchin Chen (Do Not Research, Substack)",
+      "published": "unknown (after 2023)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://donotresearch.substack.com/p/sea-monsters-as-medium",
+      "source_type": "secondary_summary",
+      "passage": "Describes a first-person online story of a sea-monster encounter during an expedition off Chile, and a 2023 YouTube CGI animation pitting the Bloop against El Gran Majá",
+      "claims_supported": [
+        "C54"
+      ],
+      "limitations": "Essay; describes internet folklore, not evidence for it.",
+      "reliability": "low"
+    },
+    {
+      "id": "SRC-046",
+      "title": "The Bloop (meme entry)",
+      "author_or_org": "Know Your Meme",
+      "published": "2023",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://knowyourmeme.com/memes/the-bloop",
+      "source_type": "social_or_forum",
+      "passage": "Videos presenting the Bloop as a giant animal spread on YouTube; Bloop content popular with younger users by late 2023",
+      "claims_supported": [
+        "C54"
+      ],
+      "limitations": "Community-edited; used only for the meme's existence.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-047",
+      "title": "10 Unsolved Mysteries of the Ocean",
+      "author_or_org": "AOL Lifestyle",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.aol.com/lifestyle/10-unsolved-mysteries-ocean-182915850.html",
+      "source_type": "news",
+      "passage": "Lists the Bloop among unsolved ocean mysteries and says not everyone is convinced it is settled",
+      "claims_supported": [
+        "C55"
+      ],
+      "limitations": "Listicle; evidence only of the persisting 'unsolved' framing.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-048",
+      "title": "Cryptids: The Bloop",
+      "author_or_org": "TIME Techland",
+      "published": "2010-05-19",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://techland.time.com/2010/05/19/cryptids-the-bloop/2",
+      "source_type": "news",
+      "passage": "Places Lovecraft's R'lyeh within 500 miles of the Bloop's coordinates; lists skeptical theories from deep-sea vents to man-made undersea weapons",
+      "claims_supported": [
+        "C39"
+      ],
+      "limitations": "Its 500-mile figure conflicts with our calculation (~1,980 km ≈ 1,230 miles; C39).",
+      "reliability": "medium"
     }
   ]
 }

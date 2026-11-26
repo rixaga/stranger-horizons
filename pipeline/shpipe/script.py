@@ -75,3 +75,32 @@ def check(ep: Episode) -> dict:
         "errors": errors,
         "warnings": warnings,
     }
+
+
+def narration(text: str) -> list[dict]:
+    """Spoken text only, per section: claim markers, {RECON} and <notes> removed, blank-line paragraphs kept.
+    This is the single source for the TTS script and the subtitles."""
+    body = re.split(r"^---\s*$", text, maxsplit=1, flags=re.M)[0]
+    sections, current, para = [], None, []
+
+    def flush():
+        if current is not None and para:
+            current["paragraphs"].append(" ".join(para))
+        para.clear()
+
+    for raw in body.splitlines():
+        if raw.startswith("## "):
+            flush()
+            current = {"heading": raw[3:].strip(), "paragraphs": []}
+            sections.append(current)
+            continue
+        if current is None or raw.startswith("#"):
+            continue
+        line = re.sub(r"\[C\d+\]|\{RECON\}|<[^>]*>", " ", raw)
+        line = re.sub(r"\s+", " ", line).strip()
+        if not line:
+            flush()
+        else:
+            para.append(line)
+    flush()
+    return sections

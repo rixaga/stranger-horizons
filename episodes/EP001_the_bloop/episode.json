@@ -3,16 +3,19 @@
   "slug": "the_bloop",
   "title": "The Bloop: The Ocean Sound Nobody Could Explain",
   "pillar": "Strange Signals",
-  "status": "script",
+  "status": "storyboard",
   "approvals": {
     "research": {
       "approved_by": "Ariga (owner)",
       "date": "2026-11-26"
     },
-    "script": null,
+    "script": {
+      "approved_by": "Ariga (owner) \u2014 script v2 with creature animations",
+      "date": "2026-11-26"
+    },
     "storyboard": null,
     "prototype": null,
     "final_cut": null
   },
-  "notes": "Target: English narration, 12-16 min, 1920x1080, 30 fps. Visual baseline: episodes/EP000_ocean_prototype prototype v4 (approved 2026-11-26). Decisions 2026-11-26: narration voice via ElevenLabs; music from the YouTube Audio Library; owner downloads the NOAA audio files."
+  "notes": "Target: English narration, 12-16 min, 1920x1080, 30 fps. Visual baseline: episodes/EP000_ocean_prototype prototype v4 (approved 2026-11-26). Decisions 2026-11-26: narration voice via ElevenLabs; music from the YouTube Audio Library; owner downloads the NOAA audio files. Creature animations: procedural Blender (owner decision 2026-11-26)."
 }

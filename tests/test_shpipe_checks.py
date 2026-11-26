@@ -112,3 +112,30 @@ def test_qc_report_aggregates_and_gates(ep):
     assert names["approvals"] == "fail"          # final mode needs every gate
     assert report["status"] == "fail"
     assert (ep / "qc" / "qc_report.json").is_file() and (ep / "qc" / "qc_report.md").is_file()
+
+
+def test_narration_text_strips_markers_and_notes():
+    from shpipe import script
+    md = """# Script — X
+
+## 1. Opening hook
+
+<visual: black screen>
+That sound was recorded in 1997. [C01]
+<sfx: clip> {RECON}
+
+Second paragraph here. [C02] [C03]
+
+## 2. Context
+Third. [C04]
+
+---
+### Reviewer checklist
+- [x] not spoken
+"""
+    sections = script.narration(md)
+    assert [s["heading"] for s in sections] == ["1. Opening hook", "2. Context"]
+    assert sections[0]["paragraphs"] == ["That sound was recorded in 1997.", "Second paragraph here."]
+    assert sections[1]["paragraphs"] == ["Third."]
+    flat = " ".join(p for s in sections for p in s["paragraphs"])
+    assert "[C" not in flat and "<" not in flat and "RECON" not in flat and "checklist" not in flat
