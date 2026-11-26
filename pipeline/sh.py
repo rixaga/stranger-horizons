@@ -54,6 +54,14 @@ def cmd_research(a):
     return _report(research.coverage(_episode(a.episode)), a.json)
 
 
+def cmd_ledger_md(a):
+    ep = _episode(a.episode)
+    out = ep.root / "research" / "CLAIM_LEDGER.md"
+    out.write_text(research.ledger_markdown(ep) + "\n", encoding="utf-8")
+    print(f"wrote {out}")
+    return 0
+
+
 def cmd_script(a):
     r = script.check(_episode(a.episode))
     if not a.json and "sections" in r:
@@ -152,6 +160,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("gate", choices=GATES)
     sp.add_argument("--by", required=True, help="who approved")
     add("research", cmd_research, "check source dossier and claim ledger coverage")
+    add("ledger-md", cmd_ledger_md, "write research/CLAIM_LEDGER.md from claim_ledger.json")
     add("script", cmd_script, "check claim markers, story beats and timing")
     sp = add("storyboard", cmd_storyboard, "validate storyboard, show timeline and requirements")
     sp.add_argument("--shot-list", action="store_true", help="also write storyboard/shot_list.csv")

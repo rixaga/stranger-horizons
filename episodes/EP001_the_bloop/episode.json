@@ -1,0 +1,15 @@
+{
+  "episode_id": "EP001",
+  "slug": "the_bloop",
+  "title": "The Bloop: The Ocean Sound Nobody Could Explain",
+  "pillar": "Strange Signals",
+  "status": "research",
+  "approvals": {
+    "research": null,
+    "script": null,
+    "storyboard": null,
+    "prototype": null,
+    "final_cut": null
+  },
+  "notes": "Target: English narration, 12-16 min, 1920x1080, 30 fps. Visual baseline: episodes/EP001_ocean_prototype prototype v4 (approved 2026-11-26). Episode ID EP001 is shared with that prototype folder, so pass this folder's path to sh.py, not the bare ID."
+}

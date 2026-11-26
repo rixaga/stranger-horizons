@@ -1,0 +1,577 @@
+{
+  "episode_id": "EP001",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "A Collection of Sounds from the Sea",
+      "author_or_org": "Andra M. Bobbitt (NOAA VENTS Program) and Sharon Nieukirk (Acoustic Monitoring Project), NOAA Pacific Marine Environmental Laboratory, via NOAA Ocean Explorer",
+      "published": "unknown (undated page; Sound in the Sea 2001 expedition site)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanexplorer.noaa.gov/explorations/sound01/background/seasounds/seasounds.html",
+      "source_type": "primary",
+      "passage": "Sections '\"Bloop\"' and '\"Slow Down\"'; intro paragraph on the PMEL Acoustics Program since 1991",
+      "claims_supported": [
+        "C01",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C31",
+        "C39"
+      ],
+      "limitations": "Undated web page, written while the source was unknown ('origin of the sound is unknown'). Gives only a 'general location' (50°S 100°W). Its 'Slow Down' location (15°S 115°W) disagrees with the later PMEL page (SRC-018), so its locations should be treated as preliminary.",
+      "reliability": "high",
+      "license_notes": "NOAA web content and audio are U.S. federal government works, generally public domain; confirm no third-party credit on the specific file before using the 452k MP3 or spectrogram on screen."
+    },
+    {
+      "id": "SRC-002",
+      "title": "Icequakes (Bloop)",
+      "author_or_org": "NOAA Pacific Marine Environmental Laboratory, Acoustics Program",
+      "published": "unknown (undated page; refers to events of early 2008)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://pmel.noaa.gov/acoustics/sounds/bloop.html",
+      "source_type": "primary",
+      "passage": "Main paragraph and spectrogram captions (original icequake 'bloop' sound, sped up 16 times; calving; harmonic tremor)",
+      "claims_supported": [
+        "C01",
+        "C06",
+        "C09",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C23",
+        "C24"
+      ],
+      "limitations": "Undated and uncited; gives the conclusion and the arrival-azimuth reasoning but no published paper specific to the 1997 signal. Location stated as a range of possible origins along a bearing, not a fix.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work (NOAA PMEL); the 16x WAV file is the candidate for authentic audio in the episode. Verify credit line."
+    },
+    {
+      "id": "SRC-003",
+      "title": "Cryogenic (Ice) — acoustic signal catalogue",
+      "author_or_org": "NOAA Pacific Marine Environmental Laboratory, Acoustics Program",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://pmel.noaa.gov/acoustics/specs_cryogenic.html",
+      "source_type": "primary",
+      "passage": "Entries 'Original icequake (bloop) sound' and 'Iceberg Grounding on Seafloor (Slow Down)'",
+      "claims_supported": [
+        "C17",
+        "C19",
+        "C32"
+      ],
+      "limitations": "Catalogue page; same wording as SRC-002, so not independent of it.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-004",
+      "title": "What is the bloop?",
+      "author_or_org": "NOAA National Ocean Service (Ocean Facts)",
+      "published": "unknown first publication; page shows last updated 2026-09-23",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanservice.noaa.gov/facts/bloop.html",
+      "source_type": "institutional",
+      "passage": "Paragraphs 1-3 (1997 detection while listening for volcanic activity; hydrophones more than 3,219 km apart; list of theories; hydrophones moved closer to Antarctica; source found in 2005)",
+      "claims_supported": [
+        "C01",
+        "C02",
+        "C04",
+        "C10",
+        "C11",
+        "C16",
+        "C20",
+        "C23",
+        "C24",
+        "C25",
+        "C31",
+        "C37",
+        "C43"
+      ],
+      "limitations": "Popular summary for the public; no citations. States 2005 as the year the source was found, which no technical paper we found ties to the 1997 signal specifically. Its climate sentence is a general statement, not a Bloop result.",
+      "reliability": "medium",
+      "license_notes": "U.S. federal government work; the Landsat Antarctica mosaic it shows is NASA (public domain)."
+    },
+    {
+      "id": "SRC-005",
+      "title": "Monitoring Pacific Ocean seismicity from an autonomous hydrophone array",
+      "author_or_org": "Christopher G. Fox, Haruyoshi Matsumoto, Tai-Kwan Andy Lau (NOAA PMEL / Oregon State University)",
+      "published": "2001-03-10",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Journal of Geophysical Research 106(B3): 4183-4206. doi:10.1029/2000JB900404",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract (array continuously deployed in the eastern equatorial Pacific since May 1996; records low-frequency energy in the SOFAR channel; results comparable to SOSUS)",
+      "claims_supported": [
+        "C02",
+        "C03",
+        "C12"
+      ],
+      "limitations": "Read from the abstract and bibliographic records only, not the full paper. Does not discuss the Bloop.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-006",
+      "title": "NOAA News: Pioneer Seamount hydrophone expedition (Sound in the Sea)",
+      "author_or_org": "NOAA (news release quoting Christopher Fox, director of PMEL's Acoustic Monitoring Project)",
+      "published": "2001-08-24",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://corpora.tika.apache.org/base/docs/govdocs1/413/413261.html (archived copy of the NOAA News page)",
+      "source_type": "primary",
+      "passage": "Closing quote by Fox on sounds that remain mysteries, naming the 'bloop'",
+      "claims_supported": [
+        "C14"
+      ],
+      "limitations": "Archived copy in a government-documents research corpus, not the live NOAA page. Fox's remark that the sound had been reported 'for decades by Navy sonar men' is not supported anywhere else we found and conflicts with the 1997 detection story; treated as unverified.",
+      "reliability": "medium",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-007",
+      "title": "Calls from the deep",
+      "author_or_org": "David Wolman, New Scientist",
+      "published": "2002-06-15",
+      "accessed": "2026-11-26",
+      "url_or_reference": "New Scientist print edition, 15 June 2002 (read via a third-party reproduction: https://northamericanmonsters.blogspot.com/2011/03/bloop.html, and bibliographic entry in Wikipedia 'Bloop')",
+      "source_type": "specialist_press",
+      "passage": "Paragraphs on Fox's 'hunch' that Bloop is the most likely of the unidentified sounds to be biological, and on detection by sensors up to 4,800 km apart",
+      "claims_supported": [
+        "C15",
+        "C25",
+        "C26",
+        "C42",
+        "C43"
+      ],
+      "limitations": "Original not accessed; text taken from an unofficial reproduction, so exact wording must be checked against New Scientist's archive before quoting on screen. Journalist's framing, not a scientific finding.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-008",
+      "title": "The sea monster goes 'bloop'—or does it?",
+      "author_or_org": "Popular Science",
+      "published": "unknown (2020s)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.popsci.com/environment/sea-monster-bloop-sound/",
+      "source_type": "specialist_press",
+      "passage": "Sections quoting Fox (2001, CNN), CNN (2002) 'deep sea monster ... giant squid', Loren Coleman (2003)",
+      "claims_supported": [
+        "C13",
+        "C27",
+        "C28",
+        "C29",
+        "C42"
+      ],
+      "limitations": "Secondary account; quotes CNN 2001/2002 and Coleman 2003, which we could not open directly (CNN fetch needed approval that was not available). Exact dates of quotes rely on this article.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-009",
+      "title": "The Bloop mystery has been solved: it was never a giant sea monster",
+      "author_or_org": "Ian Steadman, WIRED UK",
+      "published": "2012-11-29",
+      "accessed": "2026-11-26",
+      "url_or_reference": "http://www.wired.co.uk/news/archive/2012-11/29/bloop-mystery-not-solved-sort-of (read via excerpts reproduced by democraticunderground.org/10022532203, ScienceAlert and HuffPost UK)",
+      "source_type": "news",
+      "passage": "Email interview with Robert Dziak (NOAA/Oregon State University): Bloop signal characteristics 'essentially identical' to icequakes recorded off Antarctica; tens of thousands of icequakes per year",
+      "claims_supported": [
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C30"
+      ],
+      "limitations": "Original article not accessed; quotes taken from consistent reproductions in several outlets. Verify wording against the original before on-screen use.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-010",
+      "title": "Life and Death Sounds of Iceberg A53a",
+      "author_or_org": "Robert P. Dziak, Matthew J. Fowler, Haruyoshi Matsumoto, DelWayne R. Bohnenstiehl, Minkyu Park, Kyle Warren, Won Sang Lee",
+      "published": "2013-06",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Oceanography 26(2): 10-12. doi:10.5670/oceanog.2013.20 (https://tos.org/oceanography/assets/docs/26-2_dziak.pdf)",
+      "source_type": "peer_reviewed",
+      "passage": "Hydrophones (250-1,000 Hz sampling) in the Scotia Sea and Bransfield Strait recorded the iceberg's life cycle from grounding tremor to icequakes; A53a about 60 km long",
+      "claims_supported": [
+        "C18",
+        "C34"
+      ],
+      "limitations": "Short 'Rip Current' news-in-oceanography article; does not analyse the 1997 Bloop itself.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-011",
+      "title": "Sources and levels of ambient ocean sound near the Antarctic Peninsula",
+      "author_or_org": "Robert P. Dziak, DelWayne R. Bohnenstiehl, Kathleen M. Stafford, Haruyoshi Matsumoto, Minkyu Park, Won Sang Lee, Matt J. Fowler, Tai-Kwan Lau, Joseph H. Haxel, David K. Mellinger",
+      "published": "2015-04",
+      "accessed": "2026-11-26",
+      "url_or_reference": "PLoS ONE 10(4): e0123425. doi:10.1371/journal.pone.0123425",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract: arrays in Bransfield Strait and Scotia Sea 2005-2009; icequakes from fracturing icebergs are a prominent feature of the soundscape; activity peaks in austral summer",
+      "claims_supported": [
+        "C16",
+        "C33",
+        "C35"
+      ],
+      "limitations": "Read from abstract and repository copy. Does not name the Bloop.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-012",
+      "title": "Sounds of the Southern Ocean (expedition, December 3-13, 2005)",
+      "author_or_org": "Robert P. Dziak, NOAA Vents Program / Oregon State University, via NOAA Ocean Explorer",
+      "published": "2005-12",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanexplorer.noaa.gov/explorations/05sounds",
+      "source_type": "primary",
+      "passage": "Mission overview: deployment of autonomous underwater hydrophones in the Bransfield Strait in December 2005",
+      "claims_supported": [
+        "C16"
+      ],
+      "limitations": "Expedition web site; describes deployment goals, not results.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work; Bransfield Strait 3D seafloor image credit must be checked before use."
+    },
+    {
+      "id": "SRC-013",
+      "title": "Long-range detection of hydroacoustic signals from large icebergs in the Ross Sea, Antarctica",
+      "author_or_org": "Jacques Talandier, Olivier Hyvernaud, Emile A. Okal, Pierre-Franck Piserchia",
+      "published": "2002",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Earth and Planetary Science Letters 204: 519-534. doi:10.1016/S0012-821X(02)00867-1",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract/introduction: signals detected in late 2000 by seismic stations in French Polynesia traced to huge icebergs drifting in the Ross Sea",
+      "claims_supported": [
+        "C34"
+      ],
+      "limitations": "Independent (French/US) group; supports the general point that iceberg sounds travel thousands of km, not the Bloop specifically.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-014",
+      "title": "Antarctic's siren call: the sound of icebergs",
+      "author_or_org": "H. Matsumoto, R.P. Dziak, D. Bohnenstiehl, J. Tournadre, T-K Lau, M. Fowler, J. Haxel, M. Park, W. Lee (NOAA PMEL publication 4150)",
+      "published": "unknown (c. 2014; discusses 2008-2009 data)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.pmel.noaa.gov/pubs/PDF/mats4150/mats4150.pdf",
+      "source_type": "institutional",
+      "passage": "Abstract: disintegration of icebergs B15a and C19a in 2008-early 2009 heard at Juan Fernández Islands (CTBTO hydrophones) and across the equator, ~10,000 km away; iceberg sounds dominate <100 Hz at those stations",
+      "claims_supported": [
+        "C34",
+        "C36"
+      ],
+      "limitations": "Conference paper; peer-review status not confirmed.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-015",
+      "title": "Blue and fin whale call source levels and propagation range in the Southern Ocean",
+      "author_or_org": "Ana Širović, John A. Hildebrand, Sean M. Wiggins",
+      "published": "2007-08",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Journal of the Acoustical Society of America 122(2): 1208-1215. doi:10.1121/1.2749452",
+      "source_type": "peer_reviewed",
+      "passage": "Abstract: average blue whale call source level 189 ± 3 dB re 1 µPa at 1 m (25-29 Hz); blue whales located up to 200 km away",
+      "claims_supported": [
+        "C26"
+      ],
+      "limitations": "Measured off the Western Antarctic Peninsula; other studies give similar values (~188 dB, Cummings & Thompson 1971, cited within).",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-016",
+      "title": "What is SOFAR?",
+      "author_or_org": "NOAA National Ocean Service (Ocean Facts)",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://oceanservice.noaa.gov/facts/sofar.html",
+      "source_type": "institutional",
+      "passage": "Definition of the SOund Fixing And Ranging channel; hydrophones at the channel axis record distant sounds",
+      "claims_supported": [
+        "C12"
+      ],
+      "limitations": "Popular explainer.",
+      "reliability": "high",
+      "license_notes": "NOAA infographic may be reusable as reference; we will draw our own diagram."
+    },
+    {
+      "id": "SRC-017",
+      "title": "How does sound travel long distances? The SOFAR Channel / History of the SOFAR Channel",
+      "author_or_org": "Discovery of Sound in the Sea (DOSITS), University of Rhode Island",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://dosits.org/science/movement/sofar-channel/",
+      "source_type": "institutional",
+      "passage": "Sound channel axis; 1944 Ewing and Worzel test from R/V Saluda",
+      "claims_supported": [
+        "C12"
+      ],
+      "limitations": "Educational site; used for background only.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-018",
+      "title": "Slow Down (noise97139)",
+      "author_or_org": "NOAA Pacific Marine Environmental Laboratory, Acoustics Program",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://data.pmel.noaa.gov/acoustics/sounds/noise97139.html",
+      "source_type": "primary",
+      "passage": "Recorded 19 May 1997 on the eastern equatorial Pacific array; origin 15:30 GMT near 62°S 60°W; probably a large iceberg running aground; ~7 minutes; heard at nearly 5,000 km",
+      "claims_supported": [
+        "C32"
+      ],
+      "limitations": "Disagrees with SRC-001's earlier location for the same sound (15°S 115°W), showing that early locations were revised.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-019",
+      "title": "Julia",
+      "author_or_org": "NOAA Pacific Marine Environmental Laboratory, Acoustics Program",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://pmel.noaa.gov/acoustics/sounds/julia.html",
+      "source_type": "primary",
+      "passage": "Recorded 1 March 1999; most likely a large iceberg run aground off Antarctica; origin between Bransfield Strait and Cape Adare",
+      "claims_supported": [
+        "C32"
+      ],
+      "limitations": "Same azimuth uncertainty as the Bloop.",
+      "reliability": "high",
+      "license_notes": "U.S. federal government work."
+    },
+    {
+      "id": "SRC-020",
+      "title": "R'lyeh / The Call of Cthulhu (encyclopedia entries)",
+      "author_or_org": "Wikipedia contributors",
+      "published": "accessed version, 2026",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://en.wikipedia.org/wiki/R%27lyeh ; https://en.wikipedia.org/wiki/The_Call_of_Cthulhu",
+      "source_type": "secondary_summary",
+      "passage": "Lovecraft places R'lyeh at 47°9′S 126°43′W; story first published in Weird Tales, February 1928; Derleth's alternative 49°51′S 128°34′W; Pacific pole of inaccessibility 48°52.6′S 123°23.6′W",
+      "claims_supported": [
+        "C38",
+        "C39"
+      ],
+      "limitations": "Encyclopedia. Before the script is locked, check the coordinates against the story text itself (public domain in the U.S. since 2024) and the pole of inaccessibility against a geodetic source.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-021",
+      "title": "Strange maps: Point Nemo",
+      "author_or_org": "Atlas Obscura",
+      "published": "unknown",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://atlasobscura.com/articles/strange-maps-point-nemo",
+      "source_type": "specialist_press",
+      "passage": "Lovecraft's R'lyeh about 330 km from Point Nemo",
+      "claims_supported": [
+        "C39"
+      ],
+      "limitations": "Popular article; our own calculation (research.json) gives ~313 km, consistent.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-022",
+      "title": "NOAA: Just To Be Clear, Mermaids Do Not Exist",
+      "author_or_org": "NPR (Weekend Edition, Scott Simon)",
+      "published": "2012-07-07",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.npr.org/2012/07/07/156416968/noaa-just-to-be-clear-mermaids-do-not-exist",
+      "source_type": "news",
+      "passage": "NOAA statement after queries following Animal Planet's 'Mermaids: The Body Found'",
+      "claims_supported": [
+        "C41"
+      ],
+      "limitations": "News summary of NOAA's statement.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-023",
+      "title": "NOAA forced to deny existence of mermaids",
+      "author_or_org": "The Register",
+      "published": "2012-07-03",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.theregister.co.uk/2012/07/03/mermaids/",
+      "source_type": "news",
+      "passage": "Animal Planet's own description lists NOAA's 1997 'Bloop' as one of two real events used as a 'springboard' for the fiction",
+      "claims_supported": [
+        "C40"
+      ],
+      "limitations": "Quotes Animal Planet's publicity text second-hand.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-024",
+      "title": "Mermaids: The Body Found (fact check)",
+      "author_or_org": "Snopes",
+      "published": "unknown (updated after May 2013)",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.snopes.com/photos/supernatural/mermaids.asp",
+      "source_type": "secondary_summary",
+      "passage": "Program aired 27 May 2012 on Animal Planet; a purely fictional pseudo-documentary with a disclaimer",
+      "claims_supported": [
+        "C40"
+      ],
+      "limitations": "Fact-check site; consistent with SRC-022/023.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-025",
+      "title": "Setting the Bloop Straight (Skeptoid #339)",
+      "author_or_org": "Brian Dunning, Skeptoid",
+      "published": "2012-12-04",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://skeptoid.com/episodes/339",
+      "source_type": "secondary_summary",
+      "passage": "Correction episode: oceanographers did not know the source, while the press presented it as a sea monster",
+      "claims_supported": [
+        "C28"
+      ],
+      "limitations": "Podcast commentary; used only for how the story was covered.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-026",
+      "title": "The Bloop: An Underwater Mystery That Took Nearly 10 Years to Solve",
+      "author_or_org": "Motherboard (Vice); reposted by NOAA PMEL 'PMEL in the News' as '...Nearly 20 Years...'",
+      "published": "2017-04-25",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.vice.com/en/article/the-bloop-an-underwater-mystery-that-took-nearly-20-years-to-solve/ ; https://www.pmel.noaa.gov/acoustics/pmel-in-the-news/bloop-underwater-mystery-took-nearly-20-years-solve",
+      "source_type": "news",
+      "passage": "Teaser: some linked the sound to Lovecraft's Cthulhu; hydrophones more than 3,000 miles apart",
+      "claims_supported": [
+        "C23",
+        "C29",
+        "C37"
+      ],
+      "limitations": "Headline itself is inconsistent (10 vs 20 years), illustrating how even the 'solved' date drifts between retellings.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-027",
+      "title": "In 1997, NOAA recorded a sound louder than any known animal",
+      "author_or_org": "Boing Boing",
+      "published": "2026-05-19",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://boingboing.net/2026/05/19/in-1997-noaa-recorded-a-sound-louder-than-any-known-animal.html",
+      "source_type": "news",
+      "passage": "States the Bloop was recorded exactly once and never appeared again",
+      "claims_supported": [
+        "C31"
+      ],
+      "limitations": "Cited only as an example of a persistent error (contradicted by SRC-001 and SRC-004).",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-028",
+      "title": "Denizens of the deep go 'bloop'",
+      "author_or_org": "Mail & Guardian (wire report based on New Scientist)",
+      "published": "2002",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://mg.co.za/?p=462803",
+      "source_type": "news",
+      "passage": "Sensors up to 4,828 km apart; 'far more powerful than the calls made by any creature known on Earth'; giant squid suggestion",
+      "claims_supported": [
+        "C25",
+        "C27"
+      ],
+      "limitations": "Derivative of SRC-007; shows how the animal framing spread in 2002.",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-029",
+      "title": "Meet the Bloop, the mysterious sound from the bottom of the Pacific Ocean",
+      "author_or_org": "io9 / Gizmodo",
+      "published": "2012",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://gizmodo.com/5883622/meet-the-bloop-the-mysterious-sound-from-the-bottom-of-the-pacific-ocean",
+      "source_type": "news",
+      "passage": "Claims the sound lasted fifteen seconds and was picked up by every sensor in the array",
+      "claims_supported": [
+        "C31"
+      ],
+      "limitations": "Cited only as an example of popular details that conflict with NOAA (NOAA: rise over about one minute; 'multiple sensors').",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-030",
+      "title": "Watch and Listen to the Surprisingly Noisy Death of an Iceberg",
+      "author_or_org": "Jane J. Lee, National Geographic",
+      "published": "2013-07-17",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://www.nationalgeographic.com/science/article/130715-antarctica-iceberg-melting-sounds-ocean-science",
+      "source_type": "news",
+      "passage": "Dziak was in Antarctica to study underwater volcanoes; had recorded 5,000 to 6,000 icequakes around the Antarctic Peninsula and South Atlantic",
+      "claims_supported": [
+        "C33",
+        "C35"
+      ],
+      "limitations": "Journalistic account of SRC-010.",
+      "reliability": "high"
+    },
+    {
+      "id": "SRC-031",
+      "title": "Quotations of an older NOAA description ('several times louder than the loudest recorded animal, the blue whale')",
+      "author_or_org": "TIME Techland (2012) and kottke.org (2012), quoting a NOAA page",
+      "published": "2012",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://techland.time.com/?p=27477 ; https://kottke.org/12/10/unexplained-sounds",
+      "source_type": "secondary_summary",
+      "passage": "Both quote NOAA wording that the Bloop resembled a living creature but was several times louder than the loudest known animal",
+      "claims_supported": [
+        "C26"
+      ],
+      "limitations": "The current NOAA pages (SRC-001, SRC-002, SRC-004) do not contain this wording; we could not find the original NOAA page. Treat as an unverified report of earlier NOAA wording.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-032",
+      "title": "The Bloop: A Mysterious Sound from the Deep Ocean (Astronomy Picture of the Day)",
+      "author_or_org": "Robert Nemiroff & Jerry Bonnell, NASA APOD; image credit NOAA, SOSUS",
+      "published": "2010-04-27",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://science.nasa.gov/?p=1239351",
+      "source_type": "secondary_summary",
+      "passage": "States no further Bloops had been heard since 1997",
+      "claims_supported": [
+        "C30"
+      ],
+      "limitations": "Written before NOAA published the icequake explanation; shows the 2010-era 'unsolved' framing. Contrasts with Dziak's 2012 remark that Bloop-like icequake signals are common (SRC-009).",
+      "reliability": "medium"
+    },
+    {
+      "id": "SRC-033",
+      "title": "Bloop (encyclopedia entry)",
+      "author_or_org": "Wikipedia contributors",
+      "published": "accessed version, 2026",
+      "accessed": "2026-11-26",
+      "url_or_reference": "https://en.wikipedia.org/wiki/Bloop",
+      "source_type": "secondary_summary",
+      "passage": "Summary; bibliography used to locate CNN 2001/2002, New Scientist 2002 and WIRED UK 2012",
+      "claims_supported": [],
+      "limitations": "Orientation only; never the sole source for a claim.",
+      "reliability": "lead_only"
+    },
+    {
+      "id": "SRC-034",
+      "title": "The Call of Cthulhu",
+      "author_or_org": "H. P. Lovecraft",
+      "published": "1928-02",
+      "accessed": "2026-11-26",
+      "url_or_reference": "Weird Tales vol. 11 no. 2 (February 1928); text: https://en.wikisource.org/wiki/Weird_Tales/Volume_11/Issue_2/The_Call_of_Cthulhu and Project Gutenberg eBook #68283 (https://gutenberg.org/ebooks/68283)",
+      "source_type": "primary",
+      "passage": "Part III, 'The Madness from the Sea': the Emma meets the Alert at S. Latitude 49°51', W. Longitude 128°34'; the crew reaches R'lyeh at S. Latitude 47°9', W. Longitude 126°43'",
+      "claims_supported": [
+        "C38",
+        "C39"
+      ],
+      "limitations": "Coordinates confirmed from an annotated edition excerpt found by search (goodreads notes) and the geohashing.site quotation; Wikisource and Gutenberg copies identified but not opened in this session. Fiction: used only for what the story says.",
+      "reliability": "high",
+      "license_notes": "Published 1928; in the U.S. public domain since 1 January 2024. Quote only a short line on screen."
+    }
+  ]
+}
