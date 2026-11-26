@@ -1,6 +1,6 @@
 # Script — EP001 The Bloop: The Ocean Sound Nobody Could Explain
 
-Status: draft v2 (owner note 2026-11-26: more conspiracy theories, real research revealed at the end) — awaiting owner approval (script gate)
+Status: v2 APPROVED by owner 2026-11-26 (conspiracy theories first, real research revealed at the end; procedural Blender creature animations)
 Target length: 12–16 min. Narration ≈ 2,150 words at ~145 wpm, plus audio moments and pauses.
 
 Conventions: `[C##]` = claim in `research/claim_ledger.json`. `{RECON}` = the visual on that line is an illustrative reconstruction and must carry the on-screen label. `<visual: …>`, `<sfx: …>` and `<card: …>` are production notes and are not spoken. The spoken-only text is in `narration.md`; pronunciations are in `pronunciation_guide.md`.
@@ -242,5 +242,5 @@ It is what else the ocean is telling us, that we haven't learned to hear.
 - [x] At least one ordinary explanation is given for each anomaly (ice for the sound; speed-up for the "animal" quality; travel distance for the "louder than a whale" claim)
 - [x] No fabricated quotes, experts or documents. Direct quotation on screen: one NOAA PMEL sentence (U.S. government work). Fox and Dziak are paraphrased; the 2001 NOAA release is paraphrased.
 - [x] No creature reconstruction that could be taken as real: every creature shot is labelled "Imagined — theory, not evidence" throughout, is never cut against the real NOAA audio or spectrogram, and is shown turning into ice when answered in section 6
-- [ ] Owner: approve tone, the conspiracy section, and verdict wording
+- [x] Owner: approve tone, the conspiracy section, and verdict wording (2026-11-26)
 - [ ] Before narration: verify C13, C21, C22 wording against the original CNN 2001 and WIRED UK 2012 articles (currently read via secondary copies)
