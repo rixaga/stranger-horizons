@@ -1,6 +1,6 @@
 # EP001 Ocean Prototype — Stage 6 Evaluation
 
-**Status:** evaluation complete; v3 and v4 rendered. **Awaiting owner approval.** Full episode production has *not* started.
+**Status:** evaluation complete; v3 and v4 rendered. **v4 approved by the owner on 2026-11-26 as the EP001 visual baseline** (`episode.json` → approvals.prototype). Full episode production has *not* started and needs separate instructions.
 **Evaluated:** `final/EP001_preview_v2.mp4` (the Stage 5 deliverable). The improved version is v3; v4 adds the scale cue and brighter exposure the owner asked for (see `IMPROVEMENT_LOG.md`).
 **Compared against:** `REFERENCE_VIDEO_ANALYSIS.md` (§6 "Adopt / Do not adopt"), `docs/VISUAL_STYLE_GUIDE.md`, `docs/CINEMATOGRAPHY_GUIDE.md`, `docs/LIGHTING_GUIDE.md`, `docs/ENVIRONMENT_GUIDE.md`.
 
