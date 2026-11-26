@@ -30,3 +30,9 @@ Thumbs.db
 .vscode/
 .idea/
 reports/
+# EP001 generated outputs (regenerate with scripts/run_ep001.py)
+episodes/*/logs/
+episodes/*/edit/
+episodes/*/blender/shots/*.blend
+episodes/*/blender/*_set.blend
+episodes/*/scripts/launch_args.json

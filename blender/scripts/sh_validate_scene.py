@@ -38,7 +38,8 @@ def validate_scene(scene, episode_root) -> dict:
     if spec is None:
         return {"status": "fail", "errors": [f"{sid} is not in the storyboard"]}
     row = next(r for r in sb_mod.timeline(sb) if r["scene_id"] == sid)
-    profile = load_profile(PROFILE_FOR_MODE.get(mode, "preview"))
+    profile_name = scene.get("sh_profile") or PROFILE_FOR_MODE.get(mode, "preview")
+    profile = load_profile(profile_name)
     r = scene.render
 
     if scene.camera is None:
@@ -49,10 +50,10 @@ def validate_scene(scene, episode_root) -> dict:
         errors.append(f"fps {r.fps}/{r.fps_base}, storyboard needs {sb['fps']}")
     if (r.resolution_x, r.resolution_y, r.resolution_percentage) != (profile["resolution_x"], profile["resolution_y"], 100):
         errors.append(f"resolution {r.resolution_x}x{r.resolution_y}@{r.resolution_percentage}% "
-                      f"≠ {mode} profile {profile['resolution_x']}x{profile['resolution_y']}")
+                      f"≠ {profile_name} profile {profile['resolution_x']}x{profile['resolution_y']}")
     try:
         if r.engine != resolve_engine(profile["engine"], available_engines()):
-            errors.append(f"engine {r.engine} ≠ {mode} profile {profile['engine']}")
+            errors.append(f"engine {r.engine} ≠ {profile_name} profile {profile['engine']}")
     except ValueError as exc:
         errors.append(str(exc))
     expected_out = ep.render_dir(mode, sid)

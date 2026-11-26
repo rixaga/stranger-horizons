@@ -13,6 +13,7 @@ EXTRA_DIRS = ("/opt/homebrew/bin", "/usr/local/bin")
 BT709 = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
 # Belt and braces: also write the tags straight into the H.264 VUI, so they survive any
 # change in how FFmpeg versions pass output colour options to the encoder.
+BT709_FRAMES = "setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709"
 H264_BT709_VUI = ["-bsf:v", "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1"]
 INSTALL_HINT = "Install it with `brew install ffmpeg` (macOS) or your package manager, then retry."
 
@@ -62,7 +63,10 @@ def encode_sequence(pattern: str, output: Path, fps: int = 30, crf: int = 18, pr
     args += ["-i", pattern]
     if audio:
         args += ["-i", str(audio)]
-    args += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(crf), "-preset", preset, *BT709, *H264_BT709_VUI]
+    # setparams relabels the decoded frames: Blender PNGs carry sRGB transfer, which FFmpeg 9.1
+    # otherwise passes through to the MP4 (seen on the owner's Mac: color_transfer=iec61966-2-1).
+    args += ["-vf", BT709_FRAMES, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", str(crf), "-preset", preset,
+             *BT709, *H264_BT709_VUI]
     if audio:
         args += ["-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest"]
     args += ["-movflags", "+faststart", str(tmp)]

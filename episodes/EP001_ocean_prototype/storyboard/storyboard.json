@@ -1,0 +1,188 @@
+{
+  "episode_id": "EP001",
+  "title": "Ocean Prototype",
+  "fps": 30,
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "duration_seconds": 10,
+      "narration": "",
+      "visual_intent": "Establish the channel's deep-ocean look: we drift through dark water toward a towering basalt pinnacle that emerges from the murk.",
+      "reconstruction_status": "illustrative_reconstruction",
+      "on_screen_label": "Illustrative reconstruction",
+      "environment": "Mid-water seabed (~150 m, lower twilight zone), sediment and basalt boulders",
+      "lighting": "Faint downwelling daylight broken into shafts from above; two vehicle lamps for the near field",
+      "effects": [
+        "water_volume",
+        "marine_snow",
+        "light_shafts"
+      ],
+      "environment_preset": "deep_ocean",
+      "camera_preset": "glide_reveal",
+      "camera": {
+        "shot_size": "extreme_wide",
+        "angle": "low",
+        "movement": "slow forward glide with gentle rise",
+        "lens_mm": 24,
+        "dof": true,
+        "fstop": 4.0
+      },
+      "transition": "cut",
+      "source_ids": [],
+      "asset_ids": [],
+      "sound_notes": "Low water rumble, distant creaks, no music (prototype is visual only)",
+      "blender": {
+        "template": "episodes/EP001_ocean_prototype/blender/EP001_set.blend",
+        "target_m": [
+          4,
+          0,
+          14
+        ],
+        "render_profile": "preview_hd",
+        "preset_overrides": {
+          "volume": {
+            "bounds_m": [
+              240,
+              280,
+              70
+            ],
+            "center_m": [
+              0,
+              -25,
+              25
+            ],
+            "scatter_color": [
+              0.08,
+              0.36,
+              0.42
+            ],
+            "density": 0.008,
+            "absorption_color": [
+              0.1,
+              0.5,
+              0.58
+            ],
+            "absorption_density": 0.02,
+            "anisotropy": 0.78,
+            "noise_scale": 0.04,
+            "noise_amount": 0.3,
+            "noise_drift_m_s": [
+              0.15,
+              0.05,
+              0.02
+            ]
+          },
+          "lights": [
+            {
+              "name": "SH_Downwelling_Sun",
+              "type": "SUN",
+              "role": "key",
+              "color": [
+                0.42,
+                0.74,
+                0.86
+              ],
+              "energy": 3.0,
+              "rotation_deg": [
+                -22,
+                0,
+                8
+              ],
+              "angle_deg": 2.0,
+              "volume_factor": 1.6,
+              "diffuse_factor": 0.3,
+              "specular_factor": 0.2
+            },
+            {
+              "name": "SH_SubLamp_L",
+              "type": "SPOT",
+              "role": "motivated_source",
+              "color": [
+                0.92,
+                0.96,
+                1.0
+              ],
+              "energy": 500,
+              "location": [
+                -0.6,
+                -0.2,
+                0.1
+              ],
+              "rotation_deg": [
+                0,
+                -6,
+                0
+              ],
+              "spot_size_deg": 45,
+              "spot_blend": 0.6,
+              "size_m": 0.15,
+              "volume_factor": 1.0,
+              "parent_to_camera": true
+            },
+            {
+              "name": "SH_SubLamp_R",
+              "type": "SPOT",
+              "role": "motivated_source",
+              "color": [
+                0.92,
+                0.96,
+                1.0
+              ],
+              "energy": 500,
+              "location": [
+                0.6,
+                -0.2,
+                0.1
+              ],
+              "rotation_deg": [
+                0,
+                6,
+                0
+              ],
+              "spot_size_deg": 45,
+              "spot_blend": 0.6,
+              "size_m": 0.15,
+              "volume_factor": 1.0,
+              "parent_to_camera": true
+            }
+          ],
+          "particles": {
+            "count": 9000,
+            "bounds_m": [
+              28,
+              36,
+              10
+            ],
+            "center_m": [
+              4,
+              -77,
+              4
+            ],
+            "drift_m_s": [
+              0.03,
+              0.02,
+              -0.015
+            ],
+            "color": [
+              0.45,
+              0.5,
+              0.52
+            ]
+          },
+          "color_management": {
+            "exposure": 0.6
+          },
+          "camera": {
+            "clip_end_m": 400,
+            "clip_start_m": 0.6
+          },
+          "eevee": {
+            "volumetric_end_m": 220,
+            "volumetric_tile_size": "4",
+            "volumetric_samples": 96
+          }
+        }
+      }
+    }
+  ]
+}

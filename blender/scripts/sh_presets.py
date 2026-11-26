@@ -108,7 +108,7 @@ def _world(bpy, scene, cfg):
     scene.world = world
 
 
-def _volume_material(bpy, cfg):
+def _volume_material(bpy, cfg):  # noqa: C901 (linear node build)
     mat = bpy.data.materials.get("SH_Volume") or bpy.data.materials.new("SH_Volume")
     _ensure_nodes(mat)
     nt = mat.node_tree
@@ -144,6 +144,19 @@ def _volume_material(bpy, cfg):
     if amount > 0:
         noise = nt.nodes.new("ShaderNodeTexNoise")
         noise.inputs["Scale"].default_value = cfg.get("noise_scale", 0.1)
+        drift = cfg.get("noise_drift_m_s")
+        if drift:
+            coord = nt.nodes.new("ShaderNodeTexCoord")
+            mapping = nt.nodes.new("ShaderNodeMapping")
+            nt.links.new(coord.outputs["Object"], mapping.inputs["Vector"])
+            nt.links.new(mapping.outputs["Vector"], noise.inputs["Vector"])
+            scene = bpy.context.scene
+            seconds = (scene.frame_end - scene.frame_start) / max(scene.render.fps, 1)
+            loc = mapping.inputs["Location"]
+            loc.default_value = (0, 0, 0)
+            loc.keyframe_insert("default_value", frame=scene.frame_start)
+            loc.default_value = tuple(-d * seconds for d in drift)
+            loc.keyframe_insert("default_value", frame=scene.frame_end)
         mr = nt.nodes.new("ShaderNodeMapRange")
         mr.inputs["To Min"].default_value = 1.0 - amount
         mr.inputs["To Max"].default_value = 1.0 + amount
@@ -196,6 +209,9 @@ def _lights(bpy, scene, col, lights):
         data.energy = spec["energy"]
         if hasattr(data, "volume_factor"):
             data.volume_factor = spec.get("volume_factor", 1.0)
+        for key in ("diffuse_factor", "specular_factor"):
+            if key in spec and hasattr(data, key):
+                setattr(data, key, spec[key])
         if spec["type"] == "SUN":
             data.angle = math.radians(spec.get("angle_deg", 0.53))
         if spec["type"] == "SPOT":
@@ -285,6 +301,8 @@ def _color_management(scene, cfg):
 
 def _engine_settings(scene, eevee, cycles):
     ev = getattr(scene, "eevee", None)
+    if ev is not None and "volumetric_end_m" in eevee and hasattr(ev, "use_volume_custom_range"):
+        ev.use_volume_custom_range = True  # Blender 5.x ignores volumetric_end without it
     if ev is not None:
         for attr, key in (("volumetric_tile_size", "volumetric_tile_size"), ("volumetric_samples", "volumetric_samples"),
                           ("volumetric_end", "volumetric_end_m"), ("use_volumetric_shadows", "volumetric_shadows")):
