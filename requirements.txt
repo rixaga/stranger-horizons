@@ -1,5 +1,6 @@
 # Pipeline tools (run with the system Python, not Blender's)
 jsonschema>=4.20
+Pillow>=10  # Shorts overlays (pipeline/shpipe/shorts_render.py)
 pytest>=8.0
 # Optional: Blender as a Python module, for running tests/test_blender_integration.py
 # without a full Blender install. Must match Blender's Python version.

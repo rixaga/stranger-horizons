@@ -1,0 +1,65 @@
+{
+  "short_id": "EP001_S01",
+  "title": "The Bloop in 36 seconds (wordless promo)",
+  "status": "draft",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "style": "toon (sh_toon) + HUD overlay; no narration; music + NOAA audio",
+  "editorial": [
+    "No creature image is ever on screen with the real NOAA audio or waveform.",
+    "Imagined shots carry the IMAGINED tag for their full length.",
+    "NOAA audio credited on screen (U.S. government work, public domain)."
+  ],
+  "audio": {
+    "music": {"source": "YouTube Audio Library (owner picks track)", "file": null},
+    "cues": [
+      {"file": "audio/source_noaa/bloop.wav", "shot": "SH01", "at_s": 0.3, "from_s": 0.0, "dur_s": 3.6, "gain_db": -2, "note": "real NOAA recording (16x), over empty water only"},
+      {"file": "audio/source_noaa/bloop.wav", "shot": "SH05", "at_s": 0.4, "from_s": 0.0, "dur_s": 6.0, "gain_db": 0, "note": "real NOAA recording (16x) under its own waveform"}
+    ]
+  },
+  "shots": [
+    {"id": "SH01", "duration_s": 4.0, "plate": "ocean_descent", "elements": [
+      {"type": "hud", "speed": "16x FASTER", "pitch": "9–28 Hz", "claims": ["C06", "C47"], "in_s": 0.3},
+      {"type": "big", "text": "1997", "y": 760, "size": 150, "claims": ["C01"], "in_s": 0.4, "out_s": 2.2},
+      {"type": "big", "text": "THE PACIFIC", "y": 900, "size": 64, "claims": ["C01"], "in_s": 0.7, "out_s": 2.2},
+      {"type": "big", "text": "A SOUND NOBODY", "y": 820, "size": 70, "claims": ["C14"], "in_s": 2.3},
+      {"type": "big", "text": "COULD EXPLAIN", "y": 910, "size": 70, "color": "amber", "claims": ["C14"], "in_s": 2.5},
+      {"type": "credit", "text": "Real recording: NOAA / PMEL (public domain)", "claims": ["C01"], "in_s": 0.3}
+    ]},
+    {"id": "SH02", "duration_s": 5.5, "plate": "hydrophone", "elements": [
+      {"type": "card", "num": 1, "text": "WHO HEARD IT?", "in_s": 0.2},
+      {"type": "pill", "text": "NOAA UNDERWATER MICROPHONES", "y": 318, "color": "teal", "claims": ["C01", "C02"], "in_s": 0.6},
+      {"type": "callout", "track": "hydrophone", "box": [60, 1180], "title": "HYDROPHONE", "sub": "listens for undersea quakes", "claims": ["C02"], "in_s": 1.2},
+      {"type": "meter", "label": "HEARD FROM", "value": "OVER 5,000 km", "claims": ["C07"], "y": 1560, "in_s": 2.4}
+    ]},
+    {"id": "SH03", "duration_s": 8.5, "plate": "megalodon", "elements": [
+      {"type": "card", "num": 2, "text": "WHAT MADE IT?", "in_s": 0.2},
+      {"type": "pill", "text": "THEORY: A GIANT SHARK?", "y": 318, "color": "red", "claims": ["C48"], "in_s": 0.6},
+      {"type": "callout", "track": "shark", "box": [60, 1180], "title": "MEGALODON", "sub": "gone from the fossil record ~2.6 million yrs ago", "claims": ["C49"], "in_s": 2.6},
+      {"type": "callout", "track": "rov", "box": [560, 1430], "title": "ROV · 2.8 m", "design": true, "in_s": 3.4, "out_s": 6.4},
+      {"type": "stamp", "text": "NO EVIDENCE", "claims": ["C49"], "in_s": 6.0},
+      {"type": "tag", "text": "IMAGINED — NOT EVIDENCE"}
+    ]},
+    {"id": "SH04", "duration_s": 8.0, "plate": "iceberg", "elements": [
+      {"type": "card", "num": 3, "text": "THE LIKELY ANSWER", "in_s": 0.2},
+      {"type": "pill", "text": "AN ICEQUAKE", "y": 318, "color": "teal", "claims": ["C17", "C20"], "in_s": 0.6},
+      {"type": "callout", "track": "iceberg", "box": [60, 1240], "title": "ICEBERG CRACKING", "sub": "near Antarctica", "claims": ["C09", "C17"], "in_s": 2.8},
+      {"type": "meter", "label": "COMPARED WITH RECORDED ICEQUAKES", "value": "VERY SIMILAR", "claims": ["C18", "C21"], "y": 1720, "in_s": 4.6},
+      {"type": "tag", "text": "ILLUSTRATION"}
+    ]},
+    {"id": "SH05", "duration_s": 6.5, "plate": "backdrop", "elements": [
+      {"type": "card", "num": 4, "text": "THE REAL RECORDING", "in_s": 0.1},
+      {"type": "wave", "file": "audio/source_noaa/bloop.wav", "from_s": 0.0, "dur_s": 6.0, "in_s": 0.4, "claims": ["C01", "C06"]},
+      {"type": "hud", "speed": "16x FASTER", "pitch": "9–28 Hz", "claims": ["C06", "C47"], "in_s": 0.1},
+      {"type": "big", "text": "AT REAL SPEED: 9–28 Hz", "y": 1420, "size": 54, "claims": ["C47"], "in_s": 3.0},
+      {"type": "big", "text": "NEAR THE LIMIT OF HUMAN HEARING", "y": 1500, "size": 40, "color": "teal", "claims": ["C47"], "in_s": 3.4},
+      {"type": "credit", "text": "Audio: NOAA / PMEL (public domain)", "claims": ["C01"]}
+    ]},
+    {"id": "SH06", "duration_s": 3.5, "plate": "backdrop", "elements": [
+      {"type": "big", "text": "THE BLOOP", "y": 820, "size": 120, "color": "amber", "in_s": 0.1},
+      {"type": "big", "text": "THE FULL STORY", "y": 960, "size": 56, "in_s": 0.4},
+      {"type": "brand", "text": "STRANGER HORIZONS", "in_s": 0.6}
+    ]}
+  ]
+}
