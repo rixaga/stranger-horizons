@@ -1,1 +1,31 @@
-{"assets": []}
+{
+  "assets": [
+    {
+      "id": "AST-001",
+      "name": "Poppins (Bold, Medium)",
+      "kind": "font",
+      "source": "The Poppins Project Authors / Indian Type Foundry",
+      "url": "https://github.com/itfoundry/Poppins",
+      "license": "SIL Open Font License 1.1",
+      "attribution_required": false,
+      "ai_generated": false,
+      "acquired": "2026-11-28",
+      "local_path": "assets/fonts/poppins/",
+      "notes": "Used for Shorts HUD and text cards. OFL.txt kept beside the font files."
+    },
+    {
+      "id": "AST-002",
+      "name": "NOAA PMEL Bloop recording (bloop.wav, 16x)",
+      "kind": "sfx",
+      "source": "NOAA Pacific Marine Environmental Laboratory",
+      "url": "see episodes/EP001_the_bloop/audio/source_noaa/README.md",
+      "license": "U.S. government work (public domain)",
+      "attribution_required": false,
+      "attribution_text": "Audio: NOAA / PMEL",
+      "ai_generated": false,
+      "acquired": "2026-11-26",
+      "local_path": "episodes/EP001_the_bloop/audio/source_noaa/bloop.wav (Mac only, not in git)",
+      "notes": "Credited on screen anyway (channel policy)."
+    }
+  ]
+}

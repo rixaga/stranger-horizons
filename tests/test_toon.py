@@ -60,3 +60,24 @@ def test_apply_toon_keeps_extra_material_slots_like_eyes():
     assert max(eye_ramp.color_ramp.elements[-1].color[:3]) < 0.05  # eye toon colour comes from the original
     skin_nodes = a.material_slots[0].material.node_tree.nodes
     assert sum(n.type == "VALTORGB" for n in skin_nodes) == 2    # top + belly bands (countershading)
+
+
+def test_toon_world_marine_snow_and_projected_track():
+    from mathutils import Vector
+    from sh_toon import marine_snow, project_track, toon_world
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    scene = bpy.context.scene
+    scene.render.resolution_x, scene.render.resolution_y = 1080, 1920
+    w = toon_world(scene, bottom=(0, 0, 0.02), top=(0.02, 0.08, 0.15))
+    assert scene.world is w and any(n.type == "VALTORGB" for n in w.node_tree.nodes)
+    snow = marine_snow(scene, Vector((0, 0, 0)), 5.0, count=40, seed=1)
+    assert len(snow.data.polygons) == 40 * 20       # one icosphere (20 faces) per speck
+    cam = bpy.data.objects.new("C", bpy.data.cameras.new("C"))
+    scene.collection.objects.link(cam)
+    cam.location = (0, -10, 0)
+    cam.rotation_euler = (1.5707963, 0, 0)          # looking along +Y
+    scene.camera = cam
+    target = bpy.data.objects.new("T", None)
+    scene.collection.objects.link(target)
+    pts = project_track(scene, target, [1, 2])
+    assert pts[1] == pytest.approx((540, 960), abs=1)   # straight ahead = frame centre (pixels, y down)
