@@ -36,3 +36,6 @@ episodes/*/edit/
 episodes/*/blender/shots/*.blend
 episodes/*/blender/*_set.blend
 episodes/*/scripts/launch_args.json
+# Shorts mockups / renders (regenerate from their scripts)
+episodes/*/shorts/**/render/
+episodes/*/shorts/**/*.blend
