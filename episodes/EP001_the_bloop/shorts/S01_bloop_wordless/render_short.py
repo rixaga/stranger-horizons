@@ -112,7 +112,10 @@ def main():
                     "-map", "0:v", "-map", "[aout]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
                     "-shortest", str(tmp)], check=True)
     tmp.replace(a.out)
-    video.unlink(missing_ok=True)
+    try:
+        video.unlink(missing_ok=True)
+    except PermissionError:  # some sandboxes forbid deletes; the leftover is gitignored
+        pass
     print("SHORT_DONE", a.out)
 
 
